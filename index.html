@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Jora Solutions is a premium digital marketing partner building SEO, content, and conversion systems for precise, human-led growth.">
   <title>Jora Solutions | Premium Growth Systems</title>
-  <link rel="stylesheet" href="styles.css?v=3d-bars-bubbles-20260419">
+  <link rel="stylesheet" href="styles.css?v=interaction-refine-20260420">
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -35,12 +35,10 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="particles" id="particles" aria-hidden="true"></div>
       <div class="hero-haze" aria-hidden="true"></div>
-      <div class="hero-growth-visual" aria-hidden="true">
-        <div class="chart-waves"><span></span><span></span><span></span></div>
-        <div class="growth-dashboard">
-          <div class="dashboard-topline">
-            <span>Growth system</span>
-          </div>
+      <div class="hero-growth-visual">
+        <div class="chart-waves" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="growth-dashboard" aria-hidden="true">
+          <div class="dashboard-topline" aria-hidden="true"><span class="dashboard-topline-start">Start your growth</span></div>
           <svg class="hero-growth-chart" viewBox="0 0 520 210">
             <path class="chart-area" d="M24 176 C82 170 114 150 154 142 S230 132 268 102 S376 48 496 28 L496 198 L24 198 Z"/>
             <path class="chart-glow" d="M24 176 C82 170 114 150 154 142 S230 132 268 102 S376 48 496 28"/>
@@ -56,19 +54,37 @@
             <div class="growth-column" style="--h:12.6rem;--delay:680ms"><div class="bar-stack"><span></span></div><small>W7</small></div>
           </div>
         </div>
-        <div class="chart-bubble chart-bubble-seo">SEO systems</div>
-        <div class="chart-bubble chart-bubble-traffic">Traffic growth</div>
-        <div class="chart-bubble chart-bubble-revenue">Increase revenue</div>
+        <div class="chart-bubble chart-bubble-seo" aria-hidden="true">SEO systems</div>
+        <div class="chart-bubble chart-bubble-traffic" aria-hidden="true">Traffic growth</div>
+        <div class="chart-bubble chart-bubble-revenue" aria-hidden="true">Increase revenue</div>
+        <img class="hero-phone" src="phone.png" alt="" loading="eager" aria-hidden="true">
+        <button class="hero-visual-trigger" type="button" data-audit-open aria-label="Start a free website audit"></button>
       </div>
       <div class="hero-copy reveal">
         <p class="eyebrow">Client led digital growth</p>
         <h1 id="hero-title">Precision growth, built with you</h1>
         <p>We build SEO, content, and conversion systems that make growth easier to understand, easier to trust, and harder to lose once momentum starts compounding.</p>
         <div class="hero-cta-row">
-          <a class="primary-cta growth-trigger" href="contact.html"><span>See Your Growth Plan</span><span aria-hidden="true">-></span></a>
+          <a class="arrow-cta growth-trigger" href="contact.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+            </svg>
+            <span class="arrow-cta-text">See Your Growth Plan</span>
+          </a>
           <a class="secondary-cta" href="services.html">Explore services</a>
         </div>
         <small>No commitment - just clarity.</small>
+      </div>
+      <div class="hero-audit-entry reveal">
+        <p>Free website audit</p>
+        <form class="audit-url-form" data-audit-url-form novalidate>
+          <label>
+            <span class="visually-hidden">Your website URL</span>
+            <input class="audit-url-input" data-audit-url-input type="url" inputmode="url" autocomplete="url" placeholder="www.example.com" required>
+          </label>
+          <button class="audit-submit" type="submit">Free audit</button>
+        </form>
+        <small>We will show you what is slowing growth before you commit to anything.</small>
       </div>
     </section>
 
@@ -95,7 +111,7 @@
           <article><span>04</span><h3>Partner-level visibility</h3><p>Know what is working, what is stuck, and what the next best move should be.</p></article>
         </div>
       </div>
-      <div class="kpi-orbit reveal" aria-hidden="true">
+      <div class="kpi-orbit reveal" tabindex="0" aria-label="Illustrative KPI card carousel">
         <div class="kpi-stage">
           <article class="kpi-3d-card kpi-card-a"><span>Impressions</span><strong>1M+</strong><small>Traffic Growth</small></article>
           <article class="kpi-3d-card kpi-card-b"><span>Revenue generated</span><strong>£100k+</strong><small>Profit Scaling</small></article>
@@ -110,14 +126,19 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="home-services-title">
+    <section class="section service-showcase" aria-labelledby="home-services-title">
+      <div class="service-backdrop" aria-hidden="true">
+        <span class="service-bg service-bg-seo"></span>
+        <span class="service-bg service-bg-content"></span>
+        <span class="service-bg service-bg-conversion"></span>
+      </div>
       <div class="section-head reveal">
         <p class="eyebrow">What we build</p>
         <h2 id="home-services-title">A premium growth stack, not disconnected tactics.</h2>
         <p>Each engagement is built around the constraint that matters most right now, then extended into a system that keeps making the next decision easier.</p>
       </div>
       <div class="card-grid three">
-        <article class="service-card seo-card tilt-card reveal" tabindex="0">
+        <article class="service-card seo-card tilt-card reveal" data-service="seo" tabindex="0">
           <span>01</span>
           <h3>SEO systems</h3>
           <p>Search architecture, intent maps, and technical clarity that make the right pages easier to find and trust.</p>
@@ -126,7 +147,7 @@
             <svg viewBox="0 0 260 140"><path class="line-draw" pathLength="1" d="M38 96 C76 40 111 72 136 48 S190 24 226 76"/></svg>
           </div>
         </article>
-        <article class="service-card content-card tilt-card reveal" tabindex="0">
+        <article class="service-card content-card tilt-card reveal" data-service="content" tabindex="0">
           <span>02</span>
           <h3>Content engines</h3>
           <p>Authority-building assets, editorial structure, and messaging systems that sound like your team and move buyers forward.</p>
@@ -135,7 +156,7 @@
             <svg viewBox="0 0 260 140"><path class="line-draw" pathLength="1" d="M34 92 C78 94 78 52 122 56 S172 98 222 48"/></svg>
           </div>
         </article>
-        <article class="service-card conversion-card tilt-card reveal" tabindex="0">
+        <article class="service-card conversion-card tilt-card reveal" data-service="conversion" tabindex="0">
           <span>03</span>
           <h3>Conversion design</h3>
           <p>Offer shaping, page systems, and testing frameworks that turn attention into qualified pipeline.</p>
@@ -157,17 +178,33 @@
         <h2 id="process-title">A clear pipeline with people in the loop.</h2>
         <p>We diagnose the constraint, map the commercial priorities, build the right system, and refine it with signal instead of guesswork.</p>
       </div>
-      <div class="pipeline reveal">
+      <div class="pipeline reveal" data-active-step="diagnose">
         <svg viewBox="0 0 900 210" aria-hidden="true">
           <path class="pipe-guide" d="M50 164 C186 158 250 136 346 126 S512 120 584 84 S720 46 850 36"/>
           <path class="pipe-line line-draw" pathLength="1" d="M50 164 C186 158 250 136 346 126 S512 120 584 84 S720 46 850 36"/>
         </svg>
-        <div class="flow-cubes" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="flow-cubes" aria-hidden="true"><span data-step-marker="diagnose"></span><span data-step-marker="map"></span><span data-step-marker="build"></span><span data-step-marker="compound"></span></div>
         <div class="pipeline-steps">
-          <article><span>01</span><h3>Diagnose</h3><p>Find where growth is currently leaking, slowing, or being misread.</p></article>
-          <article><span>02</span><h3>Map</h3><p>Prioritise the SEO, content, and conversion moves that deserve attention first.</p></article>
-          <article><span>03</span><h3>Build</h3><p>Ship pages, assets, systems, and tests with partner-level context.</p></article>
-          <article><span>04</span><h3>Compound</h3><p>Turn signal into a repeatable operating rhythm your team can keep using.</p></article>
+          <button class="pipeline-step" type="button" data-step="diagnose" aria-pressed="true" aria-controls="process-detail-panel">
+            <span class="pipeline-step-number">01</span><span class="pipeline-step-title">Diagnose</span><span class="pipeline-step-copy">Find where growth is currently leaking, slowing, or being misread.</span>
+            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
+          </button>
+          <button class="pipeline-step" type="button" data-step="map" aria-pressed="false" aria-controls="process-detail-panel">
+            <span class="pipeline-step-number">02</span><span class="pipeline-step-title">Map</span><span class="pipeline-step-copy">Prioritise the SEO, content, and conversion moves that deserve attention first.</span>
+            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
+          </button>
+          <button class="pipeline-step" type="button" data-step="build" aria-pressed="false" aria-controls="process-detail-panel">
+            <span class="pipeline-step-number">03</span><span class="pipeline-step-title">Build</span><span class="pipeline-step-copy">Ship pages, assets, systems, and tests with partner-level context.</span>
+            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
+          </button>
+          <button class="pipeline-step" type="button" data-step="compound" aria-pressed="false" aria-controls="process-detail-panel">
+            <span class="pipeline-step-number">04</span><span class="pipeline-step-title">Compound</span><span class="pipeline-step-copy">Turn signal into a repeatable operating rhythm your team can keep using.</span>
+            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
+          </button>
+        </div>
+        <div class="process-detail-panel" id="process-detail-panel" aria-live="polite">
+          <h3 id="process-detail-title">Diagnose the constraint</h3>
+          <p id="process-detail-text">We inspect search visibility, buyer journeys, page performance, and offer clarity to find the few constraints that are actually slowing growth.</p>
         </div>
       </div>
       <div class="section-actions reveal">
@@ -237,9 +274,29 @@
         <h2 id="home-cta-title">We will show you exactly where your growth is being left on the table.</h2>
         <p>Use the contact page to share what feels stuck, slow, or underperforming. We will map the clearest next moves across search, content, and conversion.</p>
       </div>
-      <div class="cta-panel-actions">
-        <a class="primary-cta growth-trigger" href="contact.html"><span>Book a Growth Call</span><span aria-hidden="true">-></span></a>
-        <a class="secondary-cta" href="services.html">Review services</a>
+      <div class="cta-panel-actions contact-form-actions">
+        <form class="bottom-contact-form" data-bottom-contact-form novalidate>
+          <p>Let us reach out to you</p>
+          <div class="bottom-contact-fields">
+            <label>
+              <span class="visually-hidden">Email address</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Service required</span>
+              <select name="service" required>
+                <option value="">Service required</option>
+                <option value="SEO systems">SEO systems</option>
+                <option value="Content engines">Content engines</option>
+                <option value="Conversion design">Conversion design</option>
+                <option value="Full growth system">Full growth system</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </label>
+            <button class="primary-cta" type="submit"><span>Request contact</span><span aria-hidden="true">-></span></button>
+          </div>
+          <p class="form-status" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -253,6 +310,28 @@
       <h2 id="modalName">Client name</h2>
       <p id="modalRole"></p>
       <blockquote id="modalQuote"></blockquote>
+    </article>
+  </div>
+
+  <div class="modal audit-modal" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="auditModalTitle" aria-hidden="true" hidden>
+    <div class="modal-bg" data-close-audit-modal></div>
+    <article class="modal-panel audit-modal-panel">
+      <button type="button" class="modal-close" data-close-audit-modal>Close</button>
+      <p class="eyebrow">Free website audit</p>
+      <h2 id="auditModalTitle">Where should we send the audit?</h2>
+      <p class="audit-modal-copy">We will map the first opportunities for <strong data-audit-website>your website</strong> and show you where growth is being left on the table.</p>
+      <form class="audit-email-form" data-audit-email-form novalidate>
+        <label>
+          <span>Website</span>
+          <input data-audit-website-input name="website" type="text" inputmode="url" autocomplete="url" placeholder="www.example.com" required>
+        </label>
+        <label>
+          <span>Email address</span>
+          <input data-audit-email type="email" autocomplete="email" placeholder="you@company.com" required>
+        </label>
+        <button class="primary-cta" type="submit"><span>Send my audit path</span><span aria-hidden="true">-></span></button>
+        <p class="form-status" data-audit-status role="status"></p>
+      </form>
     </article>
   </div>
 
@@ -286,6 +365,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=interaction-refine-20260420"></script>
 </body>
 </html>
