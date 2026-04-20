@@ -348,27 +348,46 @@
     });
   }
 
-  function setupKpiCards() {
-    document.querySelectorAll(".kpi-orbit").forEach((orbit) => {
-      const cards = Array.from(orbit.querySelectorAll(".kpi-3d-card"));
-      if (!cards.length) return;
+  function setupHyperText() {
+    if (reduceMotion) return;
 
-      function clearActive() {
-        orbit.classList.remove("kpi-card-active");
-        cards.forEach((card) => card.classList.remove("kpi-card-active"));
+    const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,+-/";
+
+    document.querySelectorAll("[data-hyper-text]").forEach((element) => {
+      const target = element.querySelector("[data-hyper-text-target]");
+      const original = element.dataset.hyperText || target?.textContent || "";
+      if (!target || !original) return;
+
+      let frame = 0;
+      let rafId = 0;
+
+      function animate() {
+        window.cancelAnimationFrame(rafId);
+        frame = 0;
+        const totalFrames = 22;
+
+        function tick() {
+          const progress = frame / totalFrames;
+          target.textContent = original
+            .split("")
+            .map((char, index) => {
+              if (char === " ") return " ";
+              return index / original.length < progress
+                ? char
+                : glyphs[Math.floor(Math.random() * glyphs.length)];
+            })
+            .join("");
+
+          frame += 1;
+          if (frame <= totalFrames) rafId = window.requestAnimationFrame(tick);
+          else target.textContent = original;
+        }
+
+        tick();
       }
 
-      function activateCard(card) {
-        orbit.classList.add("kpi-card-active");
-        cards.forEach((item) => item.classList.toggle("kpi-card-active", item === card));
-      }
-
-      cards.forEach((card) => {
-        card.addEventListener("pointerenter", () => activateCard(card));
-        card.addEventListener("pointerleave", clearActive);
-        card.addEventListener("focus", () => activateCard(card));
-        card.addEventListener("blur", clearActive);
-      });
+      element.addEventListener("pointerenter", animate);
+      element.addEventListener("focus", animate);
     });
   }
 
@@ -585,7 +604,7 @@
   setupAuditEntry();
   setupTiltCards();
   setupServiceBackdrop();
-  setupKpiCards();
+  setupHyperText();
   setupProcessSteps();
   setupBottomContactForm();
   setupRevealObserver();
