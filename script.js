@@ -348,6 +348,30 @@
     });
   }
 
+  function setupKpiCards() {
+    document.querySelectorAll(".kpi-orbit").forEach((orbit) => {
+      const cards = Array.from(orbit.querySelectorAll(".kpi-3d-card"));
+      if (!cards.length) return;
+
+      function clearActive() {
+        orbit.classList.remove("kpi-card-active");
+        cards.forEach((card) => card.classList.remove("kpi-card-active"));
+      }
+
+      function activateCard(card) {
+        orbit.classList.add("kpi-card-active");
+        cards.forEach((item) => item.classList.toggle("kpi-card-active", item === card));
+      }
+
+      cards.forEach((card) => {
+        card.addEventListener("pointerenter", () => activateCard(card));
+        card.addEventListener("pointerleave", clearActive);
+        card.addEventListener("focus", () => activateCard(card));
+        card.addEventListener("blur", clearActive);
+      });
+    });
+  }
+
   function setupProcessSteps() {
     const detailCopy = {
       diagnose: {
@@ -561,6 +585,7 @@
   setupAuditEntry();
   setupTiltCards();
   setupServiceBackdrop();
+  setupKpiCards();
   setupProcessSteps();
   setupBottomContactForm();
   setupRevealObserver();
