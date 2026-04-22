@@ -180,6 +180,7 @@
     const urlInput = document.querySelector("[data-audit-url-input]");
     const visualTrigger = document.querySelector(".hero-visual-trigger[data-audit-open]");
     const auditEntry = document.querySelector(".hero-audit-entry");
+    const auditPopupClose = document.querySelector("[data-audit-popup-close]");
 
     setupTypingPlaceholder(urlInput);
 
@@ -192,6 +193,7 @@
     const websiteInput = modal.querySelector("[data-audit-website-input]");
     let previousFocus = null;
     let activeWebsite = "";
+    const auditPopupKey = "jora-audit-popup-dismissed";
 
     function normalizeWebsite(value) {
       const raw = String(value || "").trim();
@@ -224,6 +226,40 @@
       modal.setAttribute("aria-hidden", "false");
       document.body.classList.add("no-scroll");
       window.setTimeout(() => (activeWebsite ? emailInput : websiteInput)?.focus(), 0);
+    }
+
+    function isAuditPopupDismissed() {
+      try {
+        return window.sessionStorage.getItem(auditPopupKey) === "true";
+      } catch (error) {
+        return false;
+      }
+    }
+
+    function dismissAuditPopup(persist) {
+      if (!auditEntry) return;
+
+      if (persist) {
+        try {
+          window.sessionStorage.setItem(auditPopupKey, "true");
+        } catch (error) {
+          // Session persistence is progressive enhancement only.
+        }
+      }
+
+      auditEntry.classList.remove("is-visible");
+      window.setTimeout(() => {
+        auditEntry.hidden = true;
+      }, reduceMotion ? 0 : 900);
+    }
+
+    function showAuditPopup() {
+      if (!auditEntry || isAuditPopupDismissed()) return;
+
+      auditEntry.hidden = false;
+      window.setTimeout(() => {
+        auditEntry.classList.add("is-visible");
+      }, reduceMotion ? 0 : 80);
     }
 
     function closeAuditModal() {
@@ -267,8 +303,10 @@
     urlInput?.addEventListener("input", () => urlInput.setCustomValidity(""));
     urlForm?.addEventListener("submit", submitUrlForm);
     visualTrigger?.addEventListener("click", handleVisualTriggerClick);
+    auditPopupClose?.addEventListener("click", () => dismissAuditPopup(true));
     bindGrowthHover(visualTrigger);
     bindGrowthHover(auditEntry);
+    window.setTimeout(showAuditPopup, reduceMotion ? 0 : 1600);
 
     emailForm?.addEventListener("submit", (event) => {
       event.preventDefault();
