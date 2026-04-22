@@ -386,49 +386,6 @@
     });
   }
 
-  function setupHyperText() {
-    if (reduceMotion) return;
-
-    const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,+-/";
-
-    document.querySelectorAll("[data-hyper-text]").forEach((element) => {
-      const target = element.querySelector("[data-hyper-text-target]");
-      const original = element.dataset.hyperText || target?.textContent || "";
-      if (!target || !original) return;
-
-      let frame = 0;
-      let rafId = 0;
-
-      function animate() {
-        window.cancelAnimationFrame(rafId);
-        frame = 0;
-        const totalFrames = 22;
-
-        function tick() {
-          const progress = frame / totalFrames;
-          target.textContent = original
-            .split("")
-            .map((char, index) => {
-              if (char === " ") return " ";
-              return index / original.length < progress
-                ? char
-                : glyphs[Math.floor(Math.random() * glyphs.length)];
-            })
-            .join("");
-
-          frame += 1;
-          if (frame <= totalFrames) rafId = window.requestAnimationFrame(tick);
-          else target.textContent = original;
-        }
-
-        tick();
-      }
-
-      element.addEventListener("pointerenter", animate);
-      element.addEventListener("focus", animate);
-    });
-  }
-
   function setupProcessSteps() {
     const detailCopy = {
       diagnose: {
@@ -642,7 +599,6 @@
   setupAuditEntry();
   setupTiltCards();
   setupServiceBackdrop();
-  setupHyperText();
   setupProcessSteps();
   setupBottomContactForm();
   setupRevealObserver();
