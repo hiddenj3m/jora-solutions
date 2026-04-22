@@ -886,7 +886,8 @@ button { color: inherit; }
 .hero-audit-entry {
   position: fixed;
   left: 50%;
-  bottom: clamp(1rem, 4vh, 2rem);
+  top: 50%;
+  bottom: auto;
   z-index: 220;
   width: min(34rem, calc(100vw - 2rem));
   min-width: 22rem;
@@ -903,7 +904,7 @@ button { color: inherit; }
     inset 0 1px 0 rgba(255,255,255,0.13);
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, 1.4rem) scale(0.97);
+  transform: translate(-50%, calc(-50% + 1.4rem)) scale(0.97);
   transition: opacity 1100ms ease, transform 1100ms cubic-bezier(.2,.78,.16,1), border-color 320ms ease, box-shadow 320ms ease;
   backdrop-filter: blur(24px);
 }
@@ -916,7 +917,7 @@ button { color: inherit; }
 .hero-audit-entry.is-visible {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, 0) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .hero-audit-entry p {
@@ -1284,16 +1285,17 @@ h1, h2 {
 h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
 
 #hero-title {
-  line-height: 1.06;
+  line-height: 1;
   padding-bottom: 0.04em;
   overflow: visible;
 }
 
 #hero-title .aurora-text {
-  line-height: 1.25;
-  padding-bottom: 0.14em;
-  margin-bottom: -0.08em;
-  vertical-align: -0.08em;
+  display: inline-block;
+  line-height: 1.18;
+  padding: 0 0.015em 0.18em;
+  margin: -0.04em 0 -0.18em;
+  vertical-align: -0.045em;
   overflow: visible;
 }
 
