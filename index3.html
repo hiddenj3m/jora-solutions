@@ -14,9 +14,9 @@
   <header class="site-header">
     <a class="brand" href="index3.html" aria-label="Jora Solutions home">
       <span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span>
-      <span>Jora Solutions</span>
+      <span class="brand-wordmark">Jora Solutions</span>
     </a>
-    <nav aria-label="Primary">
+    <nav class="index3-header-nav" aria-label="Primary">
       <a data-page-link="home" href="index3.html">Home</a>
       <a data-page-link="services" href="services.html">Services</a>
       <a data-page-link="web" href="web-design.html">Web Design</a>
@@ -26,14 +26,49 @@
       <a data-page-link="about" href="about.html">About</a>
       <a data-page-link="contact" href="contact.html">Contact</a>
     </nav>
-    <div class="header-actions">
+    <div class="header-actions index3-header-actions">
       <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
         <span class="theme-toggle-track" aria-hidden="true"><span></span></span>
         <span class="theme-toggle-text">Dark</span>
       </button>
       <a class="nav-cta" href="contact.html">Growth plan</a>
     </div>
+    <button class="index3-menu-toggle" type="button" data-index3-menu-toggle aria-label="Open navigation" aria-controls="index3-drawer" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
   </header>
+
+  <div class="index3-drawer-shell" data-index3-drawer-shell hidden>
+    <button class="index3-drawer-overlay" type="button" data-index3-drawer-overlay aria-label="Close navigation"></button>
+    <aside class="index3-drawer" id="index3-drawer" data-index3-drawer aria-label="Mobile navigation" aria-hidden="true">
+      <div class="index3-drawer-top">
+        <a class="brand index3-drawer-brand" href="index3.html" aria-label="Jora Solutions home">
+          <span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span>
+          <span class="brand-wordmark">Jora Solutions</span>
+        </a>
+        <button class="index3-drawer-close" type="button" data-index3-drawer-close aria-label="Close navigation">Close</button>
+      </div>
+      <nav class="index3-drawer-nav" aria-label="Mobile">
+        <a data-page-link="home" href="index3.html">Home</a>
+        <a data-page-link="services" href="services.html">Services</a>
+        <a data-page-link="web" href="web-design.html">Web Design</a>
+        <a data-page-link="crm" href="crm-integrations.html">CRM & Integrations</a>
+        <a data-page-link="seo" href="seo.html">SEO</a>
+        <a data-page-link="results" href="results.html">Results</a>
+        <a data-page-link="about" href="about.html">About</a>
+        <a data-page-link="contact" href="contact.html">Contact</a>
+      </nav>
+      <div class="index3-drawer-actions">
+        <button class="theme-toggle index3-drawer-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle-track" aria-hidden="true"><span></span></span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+        <a class="nav-cta" href="contact.html">Growth plan</a>
+      </div>
+    </aside>
+  </div>
 
   <main id="main">
     <section class="hero index3-hero" aria-labelledby="index3-hero-title">
@@ -157,6 +192,7 @@
           <span class="index3-jora-jo">JO<span class="index3-jora-suffix index3-jora-sh">SH</span></span>
           <span class="index3-jora-ra">RA<span class="index3-jora-suffix index3-jora-hul">HUL</span></span>
         </div>
+        <p class="index3-jora-definition" aria-hidden="true">jōrā (जोरा). — n. Authority, power of endurance.</p>
         <figure class="index3-jora-photo index3-jora-photo-right" aria-hidden="true">
           <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="">
           <figcaption>BIO</figcaption>
@@ -191,6 +227,21 @@
       <div class="section-actions reveal">
         <a class="secondary-cta" href="about.html">Meet the partners</a>
         <a class="secondary-cta" href="contact.html">Start a direct conversation</a>
+      </div>
+    </section>
+
+    <section class="section index3-brand-meaning" aria-labelledby="index3-brand-meaning-title">
+      <div class="index3-brand-meaning-grid reveal">
+        <div class="index3-brand-meaning-head">
+          <p class="eyebrow">Why the name matters</p>
+          <h2 id="index3-brand-meaning-title">Jora is meant to stand for calm authority, long endurance, and strength that does not need to perform for attention.</h2>
+          <p class="index3-brand-meaning-lead">Those meanings are not decorative. They shape the standard we bring into the work, the way we speak to the market, and the way we stay steady through the slower parts of real growth.</p>
+        </div>
+        <div class="index3-brand-meaning-copy">
+          <p>Authority matters because a website has to make trust arrive faster. Positioning has to feel grounded. The offer has to hold its weight. The message has to sound like it belongs in the category instead of sounding like another business trying to appear bigger than it is.</p>
+          <p>Endurance matters because sustainable SEO, content systems, conversion design, and operational fixes do not compound on short-term energy. They compound when the structure is right, the discipline stays intact, and the partner doing the work is still present when the challenge becomes less glamorous and more demanding.</p>
+          <p>That is what Jora is supposed to represent. We bring that authority into the website, endure the hard parts of long-term sustainable SEO, and stay close enough to carry responsibility through the work instead of stepping back once the first wave of activity is done.</p>
+        </div>
       </div>
     </section>
 
