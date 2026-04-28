@@ -204,9 +204,9 @@ button { color: inherit; }
 }
 
 .site-header .brand-logo {
-  width: 2.35rem;
-  height: 2.35rem;
-  flex-basis: 2.35rem;
+  width: clamp(4.1rem, 5.6vw, 4.7rem);
+  height: clamp(4.1rem, 5.6vw, 4.7rem);
+  flex-basis: clamp(4.1rem, 5.6vw, 4.7rem);
 }
 
 .brand-logo img {
@@ -361,6 +361,7 @@ button { color: inherit; }
 
 .nav-cta::after {
   content: "→";
+  content: "\2192";
   display: grid;
   place-items: center;
   width: 1.42rem;
@@ -4464,15 +4465,15 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
   .bubble-cro { transform: translate(-7.4rem, 7.2rem); }
   .hero-cta-row { justify-content: center; }
   .page-hero {
-    padding-top: 8.45rem;
+    padding-top: 9.35rem;
   }
   .seo-hero {
     min-height: auto;
-    padding-top: 8.45rem;
+    padding-top: 9.35rem;
   }
   .service-hero {
     min-height: auto;
-    padding-top: 8.45rem;
+    padding-top: 9.35rem;
   }
   .seo-hero-copy {
     text-align: center;
@@ -4567,16 +4568,16 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
       flex-basis: 1.5rem;
     }
   .site-header .brand-logo {
-      width: 2rem;
-      height: 2rem;
-      flex-basis: 2rem;
+      width: clamp(3.55rem, 13vw, 4rem);
+      height: clamp(3.55rem, 13vw, 4rem);
+      flex-basis: clamp(3.55rem, 13vw, 4rem);
     }
   .footer-brand .brand-logo {
       width: 1.7rem;
       height: 1.7rem;
       flex-basis: 1.7rem;
   }
-  .hero { min-height: 82svh; padding-top: 7.15rem; }
+  .hero { min-height: 82svh; padding-top: 8.75rem; }
   .hero-copy { margin-top: 0; }
   .hero-growth-visual {
     min-height: 19rem;
@@ -4625,15 +4626,15 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
   .chart-bubble-traffic { transform: translate(5.5rem, -2.5rem); }
   .chart-bubble-revenue { transform: translate(-4.9rem, 6.8rem); }
   .page-hero {
-    padding-top: 7.4rem;
+    padding-top: 8.65rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
   .seo-hero {
-    padding: 7.4rem 1rem 3.5rem;
+    padding: 8.65rem 1rem 3.5rem;
   }
   .service-hero {
-    padding: 7.4rem 1rem 3.5rem;
+    padding: 8.65rem 1rem 3.5rem;
   }
   .service-mock {
     min-height: 31rem;
@@ -4770,7 +4771,7 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
 
   .case-report-hero {
     min-height: auto;
-    padding-top: 8.45rem;
+    padding-top: 9.35rem;
   }
 
   .case-report-layout.reverse .case-report-section {
@@ -4814,7 +4815,7 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
   }
 
   .case-report-hero {
-    padding-top: 7.8rem;
+    padding-top: 8.75rem;
   }
 
   .case-hero-actions {
