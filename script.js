@@ -213,6 +213,7 @@
     function openAuditModal(website) {
       activeWebsite = normalizeWebsite(website) || "";
       previousFocus = document.activeElement;
+      hideAuditPopup();
 
       if (websiteLabel) websiteLabel.textContent = activeWebsite || "your website";
       if (websiteInput) {
@@ -253,8 +254,15 @@
       }, reduceMotion ? 0 : 900);
     }
 
+    function hideAuditPopup() {
+      if (!auditEntry) return;
+
+      auditEntry.classList.remove("is-visible");
+      auditEntry.hidden = true;
+    }
+
     function showAuditPopup() {
-      if (!auditEntry || isAuditPopupDismissed()) return;
+      if (!auditEntry || isAuditPopupDismissed() || !modal.hidden) return;
 
       auditEntry.hidden = false;
       window.setTimeout(() => {
