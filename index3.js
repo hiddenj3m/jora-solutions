@@ -142,10 +142,10 @@
           ? clamp(viewportWidth * 0.138, 78, 160)
           : clamp(viewportWidth * 0.19, 132, 292);
       const vertical = isMobile
-        ? clamp(viewportHeight * 0.075, 26, 52)
+        ? clamp(viewportHeight * 0.045, 18, 34)
         : isCompact
-          ? clamp(viewportHeight * 0.095, 40, 76)
-          : clamp(viewportHeight * 0.13, 62, 118);
+          ? clamp(viewportHeight * 0.068, 32, 58)
+          : clamp(viewportHeight * 0.082, 42, 78);
       const spread = isMobile
         ? clamp(viewportWidth * 0.01, 4, 10)
         : isCompact

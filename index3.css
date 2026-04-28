@@ -35,6 +35,13 @@ body.index3-page main {
   animation: index3Aurora 9s linear infinite;
 }
 
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .index3-aurora-text {
+    background-image: none;
+    color: var(--blue);
+  }
+}
+
 @keyframes index3Aurora {
   0% {
     background-position: 0% 50%;
@@ -405,6 +412,10 @@ body.index3-page main {
   inset: 6%;
 }
 
+body.index3-page > .hero-audit-entry {
+  z-index: 260;
+}
+
 .index3-page .hero.growth-active .index3-video-shell {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.12),
@@ -466,6 +477,7 @@ body.index3-page main {
   padding-left: clamp(1rem, 2vw, 1.8rem);
 }
 
+.index3-client-marquee-track a,
 .index3-client-marquee-track span {
   display: inline-flex;
   align-items: center;
@@ -481,6 +493,17 @@ body.index3-page main {
   letter-spacing: clamp(0.12em, 0.3vw, 0.22em);
   text-transform: uppercase;
   white-space: nowrap;
+  text-decoration: none;
+  transition: border-color 220ms ease, color 220ms ease, background 220ms ease, transform 220ms ease;
+}
+
+.index3-client-marquee-track a:hover,
+.index3-client-marquee-track a:focus-visible {
+  border-color: rgba(114, 215, 255, 0.42);
+  background: rgba(114, 215, 255, 0.12);
+  color: var(--ink);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 @keyframes index3Marquee {
@@ -496,6 +519,8 @@ body.index3-page main {
   position: relative;
   min-height: 132svh;
   margin-top: -3.35rem;
+  --josh-align-x: clamp(3rem, 7vw, 7rem);
+  --rahul-align-x: clamp(-2.7rem, -2vw, -0.35rem);
 }
 
 .index3-jora-sticky {
@@ -554,23 +579,6 @@ body.index3-page main {
   transform: scale(1.12);
 }
 
-.index3-jora-photo figcaption {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  z-index: 1;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: rgba(245, 248, 255, 0.92);
-  font-size: clamp(3.8rem, 7vw, 7rem);
-  font-weight: 860;
-  letter-spacing: 0.16em;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
-  transform: translate(-50%, -50%);
-}
-
 .index3-jora-wordmark {
   position: relative;
   width: min(calc(100vw - 2rem), 52rem);
@@ -607,11 +615,11 @@ body.index3-page main {
 }
 
 .index3-jora-scene.is-ready .index3-jora-jo {
-  transform: translate3d(calc(-100% - var(--jo-x, 0px)), var(--jo-y, 0px), 0);
+  transform: translate3d(calc(-100% - var(--jo-x, 0px) - var(--josh-align-x, 0px)), var(--jo-y, 0px), 0);
 }
 
 .index3-jora-scene.is-ready .index3-jora-ra {
-  transform: translate3d(var(--ra-x, 0px), var(--ra-y, 0px), 0);
+  transform: translate3d(calc(var(--ra-x, 0px) + var(--rahul-align-x, 0px)), var(--ra-y, 0px), 0);
 }
 
 .index3-jora-suffix {
@@ -1000,13 +1008,41 @@ body.index3-page main {
   background: rgba(255, 255, 255, 0.68);
 }
 
-[data-theme="light"] .index3-jora-photo figcaption {
-  color: rgba(7, 17, 31, 0.76);
-  text-shadow: 0 18px 40px rgba(255, 255, 255, 0.32);
-}
-
 [data-theme="light"] .index3-jora-definition {
   color: rgba(7, 17, 31, 0.54);
+}
+
+[data-theme="light"] .index3-aurora-text {
+  background-image: linear-gradient(120deg, #005f99 0%, #2253d8 42%, #7b2fcf 72%, #004f91 100%);
+  filter: drop-shadow(0 0 16px rgba(37, 99, 235, 0.14));
+}
+
+[data-theme="light"] .index3-page .hero.growth-active .index3-hero-video {
+  opacity: 0.48;
+  filter: saturate(0.86) contrast(1.02) brightness(0.94);
+}
+
+[data-theme="light"] .index3-client-marquee {
+  border-top-color: rgba(7, 17, 31, 0.08);
+  border-bottom-color: rgba(7, 17, 31, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(241, 247, 255, 0.62)),
+    radial-gradient(circle at center, rgba(0, 119, 182, 0.08), transparent 72%);
+}
+
+[data-theme="light"] .index3-jora-wordmark {
+  color: rgba(7, 17, 31, 0.86);
+  text-shadow: 0 18px 46px rgba(255, 255, 255, 0.46);
+}
+
+[data-theme="light"] .index3-jora-photo::after {
+  background:
+    linear-gradient(180deg, rgba(248, 252, 255, 0.04), rgba(248, 252, 255, 0.42)),
+    radial-gradient(circle at top, rgba(0, 119, 182, 0.12), transparent 52%);
+}
+
+[data-theme="light"] .index3-jora-photo img {
+  filter: blur(10px) saturate(0.92) contrast(0.98) brightness(1.02);
 }
 
 [data-theme="light"] .index3-jora-photo,
@@ -1018,15 +1054,32 @@ body.index3-page main {
     rgba(255, 255, 255, 0.62);
 }
 
+[data-theme="light"] .index3-client-marquee-track a,
 [data-theme="light"] .index3-client-marquee-track span {
   border-color: rgba(7, 17, 31, 0.10);
   background: rgba(255, 255, 255, 0.72);
   color: rgba(7, 17, 31, 0.64);
 }
 
+[data-theme="light"] .index3-client-marquee-track a:hover,
+[data-theme="light"] .index3-client-marquee-track a:focus-visible {
+  border-color: rgba(0, 119, 182, 0.26);
+  background: rgba(0, 119, 182, 0.08);
+  color: rgba(7, 17, 31, 0.92);
+}
+
 [data-theme="light"] .index3-proof-media {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.78)),
+    var(--index3-proof-media) center / cover;
   opacity: 0.28;
   filter: blur(16px) saturate(1.02);
+}
+
+[data-theme="light"] .index3-proof-card a::after {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(0, 119, 182, 0.11), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.68));
 }
 
 [data-theme="light"] .index3-brand-meaning-lead {
@@ -1044,6 +1097,11 @@ body.index3-page main {
 }
 
 @media (max-width: 960px) {
+  .index3-jora-scene {
+    --josh-align-x: clamp(1.4rem, 5vw, 3rem);
+    --rahul-align-x: clamp(-1.2rem, -1.4vw, -0.35rem);
+  }
+
   .index3-page .site-header > .index3-header-nav,
   .index3-page .site-header > .index3-header-actions {
     display: none;
@@ -1167,6 +1225,11 @@ body.index3-page main {
 }
 
 @media (max-width: 620px) {
+  .index3-jora-scene {
+    --josh-align-x: 0.55rem;
+    --rahul-align-x: -0.55rem;
+  }
+
   .index3-page .hero {
     padding-top: 6.25rem;
     padding-bottom: 2rem;
@@ -1209,6 +1272,7 @@ body.index3-page main {
     display: none;
   }
 
+  .index3-client-marquee-track a,
   .index3-client-marquee-track span {
     min-width: 0;
     max-width: 100%;
@@ -1275,11 +1339,6 @@ body.index3-page main {
 
   .index3-jora-photo-right {
     right: -1rem;
-  }
-
-  .index3-jora-photo figcaption {
-    font-size: 1.85rem;
-    letter-spacing: 0.14em;
   }
 
   .index3-jora-wordmark {
