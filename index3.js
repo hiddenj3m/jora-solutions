@@ -11,6 +11,7 @@
     const closeButton = document.querySelector("[data-index3-drawer-close]");
     const headerThemeToggle = document.querySelector(".site-header .theme-toggle");
     const drawerThemeToggle = document.querySelector(".index3-drawer-theme-toggle");
+    const drawerBreakpoint = 1120;
 
     if (!shell || !panel || !menuButton) return;
 
@@ -80,7 +81,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 960 && shell.classList.contains("is-open")) {
+      if (window.innerWidth > drawerBreakpoint && shell.classList.contains("is-open")) {
         setOpen(false);
       }
     });
@@ -137,17 +138,17 @@
       const isCompact = viewportWidth <= 960;
 
       const lateral = isMobile
-        ? clamp(viewportWidth * 0.102, 38, 82)
+        ? clamp(viewportWidth * 0.072, 22, 52)
         : isCompact
-          ? clamp(viewportWidth * 0.138, 78, 160)
+          ? clamp(viewportWidth * 0.116, 58, 132)
           : clamp(viewportWidth * 0.19, 132, 292);
       const vertical = isMobile
-        ? clamp(viewportHeight * 0.045, 18, 34)
+        ? clamp(viewportHeight * 0.034, 12, 26)
         : isCompact
           ? clamp(viewportHeight * 0.068, 32, 58)
           : clamp(viewportHeight * 0.082, 42, 78);
       const spread = isMobile
-        ? clamp(viewportWidth * 0.01, 4, 10)
+        ? clamp(viewportWidth * 0.004, 0, 4)
         : isCompact
           ? clamp(viewportWidth * 0.013, 8, 16)
           : clamp(viewportWidth * 0.018, 10, 26);

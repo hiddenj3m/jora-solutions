@@ -1,5 +1,4 @@
 body.index3-page {
-  --rank-banner-height: 0px;
   --body-bg:
     radial-gradient(circle at 14% 8%, rgba(56, 189, 248, 0.18), transparent 34rem),
     radial-gradient(circle at 86% 4%, rgba(244, 216, 166, 0.10), transparent 28rem),
@@ -60,8 +59,9 @@ body.index3-page main {
 }
 
 .index3-page .site-header .brand-logo {
-  width: clamp(2.45rem, 4vw, 3rem);
-  height: clamp(2.45rem, 4vw, 3rem);
+  width: clamp(4.85rem, 7vw, 6rem);
+  height: clamp(4.85rem, 7vw, 6rem);
+  flex: 0 0 clamp(4.85rem, 7vw, 6rem);
 }
 
 .index3-page .site-header .brand-wordmark {
@@ -75,6 +75,7 @@ body.index3-page main {
   height: 3.1rem;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 0.32rem;
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -215,7 +216,7 @@ body.index3-page main {
   align-items: center;
   column-gap: clamp(2rem, 5vw, 5rem);
   min-height: 90svh;
-  padding: 7.1rem clamp(1rem, 5vw, 5rem) 2.4rem;
+  padding: clamp(10.7rem, 12vw, 12.25rem) clamp(1rem, 5vw, 5rem) 2.4rem;
   overflow: hidden;
   isolation: isolate;
 }
@@ -479,10 +480,13 @@ body.index3-page > .hero-audit-entry {
 
 .index3-client-marquee-track a,
 .index3-client-marquee-track span {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: clamp(9.25rem, 13vw, 15rem);
+  min-height: 3.15rem;
   padding: 0.85rem 1.35rem;
   border: 1px solid rgba(163, 190, 255, 0.14);
   border-radius: 999px;
@@ -494,6 +498,8 @@ body.index3-page > .hero-audit-entry {
   text-transform: uppercase;
   white-space: nowrap;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
   transition: border-color 220ms ease, color 220ms ease, background 220ms ease, transform 220ms ease;
 }
 
@@ -519,8 +525,8 @@ body.index3-page > .hero-audit-entry {
   position: relative;
   min-height: 132svh;
   margin-top: -3.35rem;
-  --josh-align-x: clamp(3rem, 7vw, 7rem);
-  --rahul-align-x: clamp(-2.7rem, -2vw, -0.35rem);
+  --josh-align-x: clamp(1.8rem, 4.5vw, 4.6rem);
+  --rahul-align-x: clamp(-2.2rem, -3.2vw, -1.15rem);
 }
 
 .index3-jora-sticky {
@@ -539,18 +545,20 @@ body.index3-page > .hero-audit-entry {
 .index3-jora-photo {
   position: absolute;
   top: 44%;
-  width: clamp(16rem, 24vw, 28rem);
-  height: clamp(19rem, 36vw, 32rem);
+  width: clamp(16rem, 26vw, 30rem);
+  height: clamp(16rem, 26vw, 30rem);
   overflow: hidden;
   border: 0;
-  border-radius: 0;
+  border-radius: 50%;
   background: transparent;
   box-shadow: none;
-  opacity: calc(var(--photo-opacity, 0) * 0.96);
+  opacity: calc(var(--photo-opacity, 0) * 0.82);
   transform: translate3d(0, calc(-50% + ((1 - var(--photo-opacity, 0)) * 42px)), 0) scale(calc(0.92 + (var(--photo-opacity, 0) * 0.08)));
   transition: opacity 100ms linear, transform 100ms linear;
   z-index: 1;
   pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle, #000 0 48%, rgba(0, 0, 0, 0.72) 62%, transparent 82%);
+  mask-image: radial-gradient(circle, #000 0 48%, rgba(0, 0, 0, 0.72) 62%, transparent 82%);
 }
 
 .index3-jora-photo::after {
@@ -558,7 +566,8 @@ body.index3-page > .hero-audit-entry {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(4, 11, 24, 0.14), rgba(4, 11, 24, 0.66)),
+    radial-gradient(circle at center, transparent 0 48%, rgba(2, 5, 11, 0.24) 62%, rgba(2, 5, 11, 0.82) 86%),
+    linear-gradient(180deg, rgba(4, 11, 24, 0.10), rgba(4, 11, 24, 0.62)),
     radial-gradient(circle at top, rgba(91, 120, 255, 0.22), transparent 52%);
 }
 
@@ -575,8 +584,8 @@ body.index3-page > .hero-audit-entry {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: blur(10px) saturate(0.84) contrast(1.02) brightness(0.74);
-  transform: scale(1.12);
+  filter: blur(8px) saturate(0.82) contrast(1.02) brightness(0.72);
+  transform: scale(1.16);
 }
 
 .index3-jora-wordmark {
@@ -624,8 +633,10 @@ body.index3-page > .hero-audit-entry {
 
 .index3-jora-suffix {
   position: absolute;
-  top: 0.04em;
+  top: 0;
   left: calc(100% - 0.04em);
+  display: inline-block;
+  line-height: inherit;
   opacity: var(--suffix-opacity, 0);
   filter: blur(calc((1 - var(--suffix-opacity, 0)) * 8px));
   transition: opacity 120ms linear, filter 120ms linear;
@@ -792,6 +803,67 @@ body.index3-page > .hero-audit-entry {
 
 .index3-results-proof .section-actions {
   grid-column: 1 / -1;
+}
+
+.index3-results-proof .kpi-orbit {
+  isolation: isolate;
+}
+
+.kpi-contact-cta {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(0.95rem, 2.8vw, 2.4rem);
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.72rem;
+  min-height: 3.15rem;
+  min-width: min(100%, 17.5rem);
+  padding: 0 1.35rem;
+  border: 1px solid rgba(114, 215, 255, 0.34);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.045)),
+    radial-gradient(circle at 18% 10%, rgba(114, 215, 255, 0.28), transparent 42%),
+    radial-gradient(circle at 86% 22%, rgba(244, 216, 166, 0.18), transparent 48%),
+    rgba(2, 5, 11, 0.62);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 860;
+  text-decoration: none;
+  text-align: center;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 0 42px rgba(56, 189, 248, 0.13);
+  transform: translateX(-50%);
+  backdrop-filter: blur(20px);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+.kpi-contact-cta span {
+  color: var(--cyan);
+  transition: transform 220ms ease;
+}
+
+.kpi-contact-cta:hover,
+.kpi-contact-cta:focus-visible {
+  border-color: rgba(114, 215, 255, 0.62);
+  background:
+    linear-gradient(135deg, rgba(54, 84, 255, 0.38), rgba(114, 215, 255, 0.15)),
+    rgba(2, 5, 11, 0.72);
+  box-shadow:
+    0 28px 82px rgba(54, 84, 255, 0.28),
+    0 0 0 1px rgba(114, 215, 255, 0.14) inset,
+    0 0 58px rgba(56, 189, 248, 0.18);
+  outline: none;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.kpi-contact-cta:hover span,
+.kpi-contact-cta:focus-visible span {
+  transform: translateX(0.16rem);
 }
 
 .index3-testimonials .section-head,
@@ -1037,6 +1109,7 @@ body.index3-page > .hero-audit-entry {
 
 [data-theme="light"] .index3-jora-photo::after {
   background:
+    radial-gradient(circle at center, transparent 0 48%, rgba(248, 252, 255, 0.20) 62%, rgba(248, 252, 255, 0.76) 86%),
     linear-gradient(180deg, rgba(248, 252, 255, 0.04), rgba(248, 252, 255, 0.42)),
     radial-gradient(circle at top, rgba(0, 119, 182, 0.12), transparent 52%);
 }
@@ -1086,6 +1159,43 @@ body.index3-page > .hero-audit-entry {
   color: rgba(7, 17, 31, 0.8);
 }
 
+[data-theme="light"] .kpi-contact-cta {
+  border-color: rgba(0, 119, 182, 0.22);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.62)),
+    radial-gradient(circle at 18% 10%, rgba(0, 119, 182, 0.13), transparent 42%),
+    radial-gradient(circle at 86% 22%, rgba(244, 216, 166, 0.22), transparent 48%);
+  color: rgba(7, 17, 31, 0.9);
+  box-shadow:
+    0 24px 62px rgba(16, 40, 76, 0.16),
+    0 0 0 1px rgba(255, 255, 255, 0.74) inset,
+    0 0 34px rgba(0, 119, 182, 0.08);
+}
+
+[data-theme="light"] .kpi-contact-cta:hover,
+[data-theme="light"] .kpi-contact-cta:focus-visible {
+  border-color: rgba(0, 119, 182, 0.36);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(229, 242, 255, 0.8)),
+    radial-gradient(circle at 18% 10%, rgba(0, 119, 182, 0.16), transparent 42%);
+  color: rgba(7, 17, 31, 0.95);
+  box-shadow:
+    0 28px 74px rgba(16, 40, 76, 0.2),
+    0 0 0 1px rgba(0, 119, 182, 0.08) inset,
+    0 0 42px rgba(0, 119, 182, 0.1);
+}
+
+@media (max-width: 1120px) {
+  .index3-page .site-header > .index3-header-nav,
+  .index3-page .site-header > .index3-header-actions {
+    display: none;
+  }
+
+  .index3-menu-toggle {
+    display: inline-flex;
+  }
+}
+
 @media (max-width: 1080px) {
   .index3-jora-photo-left {
     left: max(-5rem, calc(50% - clamp(28rem, 40vw, 34rem)));
@@ -1098,8 +1208,8 @@ body.index3-page > .hero-audit-entry {
 
 @media (max-width: 960px) {
   .index3-jora-scene {
-    --josh-align-x: clamp(1.4rem, 5vw, 3rem);
-    --rahul-align-x: clamp(-1.2rem, -1.4vw, -0.35rem);
+    --josh-align-x: clamp(0.8rem, 2.8vw, 1.8rem);
+    --rahul-align-x: clamp(-1.8rem, -2.8vw, -0.8rem);
   }
 
   .index3-page .site-header > .index3-header-nav,
@@ -1114,7 +1224,7 @@ body.index3-page > .hero-audit-entry {
   .index3-page .hero {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding-top: 6.45rem;
+    padding-top: clamp(10.1rem, 15vw, 11.4rem);
     row-gap: 1.85rem;
   }
 
@@ -1177,8 +1287,8 @@ body.index3-page > .hero-audit-entry {
 
   .index3-jora-photo {
     top: 38%;
-    width: clamp(9rem, 24vw, 13rem);
-    height: clamp(12rem, 30vw, 17rem);
+    width: clamp(9rem, 24vw, 14rem);
+    height: clamp(9rem, 24vw, 14rem);
   }
 
   .index3-jora-photo-left {
@@ -1190,9 +1300,9 @@ body.index3-page > .hero-audit-entry {
   }
 
   .index3-jora-wordmark {
-    width: min(calc(100vw - 2rem), 36rem);
-    height: clamp(5rem, 15vw, 7rem);
-    font-size: clamp(2.85rem, 12.5vw, 6.2rem);
+    width: min(calc(100vw - 2rem), 31rem);
+    height: clamp(4.2rem, 12vw, 6.2rem);
+    font-size: clamp(2.45rem, 9.8vw, 5rem);
     letter-spacing: -0.055em;
   }
 
@@ -1226,12 +1336,12 @@ body.index3-page > .hero-audit-entry {
 
 @media (max-width: 620px) {
   .index3-jora-scene {
-    --josh-align-x: 0.55rem;
-    --rahul-align-x: -0.55rem;
+    --josh-align-x: 0.15rem;
+    --rahul-align-x: -0.15rem;
   }
 
   .index3-page .hero {
-    padding-top: 6.25rem;
+    padding-top: 8.95rem;
     padding-bottom: 2rem;
   }
 
@@ -1240,8 +1350,9 @@ body.index3-page > .hero-audit-entry {
   }
 
   .index3-page .site-header .brand-logo {
-    width: 2.55rem;
-    height: 2.55rem;
+    width: clamp(3.75rem, 14vw, 4.2rem);
+    height: clamp(3.75rem, 14vw, 4.2rem);
+    flex-basis: clamp(3.75rem, 14vw, 4.2rem);
   }
 
   .index3-drawer {
@@ -1328,8 +1439,8 @@ body.index3-page > .hero-audit-entry {
 
   .index3-jora-photo {
     top: 34%;
-    width: clamp(6.5rem, 24vw, 8rem);
-    height: clamp(9rem, 30vw, 11rem);
+    width: clamp(5.6rem, 22vw, 7rem);
+    height: clamp(5.6rem, 22vw, 7rem);
     opacity: calc(var(--photo-opacity, 0) * 0.86);
   }
 
@@ -1342,10 +1453,10 @@ body.index3-page > .hero-audit-entry {
   }
 
   .index3-jora-wordmark {
-    width: min(calc(100vw - 1.5rem), 20rem);
-    height: clamp(4.1rem, 18vw, 5.4rem);
-    font-size: clamp(2.25rem, 15.2vw, 3.8rem);
-    letter-spacing: -0.05em;
+    width: min(calc(100vw - 2rem), 16.4rem);
+    height: clamp(3.35rem, 12.5vw, 4.35rem);
+    font-size: clamp(1.85rem, 10.4vw, 2.85rem);
+    letter-spacing: -0.045em;
   }
 
   .index3-jora-definition {
@@ -1368,6 +1479,14 @@ body.index3-page > .hero-audit-entry {
   .index3-proof-kpis div {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .kpi-contact-cta {
+    bottom: 0.55rem;
+    width: min(calc(100vw - 2rem), 18rem);
+    min-width: 0;
+    padding-inline: 1rem;
+    font-size: 0.86rem;
   }
 }
 
