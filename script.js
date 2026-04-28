@@ -17,10 +17,107 @@
     });
   }
 
+  function setupMobileNavigation() {
+    const header = document.querySelector(".site-header");
+    const nav = header?.querySelector("nav");
+    if (!header || !nav || document.querySelector("[data-index3-menu-toggle]") || document.querySelector(".mobile-menu-toggle")) return;
+
+    const button = document.createElement("button");
+    button.className = "mobile-menu-toggle";
+    button.type = "button";
+    button.setAttribute("aria-label", "Open navigation");
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-controls", "mobile-drawer");
+    button.innerHTML = '<span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>';
+    header.appendChild(button);
+
+    const shell = document.createElement("div");
+    shell.className = "mobile-drawer-shell";
+    shell.hidden = true;
+    shell.innerHTML = `
+      <button class="mobile-drawer-overlay" type="button" aria-label="Close navigation"></button>
+      <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="mobile-drawer-top"></div>
+        <nav class="mobile-drawer-nav" aria-label="Mobile"></nav>
+        <div class="mobile-drawer-actions">
+          <button class="theme-toggle mobile-drawer-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
+          <a class="nav-cta" href="contact.html">Growth plan</a>
+        </div>
+      </aside>
+    `;
+
+    const drawer = shell.querySelector(".mobile-drawer");
+    const drawerTop = shell.querySelector(".mobile-drawer-top");
+    const drawerNav = shell.querySelector(".mobile-drawer-nav");
+    const overlay = shell.querySelector(".mobile-drawer-overlay");
+    const brand = header.querySelector(".brand")?.cloneNode(true);
+    const closeButton = document.createElement("button");
+    closeButton.className = "mobile-drawer-close";
+    closeButton.type = "button";
+    closeButton.textContent = "Close";
+    closeButton.setAttribute("aria-label", "Close navigation");
+
+    if (brand) {
+      brand.classList.add("mobile-drawer-brand");
+      drawerTop.appendChild(brand);
+    }
+    drawerTop.appendChild(closeButton);
+
+    nav.querySelectorAll("a[href]").forEach((link) => {
+      drawerNav.appendChild(link.cloneNode(true));
+    });
+
+    header.insertAdjacentElement("afterend", shell);
+
+    let closeTimer = 0;
+
+    function hasVisibleModal() {
+      return Array.from(document.querySelectorAll(".modal")).some((modal) => !modal.hidden);
+    }
+
+    function setOpen(open) {
+      if (closeTimer) {
+        window.clearTimeout(closeTimer);
+        closeTimer = 0;
+      }
+
+      button.setAttribute("aria-expanded", String(open));
+      button.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      drawer.setAttribute("aria-hidden", String(!open));
+
+      if (open) {
+        shell.hidden = false;
+        document.body.classList.add("no-scroll");
+        window.requestAnimationFrame(() => shell.classList.add("is-open"));
+        return;
+      }
+
+      shell.classList.remove("is-open");
+      if (!hasVisibleModal()) document.body.classList.remove("no-scroll");
+      closeTimer = window.setTimeout(() => {
+        shell.hidden = true;
+      }, reduceMotion ? 0 : 300);
+    }
+
+    button.addEventListener("click", () => setOpen(!shell.classList.contains("is-open")));
+    overlay?.addEventListener("click", () => setOpen(false));
+    closeButton.addEventListener("click", () => setOpen(false));
+    drawerNav.querySelectorAll("a[href]").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && shell.classList.contains("is-open")) setOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1120 && shell.classList.contains("is-open")) setOpen(false);
+    });
+  }
+
   function setupTheme() {
     const root = document.documentElement;
-    const toggle = document.querySelector(".theme-toggle");
-    const label = document.querySelector(".theme-toggle-text");
+    const toggles = Array.from(document.querySelectorAll(".theme-toggle"));
     const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)");
     let storedTheme = null;
 
@@ -33,16 +130,14 @@
     function applyTheme(theme, persist) {
       const nextTheme = theme === "light" ? "light" : "dark";
       root.dataset.theme = nextTheme;
+      const isLight = nextTheme === "light";
 
-      if (toggle) {
-        const isLight = nextTheme === "light";
+      toggles.forEach((toggle) => {
+        const label = toggle.querySelector(".theme-toggle-text");
         toggle.setAttribute("aria-pressed", String(isLight));
         toggle.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} mode`);
-      }
-
-      if (label) {
-        label.textContent = nextTheme === "light" ? "Light" : "Dark";
-      }
+        if (label) label.textContent = isLight ? "Light" : "Dark";
+      });
 
       if (persist) {
         try {
@@ -55,8 +150,10 @@
 
     applyTheme(storedTheme || (systemPrefersLight.matches ? "light" : "dark"), false);
 
-    toggle?.addEventListener("click", () => {
-      applyTheme(root.dataset.theme === "light" ? "dark" : "light", true);
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        applyTheme(root.dataset.theme === "light" ? "dark" : "light", true);
+      });
     });
 
     systemPrefersLight.addEventListener?.("change", (event) => {
@@ -601,6 +698,7 @@
     });
   }
 
+  setupMobileNavigation();
   setupActiveNav();
   setupTheme();
   createParticles();
