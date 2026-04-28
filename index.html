@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jora Solutions is a premium digital marketing partner building SEO, content, and conversion systems for precise, human-led growth.">
-  <title>Jora Solutions | Premium Growth Systems</title>
+  <meta name="description" content="Jora Solutions blends premium growth systems with a personal partner-led approach from Josh and Rahul.">
+  <title>Jora Solutions | Your Digital Growth Partners</title>
   <link rel="stylesheet" href="styles.css?v=aurora-services-20260420">
+  <link rel="stylesheet" href="index3.css?v=hybrid-results-20260425">
 </head>
-<body data-page="home">
+<body class="index3-page" data-page="home">
   <a class="skip-link" href="#main">Skip to content</a>
-  <a class="top-rank-banner" href="seo.html"><span>Rank page 1 on Google</span><span aria-hidden="true">-></span></a>
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Jora Solutions home">
       <span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span>
-      <span>Jora Solutions</span>
+      <span class="brand-wordmark">Jora Solutions</span>
     </a>
-    <nav aria-label="Primary">
+    <nav class="index3-header-nav" aria-label="Primary">
       <a data-page-link="home" href="index.html">Home</a>
       <a data-page-link="services" href="services.html">Services</a>
       <a data-page-link="web" href="web-design.html">Web Design</a>
@@ -26,20 +26,64 @@
       <a data-page-link="about" href="about.html">About</a>
       <a data-page-link="contact" href="contact.html">Contact</a>
     </nav>
-    <div class="header-actions">
+    <div class="header-actions index3-header-actions">
       <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
         <span class="theme-toggle-track" aria-hidden="true"><span></span></span>
         <span class="theme-toggle-text">Dark</span>
       </button>
       <a class="nav-cta" href="contact.html">Growth plan</a>
     </div>
+    <button class="index3-menu-toggle" type="button" data-index3-menu-toggle aria-label="Open navigation" aria-controls="index3-drawer" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
   </header>
 
+  <div class="index3-drawer-shell" data-index3-drawer-shell hidden>
+    <button class="index3-drawer-overlay" type="button" data-index3-drawer-overlay aria-label="Close navigation"></button>
+    <aside class="index3-drawer" id="index3-drawer" data-index3-drawer aria-label="Mobile navigation" aria-hidden="true">
+      <div class="index3-drawer-top">
+        <a class="brand index3-drawer-brand" href="index.html" aria-label="Jora Solutions home">
+          <span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span>
+          <span class="brand-wordmark">Jora Solutions</span>
+        </a>
+        <button class="index3-drawer-close" type="button" data-index3-drawer-close aria-label="Close navigation">Close</button>
+      </div>
+      <nav class="index3-drawer-nav" aria-label="Mobile">
+        <a data-page-link="home" href="index.html">Home</a>
+        <a data-page-link="services" href="services.html">Services</a>
+        <a data-page-link="web" href="web-design.html">Web Design</a>
+        <a data-page-link="crm" href="crm-integrations.html">CRM & Integrations</a>
+        <a data-page-link="seo" href="seo.html">SEO</a>
+        <a data-page-link="results" href="results.html">Results</a>
+        <a data-page-link="about" href="about.html">About</a>
+        <a data-page-link="contact" href="contact.html">Contact</a>
+      </nav>
+      <div class="index3-drawer-actions">
+        <button class="theme-toggle index3-drawer-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle-track" aria-hidden="true"><span></span></span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+        <a class="nav-cta" href="contact.html">Growth plan</a>
+      </div>
+    </aside>
+  </div>
+
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <section class="hero index3-hero" aria-labelledby="index3-hero-title">
       <div class="particles" id="particles" aria-hidden="true"></div>
       <div class="hero-haze" aria-hidden="true"></div>
-      <div class="hero-growth-visual">
+
+      <div class="index3-video-stage" aria-hidden="true">
+        <div class="index3-video-shell">
+          <video class="index3-hero-video" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80">
+            <source src="./0426.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="hero-growth-visual index3-hero-visual">
         <div class="chart-waves" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="growth-dashboard" aria-hidden="true">
           <div class="dashboard-topline" aria-hidden="true"><span class="dashboard-topline-start">Start your growth</span></div>
@@ -64,65 +108,139 @@
         <img class="hero-phone" src="phone.png" alt="" loading="eager" aria-hidden="true">
         <button class="hero-visual-trigger" type="button" data-audit-open aria-label="Start a free website audit"></button>
       </div>
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Client led digital growth</p>
-        <h1 id="hero-title">Digital <span class="aurora-text">growth</span> made easy</h1>
-        <p>We build <a class="aurora-link" href="seo.html" data-label="SEO"><span class="aurora-text">SEO</span></a>, <a class="aurora-link" href="content.html" data-label="Content"><span class="aurora-text">Content</span></a>, and <a class="aurora-link" href="conversion.html" data-label="Conversion"><span class="aurora-text">Conversion</span></a> systems that make growth easier to understand, easier to trust, and harder to lose once momentum starts compounding.</p>
+
+      <div class="hero-copy index3-hero-copy reveal">
+        <p class="eyebrow">Partner-led digital growth</p>
+        <h1 id="index3-hero-title">Your <span class="aurora-text index3-aurora-text">digital growth</span> partners</h1>
+        <p>Jora is led directly by Josh and Rahul. No faceless account chain, no strategy separated from execution, and no activity pretending to be progress. We build around the commercial result that matters most, stay close enough to own what happens next, and treat your success as shared accountability.</p>
         <div class="hero-cta-row">
           <a class="arrow-cta growth-trigger" href="contact.html">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
             </svg>
-            <span class="arrow-cta-text">See Your Growth Plan</span>
+            <span class="arrow-cta-text">Speak with Josh & Rahul</span>
           </a>
-          <a class="secondary-cta" href="services.html">Explore services</a>
+          <a class="secondary-cta" href="#index3-proof">See our proof</a>
         </div>
-        <small>No commitment - just clarity.</small>
+        <div class="index3-partner-cue">
+          <span>Direct access. Shared accountability. Results first.</span>
+          <div class="index3-partner-chips" aria-label="Partner chips">
+            <span><b>J</b> Josh</span>
+            <span><b>R</b> Rahul</span>
+          </div>
+        </div>
       </div>
-      <div class="hero-audit-entry" data-audit-popup role="dialog" aria-label="Free website audit offer" hidden>
-        <button class="audit-popup-close" type="button" data-audit-popup-close aria-label="Close free audit offer">Close</button>
-        <p>Free website audit</p>
-        <h3>See what is holding growth back.</h3>
-        <span class="audit-popup-offer">Enter your website and we will map the first SEO, content, and conversion opportunities. No pressure, just clarity.</span>
-        <form class="audit-url-form" data-audit-url-form novalidate>
-          <label>
-            <span class="visually-hidden">Your website URL</span>
-            <input class="audit-url-input" data-audit-url-input type="url" inputmode="url" autocomplete="url" placeholder="www.example.com" required>
-          </label>
-          <button class="audit-submit" type="submit">Free audit</button>
-        </form>
+
+    </section>
+
+    <section class="index3-client-marquee" aria-label="Selected client list">
+      <div class="index3-client-marquee-track">
+        <div class="index3-client-marquee-set">
+          <a href="success-the-cleaning-doc.html">The Cleaning Doc</a>
+          <a href="success-ever-east.html">Ever East</a>
+          <a href="success-wholesalehq.html">WholesaleHQ</a>
+          <a href="success-kanyal-fitness.html">Kanyal Fitness</a>
+          <a href="success-southpaw-boxing.html">Southpaw Boxing</a>
+          <a href="success-ac-fight-gear.html">AC Fight Gear</a>
+        </div>
+        <div class="index3-client-marquee-set" aria-hidden="true">
+          <a href="success-the-cleaning-doc.html" tabindex="-1">The Cleaning Doc</a>
+          <a href="success-ever-east.html" tabindex="-1">Ever East</a>
+          <a href="success-wholesalehq.html" tabindex="-1">WholesaleHQ</a>
+          <a href="success-kanyal-fitness.html" tabindex="-1">Kanyal Fitness</a>
+          <a href="success-southpaw-boxing.html" tabindex="-1">Southpaw Boxing</a>
+          <a href="success-ac-fight-gear.html" tabindex="-1">AC Fight Gear</a>
+        </div>
+        <div class="index3-client-marquee-set" aria-hidden="true">
+          <a href="success-the-cleaning-doc.html" tabindex="-1">The Cleaning Doc</a>
+          <a href="success-ever-east.html" tabindex="-1">Ever East</a>
+          <a href="success-wholesalehq.html" tabindex="-1">WholesaleHQ</a>
+          <a href="success-kanyal-fitness.html" tabindex="-1">Kanyal Fitness</a>
+          <a href="success-southpaw-boxing.html" tabindex="-1">Southpaw Boxing</a>
+          <a href="success-ac-fight-gear.html" tabindex="-1">AC Fight Gear</a>
+        </div>
       </div>
     </section>
 
-    <section class="trust-strip reveal" aria-label="Placeholder client logos">
-      <p>Your digital partner</p>
-      <div>
-        <span>WholesaleHQ</span>
-        <span>TheCleaningDoc</span>
-        <span>Kanyal Fitness</span>
-        <span>EverEast</span>
-        <span>Signal Co.</span>
+    <section class="index3-jora-scene" id="index3-jora-scene" aria-labelledby="index3-jora-title">
+      <div class="index3-jora-sticky">
+        <figure class="index3-jora-photo index3-jora-photo-left" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="">
+        </figure>
+        <div class="index3-jora-wordmark" id="index3-jora-title" aria-hidden="true">
+          <span class="index3-jora-jo">JO<span class="index3-jora-suffix index3-jora-sh">SH</span></span>
+          <span class="index3-jora-ra">RA<span class="index3-jora-suffix index3-jora-hul">HUL</span></span>
+        </div>
+        <p class="index3-jora-definition" aria-hidden="true">j&#333;r&#257; (&#2332;&#2379;&#2352;&#2366;). &mdash; n. Authority, power of endurance.</p>
+        <figure class="index3-jora-photo index3-jora-photo-right" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="">
+        </figure>
+        <div class="index3-jora-caption reveal">
+          <p class="eyebrow">The people behind Jora</p>
+          <p>The brand resolves into the two partners clients actually work with, because the relationship is supposed to feel close, clear, and commercially useful from the start.</p>
+        </div>
       </div>
     </section>
 
-    <section class="proof-section" aria-labelledby="proof-title">
+    <section class="section index3-people" aria-labelledby="index3-people-title">
+      <div class="section-head reveal">
+        <p class="eyebrow">Partner-led by design</p>
+        <h2 id="index3-people-title">The brand resolves into the two partners who stay close to the result.</h2>
+        <p>Jora is deliberately built to avoid the faceless-agency handoff. Josh and Rahul stay in the room, stay in the detail, and stay accountable for what happens next because your success is the scorecard that matters.</p>
+      </div>
+      <div class="index3-people-grid">
+        <article class="index3-person-card reveal">
+          <div class="index3-person-mark">JO</div>
+          <h3>Josh</h3>
+          <p class="index3-person-role">Partner, strategy and commercial direction</p>
+          <p>Josh focuses on the growth constraint with the biggest commercial upside, then keeps the strategy tight enough that every move still makes sense to the client, the market, and the numbers.</p>
+        </article>
+        <article class="index3-person-card reveal">
+          <div class="index3-person-mark">RA</div>
+          <h3>Rahul</h3>
+          <p class="index3-person-role">Partner, systems and execution design</p>
+          <p>Rahul turns the strategy into a working system across pages, content, conversion, CRM, and operational flow so the gain is not just a short lift, but a cleaner engine the business can keep using.</p>
+        </article>
+      </div>
+      <div class="section-actions reveal">
+        <a class="secondary-cta" href="about.html">Meet the partners</a>
+        <a class="secondary-cta" href="contact.html">Start a direct conversation</a>
+      </div>
+    </section>
+
+    <section class="section index3-brand-meaning" aria-labelledby="index3-brand-meaning-title">
+      <div class="index3-brand-meaning-grid reveal">
+        <div class="index3-brand-meaning-head">
+          <p class="eyebrow">Why the name matters</p>
+          <h2 id="index3-brand-meaning-title">Jora is meant to stand for calm authority, long endurance, and strength that does not need to perform for attention.</h2>
+          <p class="index3-brand-meaning-lead">Those meanings are not decorative. They shape the standard we bring into the work, the way we speak to the market, and the way we stay steady through the slower parts of real growth.</p>
+        </div>
+        <div class="index3-brand-meaning-copy">
+          <p>Authority matters because a website has to make trust arrive faster. Positioning has to feel grounded. The offer has to hold its weight. The message has to sound like it belongs in the category instead of sounding like another business trying to appear bigger than it is.</p>
+          <p>Endurance matters because sustainable SEO, content systems, conversion design, and operational fixes do not compound on short-term energy. They compound when the structure is right, the discipline stays intact, and the partner doing the work is still present when the challenge becomes less glamorous and more demanding.</p>
+          <p>That is what Jora is supposed to represent. We bring that authority into the website, endure the hard parts of long-term sustainable SEO, and stay close enough to carry responsibility through the work instead of stepping back once the first wave of activity is done.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-section index3-results-proof" id="index3-proof" aria-labelledby="index3-proof-title">
       <div class="proof-copy reveal">
-        <p class="eyebrow">Why teams bring us in</p>
-        <h2 id="proof-title">The real win is knowing what to do next with confidence.</h2>
-        <p>Jora turns scattered marketing effort into a clear operating system. That means sharper priorities, better conversion visibility, and work that compounds instead of resetting every quarter.</p>
+        <p class="eyebrow">Results first</p>
+        <h2 id="index3-proof-title">The point is not more marketing activity. It is clearer commercial movement.</h2>
+        <p>When Josh and Rahul come in, the goal is sharper demand capture, cleaner conversion visibility, stronger operating systems, and fewer decisions made in the dark. The work only counts if it makes the next commercial move more obvious.</p>
         <div class="benefit-list">
-          <article><span>01</span><h3>Clearer priorities</h3><p>Decide what to fix, build, and scale first without wasting cycles on noise.</p></article>
-          <article><span>02</span><h3>Qualified demand</h3><p>Build pages and offers around real buyer intent instead of vanity traffic.</p></article>
-          <article><span>03</span><h3>Compounding assets</h3><p>Let <a class="inline-link" href="seo.html">SEO</a>, content, and CRO work together instead of acting like separate channels.</p></article>
-          <article><span>04</span><h3>Partner-level visibility</h3><p>Know what is working, what is stuck, and what the next best move should be.</p></article>
+          <article><span>01</span><h3>Qualified demand</h3><p>Bring in the right traffic, not just more of it, so growth has a revenue path behind it.</p></article>
+          <article><span>02</span><h3>Direct accountability</h3><p>Stay close to the two people shaping the plan instead of being filtered through layers.</p></article>
+          <article><span>03</span><h3>Compounding assets</h3><p>Build pages, content, conversion journeys, and integrations that keep working together after launch.</p></article>
+          <article><span>04</span><h3>Calmer decisions</h3><p>Know what is working, what is leaking, and what the highest-value next move should be.</p></article>
         </div>
       </div>
       <div class="kpi-orbit reveal" aria-label="Illustrative KPI card carousel">
         <div class="kpi-stage">
-          <article class="kpi-3d-card kpi-card-a"><span>Impressions</span><strong>1M+</strong><small>Traffic Growth</small></article>
-          <article class="kpi-3d-card kpi-card-b"><span>Revenue generated</span><strong>£100k+</strong><small>Profit Scaling</small></article>
-          <article class="kpi-3d-card kpi-card-c"><span>Pages Created</span><strong>1000+</strong><small>Content Development</small></article>
-          <article class="kpi-3d-card kpi-card-d"><span>Active clients</span><strong>50+</strong><small>Trusted network</small></article>
+          <article class="kpi-3d-card kpi-card-a"><span>Impressions</span><strong>1M+</strong><small>Traffic growth</small></article>
+          <article class="kpi-3d-card kpi-card-b"><span>Revenue influenced</span><strong>£100k+</strong><small>Commercial lift</small></article>
+          <article class="kpi-3d-card kpi-card-c"><span>Pages shipped</span><strong>1000+</strong><small>System output</small></article>
+          <article class="kpi-3d-card kpi-card-d"><span>Client systems</span><strong>50+</strong><small>Partner trust</small></article>
         </div>
         <div class="kpi-base-glow"></div>
       </div>
@@ -132,7 +250,33 @@
       </div>
     </section>
 
-    <section class="section service-showcase" aria-labelledby="home-services-title">
+    <section class="section index3-testimonials" aria-labelledby="index3-testimonials-title">
+      <div class="section-head reveal">
+        <p class="eyebrow">What clients notice</p>
+        <h2 id="index3-testimonials-title">The work gets clearer, and the relationship feels closer.</h2>
+        <p>That is the advantage of staying partner-led. The strategy is easier to trust, the numbers are easier to discuss honestly, and the next move rarely gets lost in layers of process.</p>
+      </div>
+      <div class="quote-grid reveal">
+        <article class="quote-card">
+          <p>"It never felt like we were passed into an account machine. Josh and Rahul stayed close to the numbers, the pages, and the commercial choices, which meant the progress actually made sense."</p>
+          <strong>Service business founder</strong>
+        </article>
+        <article class="quote-card">
+          <p>"They did not sell activity. They sold clarity, execution, and accountability. That changed how quickly we could make confident decisions."</p>
+          <strong>B2B growth lead</strong>
+        </article>
+        <article class="quote-card">
+          <p>"The relationship felt personal, but the work still felt premium. We had direct access, cleaner reporting, and a much stronger sense of where revenue was actually being won."</p>
+          <strong>Multi-location operator</strong>
+        </article>
+      </div>
+      <div class="section-actions reveal">
+        <a class="secondary-cta" href="results.html">See the full results page</a>
+        <a class="secondary-cta" href="contact.html">Talk through your growth gap</a>
+      </div>
+    </section>
+
+    <section class="section service-showcase index3-services" aria-labelledby="index3-services-title">
       <div class="service-backdrop" aria-hidden="true">
         <span class="service-bg service-bg-seo"></span>
         <span class="service-bg service-bg-content"></span>
@@ -140,14 +284,14 @@
       </div>
       <div class="section-head reveal">
         <p class="eyebrow">What we build</p>
-        <h2 id="home-services-title">A premium growth stack, not disconnected tactics.</h2>
-        <p>Each engagement is built around the constraint that matters most right now, then extended into a system that keeps making the next decision easier.</p>
+        <h2 id="index3-services-title">Systems built around the result, not disconnected channel work.</h2>
+        <p>The constraint changes from business to business, but the principle stays the same: solve the commercial bottleneck first, then turn the win into a system that keeps compounding across search, content, conversion, and operational flow.</p>
       </div>
       <div class="card-grid three">
         <article class="service-card seo-card tilt-card reveal" data-service="seo" tabindex="0">
           <span>01</span>
           <h3><a href="seo.html">SEO systems</a></h3>
-          <p>Search architecture, intent maps, and technical clarity that make the right pages easier to find and trust.</p>
+          <p>Search architecture, intent mapping, and technical clarity that make the right pages easier to find, trust, and convert from.</p>
           <div class="service-visual search-map" aria-hidden="true">
             <i></i><i></i><i></i><i></i><i></i>
             <svg viewBox="0 0 260 140"><path class="line-draw" pathLength="1" d="M38 96 C76 40 111 72 136 48 S190 24 226 76"/></svg>
@@ -156,7 +300,7 @@
         <article class="service-card content-card tilt-card reveal" data-service="content" tabindex="0">
           <span>02</span>
           <h3><a href="content.html">Content engines</a></h3>
-          <p>Hook libraries, buyer angles, and campaign creative systems that make ads clearer, sharper, and easier to test.</p>
+          <p>Content systems, message development, and asset production that keep learning loops sharp and commercial intent visible.</p>
           <div class="service-visual content-flow" aria-hidden="true">
             <b>Brief</b><b>Page</b><b>Proof</b>
             <svg viewBox="0 0 260 140"><path class="line-draw" pathLength="1" d="M34 92 C78 94 78 52 122 56 S172 98 222 48"/></svg>
@@ -165,7 +309,7 @@
         <article class="service-card conversion-card tilt-card reveal" data-service="conversion" tabindex="0">
           <span>03</span>
           <h3><a href="conversion.html">Conversion design</a></h3>
-          <p>Offer shaping, page systems, and testing frameworks that turn attention into qualified pipeline.</p>
+          <p>Offer shaping, page systems, and testing frameworks that remove friction and turn attention into qualified pipeline.</p>
           <div class="service-visual conversion-path" aria-hidden="true">
             <i></i><i></i><i></i>
             <svg viewBox="0 0 260 140"><path class="line-draw" pathLength="1" d="M32 104 C70 104 80 82 104 78 S148 74 164 52 S202 34 232 34"/></svg>
@@ -175,149 +319,102 @@
       <div class="section-actions reveal">
         <a class="primary-cta" href="services.html"><span>Explore services</span><span aria-hidden="true">-></span></a>
         <a class="secondary-cta" href="crm-integrations.html">See CRM & integrations</a>
-        <a class="secondary-cta" href="results.html">See what changes</a>
+        <a class="secondary-cta" href="contact.html">Build the right system</a>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="process-title">
+    <section class="section index3-proof" id="index3-case-studies" aria-labelledby="index3-case-studies-title">
       <div class="section-head reveal">
-        <p class="eyebrow">How we work</p>
-        <h2 id="process-title">A clear pipeline with people in the loop.</h2>
-        <p>We diagnose the constraint, map the commercial priorities, build the right system, and refine it with signal instead of guesswork.</p>
+        <p class="eyebrow">Deeper proof</p>
+        <h2 id="index3-case-studies-title">Three case-study paths that show how the system becomes tangible.</h2>
+        <p>These reports sit lower because the page leads with results, trust, and operating style first. The deeper proof is still here when you want to inspect the structure behind the work.</p>
       </div>
-      <div class="pipeline reveal" data-active-step="diagnose">
-        <svg viewBox="0 0 900 210" aria-hidden="true">
-          <path class="pipe-guide" d="M50 164 C186 158 250 136 346 126 S512 120 584 84 S720 46 850 36"/>
-          <path class="pipe-line line-draw" pathLength="1" d="M50 164 C186 158 250 136 346 126 S512 120 584 84 S720 46 850 36"/>
-        </svg>
-        <div class="flow-cubes" aria-hidden="true"><span data-step-marker="diagnose"></span><span data-step-marker="map"></span><span data-step-marker="build"></span><span data-step-marker="compound"></span></div>
-        <div class="pipeline-steps">
-          <button class="pipeline-step" type="button" data-step="diagnose" aria-pressed="true" aria-controls="process-detail-panel">
-            <span class="pipeline-step-number">01</span><span class="pipeline-step-title">Diagnose</span><span class="pipeline-step-copy">Find where growth is currently leaking, slowing, or being misread.</span>
-            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
-          </button>
-          <button class="pipeline-step" type="button" data-step="map" aria-pressed="false" aria-controls="process-detail-panel">
-            <span class="pipeline-step-number">02</span><span class="pipeline-step-title">Map</span><span class="pipeline-step-copy">Prioritise the search, content, and conversion moves that deserve attention first.</span>
-            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
-          </button>
-          <button class="pipeline-step" type="button" data-step="build" aria-pressed="false" aria-controls="process-detail-panel">
-            <span class="pipeline-step-number">03</span><span class="pipeline-step-title">Build</span><span class="pipeline-step-copy">Ship pages, assets, systems, and tests with partner-level context.</span>
-            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
-          </button>
-          <button class="pipeline-step" type="button" data-step="compound" aria-pressed="false" aria-controls="process-detail-panel">
-            <span class="pipeline-step-number">04</span><span class="pipeline-step-title">Compound</span><span class="pipeline-step-copy">Turn signal into a repeatable operating rhythm your team can keep using.</span>
-            <svg class="pipeline-step-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path></svg>
-          </button>
-        </div>
-        <div class="process-detail-panel" id="process-detail-panel" aria-live="polite">
-          <h3 id="process-detail-title">Diagnose the constraint</h3>
-          <p id="process-detail-text">We inspect search visibility, buyer journeys, page performance, and offer clarity to find the few constraints that are actually slowing growth.</p>
-        </div>
-      </div>
-      <div class="section-actions reveal">
-        <a class="secondary-cta" href="about.html">Meet Josh and Rahul</a>
-        <a class="secondary-cta" href="contact.html">Start the conversation</a>
-      </div>
-    </section>
+      <div class="index3-proof-grid">
+        <article class="index3-proof-card reveal" style="--index3-proof-media:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80')">
+          <a href="case-study-local-seo.html" aria-label="Read the Local Service Client report">
+            <span class="index3-proof-media" aria-hidden="true"></span>
+            <div class="index3-proof-top">
+              <span class="index3-proof-tag">Local SEO</span>
+              <span class="index3-proof-state">Report ready</span>
+            </div>
+            <h3>Local Service Client</h3>
+            <p>Challenge: local demand existed, but the site was not proving relevance and trust clearly enough.</p>
+            <p>Outcome framing: a stronger local visibility and enquiry system once verified reporting is added.</p>
+            <dl class="index3-proof-kpis">
+              <div><dt>Visibility lift</dt><dd>+XX%</dd></div>
+              <div><dt>Qualified enquiries</dt><dd>XX</dd></div>
+              <div><dt>Priority pages</dt><dd>XX</dd></div>
+            </dl>
+            <span class="index3-proof-link">Read full report <span aria-hidden="true">-></span></span>
+          </a>
+        </article>
 
-    <section class="section" aria-labelledby="selected-results-title">
-      <div class="section-head reveal">
-        <p class="eyebrow">Selected proof</p>
-        <h2 id="selected-results-title">Illustrative result framing for a premium agency story.</h2>
-        <p>These examples are placeholders by design. They show how Jora can present outcomes clearly once verified client proof is ready.</p>
-      </div>
-      <div class="results-grid">
-        <article class="metric-card reveal">
-          <div class="cube-bars" aria-hidden="true"><span style="--h:38%"></span><span style="--h:62%"></span><span style="--h:86%"></span></div>
-          <p>Average Revenue Lift</p>
-          <strong><span class="counter" data-count-to="41">0</span>%</strong>
-          <small>Illustrative lift target from clearer intent capture and conversion design.</small>
+        <article class="index3-proof-card reveal" style="--index3-proof-media:url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80')">
+          <a href="case-study-content-engine.html" aria-label="Read the Content Growth Client report">
+            <span class="index3-proof-media" aria-hidden="true"></span>
+            <div class="index3-proof-top">
+              <span class="index3-proof-tag">Content engine</span>
+              <span class="index3-proof-state">Report ready</span>
+            </div>
+            <h3>Content Growth Client</h3>
+            <p>Challenge: the team had output, but not enough clear creative signal to scale confidently.</p>
+            <p>Outcome framing: a content and ad-creative engine designed to make message learning more repeatable.</p>
+            <dl class="index3-proof-kpis">
+              <div><dt>Creative winners</dt><dd>XX</dd></div>
+              <div><dt>Asset velocity</dt><dd>+XX%</dd></div>
+              <div><dt>Learning cycles</dt><dd>XX</dd></div>
+            </dl>
+            <span class="index3-proof-link">Read full report <span aria-hidden="true">-></span></span>
+          </a>
         </article>
-        <article class="metric-card reveal">
-          <div class="cube-bars" aria-hidden="true"><span style="--h:30%"></span><span style="--h:58%"></span><span style="--h:78%"></span></div>
-          <p>Revenue Generated</p>
-          <strong>£<span class="counter" data-count-to="100">0</span>k+</strong>
-          <small>Example buying-stage assets mapped into a working system.</small>
-        </article>
-        <article class="metric-card wide reveal">
-          <p>Traffic Growth</p>
-          <svg viewBox="0 0 560 240" aria-hidden="true">
-            <path class="chart-area" d="M28 198 C108 194 148 166 190 158 S284 156 322 112 S432 52 532 32 L532 220 L28 220 Z"/>
-            <path class="big-line line-draw" pathLength="1" d="M28 198 C108 194 148 166 190 158 S284 156 322 112 S432 52 532 32"/>
-          </svg>
-          <small>Once the system is aligned, progress becomes easier to explain and easier to extend.</small>
+
+        <article class="index3-proof-card reveal" style="--index3-proof-media:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80')">
+          <a href="case-study-conversion-design.html" aria-label="Read the Conversion Client report">
+            <span class="index3-proof-media" aria-hidden="true"></span>
+            <div class="index3-proof-top">
+              <span class="index3-proof-tag">Conversion design</span>
+              <span class="index3-proof-state">Report ready</span>
+            </div>
+            <h3>Conversion Client</h3>
+            <p>Challenge: existing attention was reaching a page that still left too many doubts unresolved.</p>
+            <p>Outcome framing: a clearer landing-page system designed to make qualified action easier.</p>
+            <dl class="index3-proof-kpis">
+              <div><dt>Conversion lift</dt><dd>+XX%</dd></div>
+              <div><dt>Friction removed</dt><dd>XX</dd></div>
+              <div><dt>Lead quality</dt><dd>X.Xx</dd></div>
+            </dl>
+            <span class="index3-proof-link">Read full report <span aria-hidden="true">-></span></span>
+          </a>
         </article>
       </div>
-      <div class="quote-grid reveal">
-        <article class="quote-card"><p>“They made the next move obvious. The work felt commercial, calm, and precise from the start.”</p><strong>Placeholder client, SaaS category</strong></article>
-        <article class="quote-card"><p>“What stood out was the clarity. We could finally see where content, search, and conversion were helping or hurting each other.”</p><strong>Placeholder client, service business</strong></article>
-        <article class="quote-card"><p>“It felt like a partner team, not a reporting layer. Decisions got sharper every month.”</p><strong>Placeholder client, B2B growth team</strong></article>
-      </div>
-      <div class="section-actions reveal">
-        <a class="primary-cta" href="results.html"><span>See the full results page</span><span aria-hidden="true">-></span></a>
-        <a class="secondary-cta" href="contact.html">Talk through your growth gap</a>
-      </div>
     </section>
 
-    <section class="section" aria-labelledby="partners-title">
-      <div class="section-head reveal">
-        <p class="eyebrow">Partners</p>
-        <h2 id="partners-title">The people behind the system stay close to the work.</h2>
-        <p>Jora is positioned as a partner-led agency. The strategy stays commercial, the communication stays direct, and the detail stays owned.</p>
-      </div>
-      <div class="story-row reveal">
-        <button type="button" class="story" data-name="Josh" data-role="Partner, Jora Solutions" data-quote="We do not want growth to feel like a black box. We sit with you, find the clearest constraint, and turn it into a practical system your team can trust."><span>J</span><b>Josh</b></button>
-        <button type="button" class="story" data-name="Rahul" data-role="Partner, Jora Solutions" data-quote="The work is precise, but it should still feel human. Our job is to make the next decision easier and keep the system compounding."><span>R</span><b>Rahul</b></button>
-      </div>
-      <div class="section-actions reveal">
-        <a class="primary-cta" href="about.html"><span>Meet the partners</span><span aria-hidden="true">-></span></a>
-        <a class="secondary-cta" href="contact.html">Book a growth call</a>
-      </div>
-    </section>
-
-    <section class="cta-panel reveal" aria-labelledby="home-cta-title">
+    <section class="cta-panel index3-close-panel reveal" aria-labelledby="index3-close-title">
       <div class="cta-panel-copy">
-        <p class="eyebrow">Ready to scale properly?</p>
-        <h2 id="home-cta-title">We will show you exactly where your growth is being left on the table.</h2>
-        <p>Use the contact page to share what feels stuck, slow, or underperforming. We will map the clearest next moves across search, content, and conversion.</p>
+        <p class="eyebrow">Partner close</p>
+        <h2 id="index3-close-title">Work with partners who stay close enough to own the result.</h2>
+        <p>If your growth has started to feel noisy, fragmented, or harder to trust than it should, Josh and Rahul will help you find the real bottleneck, build the right system around it, and stay close until the progress is visible.</p>
       </div>
-      <div class="cta-panel-actions contact-form-actions">
-        <form class="bottom-contact-form" data-bottom-contact-form novalidate>
-          <p>Let us reach out to you</p>
-          <div class="bottom-contact-fields">
-            <label>
-              <span class="visually-hidden">Email address</span>
-              <input type="email" name="email" autocomplete="email" placeholder="you@company.com" required>
-            </label>
-            <label>
-              <span class="visually-hidden">Service required</span>
-              <select name="service" required>
-                <option value="">Service required</option>
-                <option value="SEO systems">SEO systems</option>
-                <option value="Content engines">Content engines</option>
-                <option value="Conversion design">Conversion design</option>
-                <option value="Full growth system">Full growth system</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </label>
-            <button class="primary-cta" type="submit"><span>Request contact</span><span aria-hidden="true">-></span></button>
-          </div>
-          <p class="form-status" role="status"></p>
-        </form>
+      <div class="cta-panel-actions">
+        <a class="primary-cta" href="contact.html"><span>Book a growth call</span><span aria-hidden="true">-></span></a>
+        <a class="secondary-cta" href="about.html">Meet Josh and Rahul</a>
+        <a class="secondary-cta" href="results.html">See result stories</a>
       </div>
     </section>
   </main>
 
-  <div class="modal" id="storyModal" role="dialog" aria-modal="true" aria-labelledby="modalName" aria-hidden="true" hidden>
-    <div class="modal-bg" data-close-modal></div>
-    <article class="modal-panel">
-      <button type="button" class="modal-close" data-close-modal>Close</button>
-      <div class="video-placeholder" aria-hidden="true"><span>Video placeholder</span><b>Play</b></div>
-      <p class="eyebrow">Partner story</p>
-      <h2 id="modalName">Client name</h2>
-      <p id="modalRole"></p>
-      <blockquote id="modalQuote"></blockquote>
-    </article>
+  <div class="hero-audit-entry" data-audit-popup role="dialog" aria-label="Free website audit offer" hidden>
+    <button class="audit-popup-close" type="button" data-audit-popup-close aria-label="Close free audit offer">Close</button>
+    <p>Free website audit</p>
+    <h3>See what is holding growth back.</h3>
+    <span class="audit-popup-offer">Enter your website and we will map the first SEO, content, and conversion opportunities. No pressure, just clarity.</span>
+    <form class="audit-url-form" data-audit-url-form novalidate>
+      <label>
+        <span class="visually-hidden">Your website URL</span>
+        <input class="audit-url-input" data-audit-url-input type="url" inputmode="url" autocomplete="url" placeholder="www.example.com" required>
+      </label>
+      <button class="audit-submit" type="submit">Free audit</button>
+    </form>
   </div>
 
   <div class="modal audit-modal" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="auditModalTitle" aria-hidden="true" hidden>
@@ -346,7 +443,7 @@
     <div class="footer-grid">
       <div>
         <a class="brand footer-brand" href="index.html"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span><span>Jora Solutions</span></a>
-        <p>Growth systems built with you. Premium strategy, sharper execution, and a partner-level view of what should happen next.</p>
+        <p>Your digital growth partners across strategy, systems, and the next decision that matters.</p>
       </div>
       <div>
         <h3>Pages</h3>
@@ -360,23 +457,21 @@
         <a data-page-link="contact" href="contact.html">Contact</a>
       </div>
       <div>
-        <h3>Focus</h3>
-        <a href="web-design.html">Web design</a>
-        <a href="crm-integrations.html">CRM & Integrations</a>
-        <a href="seo.html">SEO systems</a>
-        <a href="content.html">Content engines</a>
-        <a href="conversion.html">Conversion design</a>
-        <a href="results.html#case-stories">Result stories</a>
+        <h3>Proof</h3>
+        <a href="case-study-local-seo.html">Local SEO report</a>
+        <a href="case-study-content-engine.html">Content engine report</a>
+        <a href="case-study-conversion-design.html">Conversion report</a>
       </div>
       <div>
         <h3>Start</h3>
-        <a href="contact.html">Book a growth call</a>
-        <a href="about.html#principles">How we work</a>
-        <a href="results.html">Proof framework</a>
+        <a href="contact.html">Book a call</a>
+        <a href="about.html">Meet Josh and Rahul</a>
+        <a href="results.html">See our proof</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js?v=aurora-services-20260420"></script>
+  <script src="index3.js?v=hybrid-results-20260425"></script>
 </body>
 </html>
