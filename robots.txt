@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /index-draft.html
 
-Sitemap: https://jorasolutions.co.uk/sitemap.xml
+Sitemap: https://jora.solutions/sitemap.xml
