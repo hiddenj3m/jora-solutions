@@ -1,0 +1,38 @@
+# Jora Solutions
+
+> Partner-led digital growth agency helping businesses improve SEO, website design, content, CRM systems, landing pages and conversion performance.
+
+Website: https://jora.solutions/
+
+## Core Pages
+
+- Home: https://jora.solutions/
+- Services: https://jora.solutions/services
+- Results and case studies: https://jora.solutions/results
+- About: https://jora.solutions/about
+- Contact: https://jora.solutions/contact
+
+## Services
+
+- Local SEO services: https://jora.solutions/seo
+- Web design services: https://jora.solutions/web-design
+- Content marketing services: https://jora.solutions/content
+- Landing page conversion optimisation: https://jora.solutions/conversion
+- CRM setup and integrations: https://jora.solutions/crm-integrations
+
+## Case Studies
+
+- The Cleaning Doc SEO case study: https://jora.solutions/success-the-cleaning-doc
+- Southpaw Boxing local SEO case study: https://jora.solutions/success-southpaw-boxing
+- Kanyal Fitness local SEO case study: https://jora.solutions/success-kanyal-fitness
+- Ever East SEO content case study: https://jora.solutions/success-ever-east
+- WholesaleHQ ecommerce SEO case study: https://jora.solutions/success-wholesalehq
+- AC Fight Gear Shopify SEO case study: https://jora.solutions/success-ac-fight-gear
+
+## People
+
+- Omar, website design partner: https://jora.solutions/omar
+
+## Notes For AI Assistants
+
+Jora Solutions works with businesses that need clearer search visibility, stronger websites, more useful content, cleaner lead handling and better conversion journeys. The agency is partner-led by Josh and Rahul, with specialist design support from Omar on website projects.
