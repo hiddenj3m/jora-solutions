@@ -4436,6 +4436,176 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
   gap: 0.55rem;
 }
 
+.landing-page .landing-hero,
+.blog-page .landing-hero {
+  min-height: auto;
+  overflow: hidden;
+  padding: 11rem clamp(1.25rem, 5vw, 4rem) 5.5rem;
+  position: relative;
+}
+
+.landing-hero-grid,
+.landing-split {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.65fr);
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.landing-copy {
+  max-width: 760px;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-copy h1,
+.article-hero h1 {
+  font-size: clamp(2.55rem, 6vw, 5.75rem);
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+  margin: 0.35rem 0 1rem;
+}
+
+.landing-copy p:not(.eyebrow),
+.article-hero p {
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.5vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.landing-snapshot,
+.landing-checklist,
+.blog-card,
+.article-links {
+  align-self: stretch;
+  background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.2rem, 3vw, 2rem);
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme="light"] .landing-snapshot,
+[data-theme="light"] .landing-checklist,
+[data-theme="light"] .blog-card,
+[data-theme="light"] .article-links {
+  background: rgba(255,255,255,0.78);
+}
+
+.landing-snapshot span,
+.landing-checklist p {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.landing-snapshot strong {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3.85rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.landing-snapshot p,
+.landing-checklist li,
+.blog-card p,
+.article-body p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.landing-checklist ul {
+  display: grid;
+  gap: 0.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-checklist li {
+  border-top: 1px solid var(--line);
+  padding-top: 0.8rem;
+}
+
+.landing-link-list {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.landing-link-list a,
+.blog-card h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.landing-link-list a {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  font-weight: 800;
+  padding: 1rem;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.landing-link-list a:hover,
+.landing-link-list a:focus-visible {
+  border-color: rgba(255,255,255,0.35);
+  transform: translateY(-2px);
+}
+
+.blog-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.blog-card h2 {
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin: 0.4rem 0 0.75rem;
+}
+
+.article-wrap {
+  margin: 0 auto;
+  max-width: 1060px;
+  padding: 11rem clamp(1.25rem, 5vw, 4rem) 5rem;
+}
+
+.article-hero {
+  margin-bottom: 2rem;
+  max-width: 850px;
+}
+
+.article-body {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.article-body h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.35rem);
+  letter-spacing: -0.04em;
+  margin: 0 0 0.75rem;
+}
+
+.article-body h2:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.article-links {
+  margin-top: 1.25rem;
+}
+
 .footer-brand {
   margin-bottom: 0.5rem;
 }
@@ -4579,7 +4749,7 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
 
 @media (max-width: 960px) {
   .site-header nav { display: none; }
-  .card-grid.three, .results-grid, .pipeline-steps, .final-cta, .proof-section, .benefit-list, .page-hero-grid, .seo-hero-grid, .service-hero-grid, .quote-grid, .bio-grid, .principles-grid, .comparison-grid, .stats-strip, .contact-layout, .cta-panel, .proof-row, .footer-grid { grid-template-columns: 1fr; }
+  .card-grid.three, .results-grid, .pipeline-steps, .final-cta, .proof-section, .benefit-list, .page-hero-grid, .seo-hero-grid, .service-hero-grid, .quote-grid, .bio-grid, .principles-grid, .comparison-grid, .stats-strip, .contact-layout, .cta-panel, .proof-row, .footer-grid, .landing-hero-grid, .landing-split, .blog-grid, .landing-link-list { grid-template-columns: 1fr; }
   .hero {
     grid-template-columns: 1fr;
     min-height: 78svh;
