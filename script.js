@@ -414,11 +414,10 @@
     window.setTimeout(showAuditPopup, reduceMotion ? 0 : 1600);
 
     emailForm?.addEventListener("submit", (event) => {
-      event.preventDefault();
-
       const website = normalizeWebsite(websiteInput?.value);
 
       if (!website) {
+        event.preventDefault();
         websiteInput?.setCustomValidity("Enter a valid website, for example www.example.com.");
         if (status) status.textContent = "Add the website you want us to review.";
         websiteInput?.reportValidity();
@@ -430,14 +429,13 @@
       if (websiteLabel) websiteLabel.textContent = activeWebsite;
 
       if (!emailForm.checkValidity()) {
+        event.preventDefault();
         if (status) status.textContent = "Add a valid email and we will keep the next step clear.";
         emailForm.reportValidity();
         return;
       }
 
-      if (status) {
-        status.textContent = `Prototype note: ${activeWebsite || "your website"} is ready for review, but no backend is connected yet. The audit handoff can be wired here when the site goes live.`;
-      }
+      if (status) status.textContent = "Sending your audit request...";
     });
 
     websiteInput?.addEventListener("input", () => websiteInput.setCustomValidity(""));
@@ -564,14 +562,19 @@
       const status = form.querySelector(".form-status");
 
       form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
         if (!form.checkValidity()) {
+          event.preventDefault();
           if (status) status.textContent = "Add your email and choose the service that feels closest.";
           form.reportValidity();
           return;
         }
 
+        if (form.matches("[data-netlify='true'], [netlify]")) {
+          if (status) status.textContent = "Sending your request...";
+          return;
+        }
+
+        event.preventDefault();
         const service = new FormData(form).get("service") || "your growth system";
         if (status) {
           status.textContent = `Prototype note: we would reach out about ${service}, but no backend is connected yet.`;
@@ -682,14 +685,19 @@
       if (!status) return;
 
       form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
         if (!form.checkValidity()) {
+          event.preventDefault();
           status.textContent = "Add your details above and we will keep the next step clear.";
           form.reportValidity();
           return;
         }
 
+        if (form.matches("[data-netlify='true'], [netlify]")) {
+          status.textContent = "Sending your enquiry...";
+          return;
+        }
+
+        event.preventDefault();
         status.textContent = "Prototype note: the form is validated, but no backend is connected yet. The growth-plan handoff can be wired here when the site goes live.";
         form.reset();
         finalCta?.classList.add("growth-active");

@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CVR Impact Calculator | Jora Solutions</title>
+  <meta name="description" content="Estimate revenue, CAC and profit impact from improving landing-page conversion rate. Runs in your browser with no signup required." />
+  <link rel="canonical" href="https://jora.solutions/tools/cvr-impact/" />
+  <meta property="og:title" content="CVR Impact Calculator | Jora Solutions" />
+  <meta property="og:description" content="Estimate revenue, CAC and profit impact from improving landing-page conversion rate. Runs in your browser with no signup required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jora.solutions/tools/cvr-impact/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" href="../../logo-black.png" />
+  <link rel="stylesheet" href="../../styles.css?v=aurora-services-20260420" />
+  <link rel="stylesheet" href="../assets/jora-tools.css" />
+  <script src="../assets/jora-tools.js" defer></script>
+  <script src="../assets/tools/cvr-impact.js" defer></script>
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "WebApplication",
+    "name":  "CVR Impact Calculator",
+    "url":  "https://jora.solutions/tools/cvr-impact/",
+    "description":  "Estimate revenue, CAC and profit impact from improving landing-page conversion rate. Runs in your browser with no signup required.",
+    "applicationCategory":  "BusinessApplication",
+    "operatingSystem":  "Any",
+    "offers":  {
+                   "@type":  "Offer",
+                   "price":  "0",
+                   "priceCurrency":  "GBP"
+               },
+    "publisher":  {
+                      "@type":  "Organization",
+                      "name":  "Jora Solutions",
+                      "url":  "https://jora.solutions/"
+                  }
+}
+  </script>
+</head>
+
+<body class="tools-page" data-page="tools">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="top-rank-banner" href="../../seo.html"><span>Rank page 1 on Google</span><span aria-hidden="true">-&gt;</span></a>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Jora Solutions home"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a>
+    <nav aria-label="Primary">
+      <a data-page-link="home" href="../../index.html">Home</a>
+      <a data-page-link="services" href="../../services.html">Services</a>
+      <a data-page-link="web" href="../../web-design.html">Web Design</a>
+      <a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a>
+      <a data-page-link="seo" href="../../seo.html">SEO</a>
+      <a data-page-link="results" href="../../results.html">Results</a>
+      <a data-page-link="about" href="../../about.html">About</a>
+      <a data-page-link="blog" href="../../blog/">Blog</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle" data-page-link="tools" href="../" aria-haspopup="true">Tools</a>
+        <div class="nav-dropdown-panel" aria-label="Marketing tools">
+          <a href="../ad-profit-command-centre/">Ad Profit Command Centre</a>
+          <a href="../discount-margin/">Discount Margin Calculator</a>
+          <a href="../break-even-roas/">Break-even ROAS Calculator</a>
+          <a href="../cac-ceiling/">CAC Ceiling Calculator</a>
+          <a href="../lead-value/">Lead Value Calculator</a>
+          <a href="../cvr-impact/">CVR Impact Calculator</a>
+        </div>
+      </div>
+      <a data-page-link="contact" href="../../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
+      <a class="nav-cta" href="../../contact.html">Growth plan</a>
+    </div>
+  </header>
+
+  <main id="main" class="apcc">
+    <section class="hero tool-hub-hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          Jora Solutions / Conversion Tool
+        </div>
+
+        <h1>CVR Impact Calculator</h1>
+        <p>
+          Estimate how conversion-rate improvements change revenue, profit and CAC before rebuilding a page.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tool" class="btn">Run Calculation</a>
+          <a href="#lead" class="btn secondary">Here's what you should do instead</a>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <span>Conversion lift</span>
+          <span data-tool-status="cvr-impact">Ready</span>
+        </div>
+
+        <div class="terminal-grid">
+          <div class="terminal-row">
+            <span>Focus</span>
+            <strong>CVR lift</strong>
+          </div>
+          <div class="terminal-row">
+            <span>Output</span>
+            <strong>Profit impact</strong>
+          </div>
+          <div class="terminal-row">
+            <span>Runs</span>
+            <strong>In browser</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section">
+      <div class="tool-shell">
+        <form name="jora-tool-cvr-impact" method="POST" data-netlify="true" class="tool-form" data-tool-form="cvr-impact">
+          <input type="hidden" name="form-name" value="jora-tool-cvr-impact" />
+          <p class="command-kicker">Inputs</p>
+          <h2>Model the lift</h2>
+
+          <div class="field">
+            <label for="cvr-visitors">Monthly visitors or clicks</label>
+            <input id="cvr-visitors" name="visitors" type="number" value="2500" min="1" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="cvr-current">Current CVR (%)</label>
+            <input id="cvr-current" name="currentCvr" type="number" value="2.0" min="0.1" max="100" step="0.1" />
+          </div>
+
+          <div class="field">
+            <label for="cvr-target">Improved CVR (%)</label>
+            <input id="cvr-target" name="targetCvr" type="number" value="3.0" min="0.1" max="100" step="0.1" />
+          </div>
+
+          <div class="field">
+            <label for="cvr-aov">Average order value (&pound;)</label>
+            <input id="cvr-aov" name="aov" type="number" value="99" min="1" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="cvr-margin">Gross margin (%)</label>
+            <input id="cvr-margin" name="margin" type="number" value="65" min="1" max="100" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="cvr-spend">Monthly traffic cost (&pound;)</label>
+            <input id="cvr-spend" name="trafficCost" type="number" value="1500" min="0" step="1" />
+          </div>
+
+          <button class="btn" type="submit">Calculate CVR Impact</button>
+          <p class="tool-note">Results stay on the page and update in your browser. No signup is required.</p>
+        </form>
+
+        <div class="tool-results">
+          <div class="result-panel">
+            <h2>Result</h2>
+            <div class="result-metric-grid" data-result-metrics="cvr-impact"></div>
+          </div>
+
+          <div class="recommendation-panel">
+            <h2>What to do next</h2>
+            <p data-result-recommendation="cvr-impact">Run the calculation to see whether conversion work is worth prioritising.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lead" class="section">
+      <h2>Here's what you should do instead</h2>
+      <p class="section-desc">
+        Do not redesign blindly. Prioritise the page changes that improve clarity, proof,
+        offer strength and objection handling where the profit lift justifies the work.
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer tools-site-footer">
+    <div class="footer-grid">
+      <div><a class="brand footer-brand" href="../../index.html"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a><p>SEO, web design and digital marketing systems for businesses that want clearer growth from search, content and conversion.</p></div>
+      <div><h3>Pages</h3><a data-page-link="home" href="../../index.html">Home</a><a data-page-link="services" href="../../services.html">Services</a><a data-page-link="web" href="../../web-design.html">Web Design</a><a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a><a data-page-link="seo" href="../../seo.html">SEO</a><a data-page-link="results" href="../../results.html">Results</a><a data-page-link="about" href="../../about.html">About</a><a data-page-link="blog" href="../../blog/">Blog</a><a data-page-link="tools" href="../../tools/">Tools</a>
+        <a data-page-link="contact" href="../../contact.html">Contact</a></div>
+      <div><h3>Commercial</h3><a href="../../small-business-seo-services.html">Small business SEO</a><a href="../../medium-business-seo-services.html">Medium business SEO</a><a href="../../local-seo-services.html">Local SEO</a><a href="../../lead-generation-web-design.html">Lead generation web design</a></div>
+      <div><h3>Start</h3><a href="../../contact.html">Get your growth plan</a><a href="../../tools/">Use the calculators</a><a href="../../blog/">Read the blog</a></div>
+    </div>
+  </footer>
+  <script src="../../script.js?v=aurora-services-20260420"></script>
+</body>
+</html>
+
+
+
+
+

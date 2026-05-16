@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Break-even ROAS Calculator | Jora Solutions</title>
+  <meta name="description" content="Calculate the break-even ROAS your offer needs after margin, refunds and fixed campaign costs. Runs in your browser with no signup required." />
+  <link rel="canonical" href="https://jora.solutions/tools/break-even-roas/" />
+  <meta property="og:title" content="Break-even ROAS Calculator | Jora Solutions" />
+  <meta property="og:description" content="Calculate the break-even ROAS your offer needs after margin, refunds and fixed campaign costs. Runs in your browser with no signup required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jora.solutions/tools/break-even-roas/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" href="../../logo-black.png" />
+  <link rel="stylesheet" href="../../styles.css?v=aurora-services-20260420" />
+  <link rel="stylesheet" href="../assets/jora-tools.css" />
+  <script src="../assets/jora-tools.js" defer></script>
+  <script src="../assets/tools/break-even-roas.js" defer></script>
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "WebApplication",
+    "name":  "Break-even ROAS Calculator",
+    "url":  "https://jora.solutions/tools/break-even-roas/",
+    "description":  "Calculate the break-even ROAS your offer needs after margin, refunds and fixed campaign costs. Runs in your browser with no signup required.",
+    "applicationCategory":  "BusinessApplication",
+    "operatingSystem":  "Any",
+    "offers":  {
+                   "@type":  "Offer",
+                   "price":  "0",
+                   "priceCurrency":  "GBP"
+               },
+    "publisher":  {
+                      "@type":  "Organization",
+                      "name":  "Jora Solutions",
+                      "url":  "https://jora.solutions/"
+                  }
+}
+  </script>
+</head>
+
+<body class="tools-page" data-page="tools">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="top-rank-banner" href="../../seo.html"><span>Rank page 1 on Google</span><span aria-hidden="true">-&gt;</span></a>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Jora Solutions home"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a>
+    <nav aria-label="Primary">
+      <a data-page-link="home" href="../../index.html">Home</a>
+      <a data-page-link="services" href="../../services.html">Services</a>
+      <a data-page-link="web" href="../../web-design.html">Web Design</a>
+      <a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a>
+      <a data-page-link="seo" href="../../seo.html">SEO</a>
+      <a data-page-link="results" href="../../results.html">Results</a>
+      <a data-page-link="about" href="../../about.html">About</a>
+      <a data-page-link="blog" href="../../blog/">Blog</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle" data-page-link="tools" href="../" aria-haspopup="true">Tools</a>
+        <div class="nav-dropdown-panel" aria-label="Marketing tools">
+          <a href="../ad-profit-command-centre/">Ad Profit Command Centre</a>
+          <a href="../discount-margin/">Discount Margin Calculator</a>
+          <a href="../break-even-roas/">Break-even ROAS Calculator</a>
+          <a href="../cac-ceiling/">CAC Ceiling Calculator</a>
+          <a href="../lead-value/">Lead Value Calculator</a>
+          <a href="../cvr-impact/">CVR Impact Calculator</a>
+        </div>
+      </div>
+      <a data-page-link="contact" href="../../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
+      <a class="nav-cta" href="../../contact.html">Growth plan</a>
+    </div>
+  </header>
+
+  <main id="main" class="apcc">
+    <section class="hero tool-hub-hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          Jora Solutions / ROAS Tool
+        </div>
+
+        <h1>Break-even ROAS Calculator</h1>
+        <p>
+          Find the ROAS your ads must hit before the campaign covers traffic, refunds and fixed costs.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tool" class="btn">Run Calculation</a>
+          <a href="#lead" class="btn secondary">Here's what you should do instead</a>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <span>ROAS floor</span>
+          <span data-tool-status="break-even-roas">Ready</span>
+        </div>
+
+        <div class="terminal-grid">
+          <div class="terminal-row">
+            <span>Focus</span>
+            <strong>Profit floor</strong>
+          </div>
+          <div class="terminal-row">
+            <span>Output</span>
+            <strong>Required ROAS</strong>
+          </div>
+          <div class="terminal-row">
+            <span>Runs</span>
+            <strong>In browser</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section">
+      <div class="tool-shell">
+        <form name="jora-tool-break-even-roas" method="POST" data-netlify="true" class="tool-form" data-tool-form="break-even-roas">
+          <input type="hidden" name="form-name" value="jora-tool-break-even-roas" />
+          <p class="command-kicker">Inputs</p>
+          <h2>Set the floor</h2>
+
+          <div class="field">
+            <label for="beroas-ad-spend">Ad spend (&pound;)</label>
+            <input id="beroas-ad-spend" name="adSpend" type="number" value="1500" min="1" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="beroas-margin">Gross margin (%)</label>
+            <input id="beroas-margin" name="margin" type="number" value="65" min="1" max="100" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="beroas-refund">Refund rate (%)</label>
+            <input id="beroas-refund" name="refundRate" type="number" value="5" min="0" max="90" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="beroas-fixed">Fixed campaign costs (&pound;)</label>
+            <input id="beroas-fixed" name="fixedCosts" type="number" value="250" min="0" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="beroas-current">Current or expected ROAS</label>
+            <input id="beroas-current" name="currentRoas" type="number" value="2.5" min="0" step="0.1" />
+          </div>
+
+          <button class="btn" type="submit">Calculate ROAS Floor</button>
+          <p class="tool-note">Results stay on the page and update in your browser. No signup is required.</p>
+        </form>
+
+        <div class="tool-results">
+          <div class="result-panel">
+            <h2>Result</h2>
+            <div class="result-metric-grid" data-result-metrics="break-even-roas"></div>
+          </div>
+
+          <div class="recommendation-panel">
+            <h2>What to do next</h2>
+            <p data-result-recommendation="break-even-roas">Run the calculation to see the ROAS floor before you judge the campaign.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lead" class="section">
+      <h2>Here's what you should do instead</h2>
+      <p class="section-desc">
+        Do not scale from platform ROAS alone. Compare it to your break-even floor,
+        then improve margin, conversion rate or AOV before increasing budget.
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer tools-site-footer">
+    <div class="footer-grid">
+      <div><a class="brand footer-brand" href="../../index.html"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a><p>SEO, web design and digital marketing systems for businesses that want clearer growth from search, content and conversion.</p></div>
+      <div><h3>Pages</h3><a data-page-link="home" href="../../index.html">Home</a><a data-page-link="services" href="../../services.html">Services</a><a data-page-link="web" href="../../web-design.html">Web Design</a><a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a><a data-page-link="seo" href="../../seo.html">SEO</a><a data-page-link="results" href="../../results.html">Results</a><a data-page-link="about" href="../../about.html">About</a><a data-page-link="blog" href="../../blog/">Blog</a><a data-page-link="tools" href="../../tools/">Tools</a>
+        <a data-page-link="contact" href="../../contact.html">Contact</a></div>
+      <div><h3>Commercial</h3><a href="../../small-business-seo-services.html">Small business SEO</a><a href="../../medium-business-seo-services.html">Medium business SEO</a><a href="../../local-seo-services.html">Local SEO</a><a href="../../lead-generation-web-design.html">Lead generation web design</a></div>
+      <div><h3>Start</h3><a href="../../contact.html">Get your growth plan</a><a href="../../tools/">Use the calculators</a><a href="../../blog/">Read the blog</a></div>
+    </div>
+  </footer>
+  <script src="../../script.js?v=aurora-services-20260420"></script>
+</body>
+</html>
+
+
+
+
+

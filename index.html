@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,15 +19,26 @@
       <span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span>
       <span class="brand-wordmark">Jora Solutions</span>
     </a>
-    <nav class="index3-header-nav" aria-label="Primary">
+        <nav class="index3-header-nav" aria-label="Primary">
       <a data-page-link="home" href="index.html">Home</a>
       <a data-page-link="services" href="services.html">Services</a>
       <a data-page-link="web" href="web-design.html">Web Design</a>
-      <a data-page-link="crm" href="crm-integrations.html">CRM & Integrations</a>
+      <a data-page-link="crm" href="crm-integrations.html">CRM &amp; Integrations</a>
       <a data-page-link="seo" href="seo.html">SEO</a>
       <a data-page-link="results" href="results.html">Results</a>
       <a data-page-link="about" href="about.html">About</a>
       <a data-page-link="blog" href="blog/">Blog</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle" data-page-link="tools" href="tools/" aria-haspopup="true">Tools</a>
+        <div class="nav-dropdown-panel" aria-label="Marketing tools">
+          <a href="tools/ad-profit-command-centre/">Ad Profit Command Centre</a>
+          <a href="tools/discount-margin/">Discount Margin Calculator</a>
+          <a href="tools/break-even-roas/">Break-even ROAS Calculator</a>
+          <a href="tools/cac-ceiling/">CAC Ceiling Calculator</a>
+          <a href="tools/lead-value/">Lead Value Calculator</a>
+          <a href="tools/cvr-impact/">CVR Impact Calculator</a>
+        </div>
+      </div>
       <a data-page-link="contact" href="contact.html">Contact</a>
     </nav>
     <div class="header-actions index3-header-actions">
@@ -54,15 +65,22 @@
         </a>
         <button class="index3-drawer-close" type="button" data-index3-drawer-close aria-label="Close navigation">Close</button>
       </div>
-      <nav class="index3-drawer-nav" aria-label="Mobile">
+            <nav class="index3-drawer-nav" aria-label="Mobile">
         <a data-page-link="home" href="index.html">Home</a>
         <a data-page-link="services" href="services.html">Services</a>
         <a data-page-link="web" href="web-design.html">Web Design</a>
-        <a data-page-link="crm" href="crm-integrations.html">CRM & Integrations</a>
+        <a data-page-link="crm" href="crm-integrations.html">CRM &amp; Integrations</a>
         <a data-page-link="seo" href="seo.html">SEO</a>
         <a data-page-link="results" href="results.html">Results</a>
         <a data-page-link="about" href="about.html">About</a>
         <a data-page-link="blog" href="blog/">Blog</a>
+        <a data-page-link="tools" href="tools/">Tools</a>
+        <a href="tools/ad-profit-command-centre/">Ad Profit Command Centre</a>
+        <a href="tools/discount-margin/">Discount Margin Calculator</a>
+        <a href="tools/break-even-roas/">Break-even ROAS Calculator</a>
+        <a href="tools/cac-ceiling/">CAC Ceiling Calculator</a>
+        <a href="tools/lead-value/">Lead Value Calculator</a>
+        <a href="tools/cvr-impact/">CVR Impact Calculator</a>
         <a data-page-link="contact" href="contact.html">Contact</a>
       </nav>
       <div class="index3-drawer-actions">
@@ -410,10 +428,11 @@
     <p>Free website audit</p>
     <h3>See what is holding growth back.</h3>
     <span class="audit-popup-offer">Enter your website and we will map the first SEO, content, and conversion opportunities. No pressure, just clarity.</span>
-    <form name="audit-url" netlify class="audit-url-form" data-audit-url-form novalidate>
+    <form name="audit-url" method="POST" data-netlify="true" class="audit-url-form" data-audit-url-form novalidate>
+          <input type="hidden" name="form-name" value="audit-url" />
       <label>
         <span class="visually-hidden">Your website URL</span>
-        <input class="audit-url-input" data-audit-url-input type="url" inputmode="url" autocomplete="url" placeholder="www.example.com" required>
+        <input class="audit-url-input" data-audit-url-input name="website" type="url" inputmode="url" autocomplete="url" placeholder="www.example.com" required>
       </label>
       <button class="audit-submit" type="submit">Free audit</button>
     </form>
@@ -426,14 +445,15 @@
       <p class="eyebrow">Free website audit</p>
       <h2 id="auditModalTitle">Where should we send the audit?</h2>
       <p class="audit-modal-copy">We will map the first opportunities for <strong data-audit-website>your website</strong> and show you where growth is being left on the table.</p>
-      <form name="audit-email" netlify class="audit-email-form" data-audit-email-form novalidate>
+      <form name="audit-email" method="POST" data-netlify="true" class="audit-email-form" data-audit-email-form novalidate>
+          <input type="hidden" name="form-name" value="audit-email" />
         <label>
           <span>Website</span>
           <input data-audit-website-input name="website" type="text" inputmode="url" autocomplete="url" placeholder="www.example.com" required>
         </label>
         <label>
           <span>Email address</span>
-          <input data-audit-email type="email" autocomplete="email" placeholder="you@company.com" required>
+          <input data-audit-email name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
         </label>
         <button class="primary-cta" type="submit"><span>Send my audit path</span><span aria-hidden="true">-></span></button>
         <p class="form-status" data-audit-status role="status"></p>
@@ -457,6 +477,7 @@
         <a data-page-link="results" href="results.html">Results</a>
         <a data-page-link="about" href="about.html">About</a>
         <a data-page-link="blog" href="blog/">Blog</a>
+        <a data-page-link="tools" href="tools/">Tools</a>
         <a data-page-link="contact" href="contact.html">Contact</a>
       </div>
       <div>
@@ -478,3 +499,8 @@
   <script src="index3.js?v=hybrid-results-20260425"></script>
 </body>
 </html>
+
+
+
+
+

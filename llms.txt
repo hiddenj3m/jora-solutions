@@ -9,6 +9,7 @@ Website: https://jora.solutions/
 - Home: https://jora.solutions/
 - Services: https://jora.solutions/services
 - Results and case studies: https://jora.solutions/results
+- Marketing calculators: https://jora.solutions/tools/
 - About: https://jora.solutions/about
 - Contact: https://jora.solutions/contact
 
@@ -19,6 +20,15 @@ Website: https://jora.solutions/
 - Content marketing services: https://jora.solutions/content
 - Landing page conversion optimisation: https://jora.solutions/conversion
 - CRM setup and integrations: https://jora.solutions/crm-integrations
+
+## Tools
+
+- Ad Profit Command Centre: https://jora.solutions/tools/ad-profit-command-centre/
+- Discount Margin Calculator: https://jora.solutions/tools/discount-margin/
+- Break-even ROAS Calculator: https://jora.solutions/tools/break-even-roas/
+- CAC Ceiling Calculator: https://jora.solutions/tools/cac-ceiling/
+- Lead Value Calculator: https://jora.solutions/tools/lead-value/
+- CVR Impact Calculator: https://jora.solutions/tools/cvr-impact/
 
 ## Case Studies
 

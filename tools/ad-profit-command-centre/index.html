@@ -1,0 +1,630 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ad Profit Command Centre | Jora Solutions</title>
+  <meta name="description" content="Model ad spend, CAC, ROAS, profit range and offer economics before increasing paid media budget. Runs in your browser with no signup required." />
+  <link rel="canonical" href="https://jora.solutions/tools/ad-profit-command-centre/" />
+  <meta property="og:title" content="Ad Profit Command Centre | Jora Solutions" />
+  <meta property="og:description" content="Model ad spend, CAC, ROAS, profit range and offer economics before increasing paid media budget. Runs in your browser with no signup required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jora.solutions/tools/ad-profit-command-centre/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" href="../../logo-black.png" />
+  <link rel="stylesheet" href="../../styles.css?v=aurora-services-20260420" />
+  <link rel="stylesheet" href="../assets/jora-tools.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "WebApplication",
+    "name":  "Ad Profit Command Centre",
+    "url":  "https://jora.solutions/tools/ad-profit-command-centre/",
+    "description":  "Model ad spend, CAC, ROAS, profit range and offer economics before increasing paid media budget. Runs in your browser with no signup required.",
+    "applicationCategory":  "BusinessApplication",
+    "operatingSystem":  "Any",
+    "offers":  {
+                   "@type":  "Offer",
+                   "price":  "0",
+                   "priceCurrency":  "GBP"
+               },
+    "publisher":  {
+                      "@type":  "Organization",
+                      "name":  "Jora Solutions",
+                      "url":  "https://jora.solutions/"
+                  }
+}
+  </script>
+</head>
+
+<body class="tools-page" data-page="tools">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="top-rank-banner" href="../../seo.html"><span>Rank page 1 on Google</span><span aria-hidden="true">-&gt;</span></a>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Jora Solutions home"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a>
+    <nav aria-label="Primary">
+      <a data-page-link="home" href="../../index.html">Home</a>
+      <a data-page-link="services" href="../../services.html">Services</a>
+      <a data-page-link="web" href="../../web-design.html">Web Design</a>
+      <a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a>
+      <a data-page-link="seo" href="../../seo.html">SEO</a>
+      <a data-page-link="results" href="../../results.html">Results</a>
+      <a data-page-link="about" href="../../about.html">About</a>
+      <a data-page-link="blog" href="../../blog/">Blog</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle" data-page-link="tools" href="../" aria-haspopup="true">Tools</a>
+        <div class="nav-dropdown-panel" aria-label="Marketing tools">
+          <a href="../ad-profit-command-centre/">Ad Profit Command Centre</a>
+          <a href="../discount-margin/">Discount Margin Calculator</a>
+          <a href="../break-even-roas/">Break-even ROAS Calculator</a>
+          <a href="../cac-ceiling/">CAC Ceiling Calculator</a>
+          <a href="../lead-value/">Lead Value Calculator</a>
+          <a href="../cvr-impact/">CVR Impact Calculator</a>
+        </div>
+      </div>
+      <a data-page-link="contact" href="../../contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
+      <a class="nav-cta" href="../../contact.html">Growth plan</a>
+    </div>
+  </header>
+
+  <main id="main" class="apcc">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          Jora Solutions / Ad Profit Command Centre
+        </div>
+
+        <h1>Know if your ads will make money before you spend.</h1>
+
+        <p>
+          Model your pricing, conversion rate, LTV and ad costs to see your expected profit,
+          worst case, CAC headroom and scale ceiling.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tool" class="btn">Run Model</a>
+          <a href="#lead" class="btn secondary">Here's what you should do instead</a>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <span>Profit Before You Spend</span>
+          <span id="accessStatus">Ready</span>
+        </div>
+
+        <div class="terminal-grid">
+          <div class="terminal-row">
+            <span>Expected Profit</span>
+            <strong id="heroProfit">&pound;0</strong>
+          </div>
+
+          <div class="terminal-row">
+            <span>Projected CAC</span>
+            <strong id="heroCAC">&pound;0</strong>
+          </div>
+
+          <div class="terminal-row">
+            <span>LTV:CAC</span>
+            <strong id="heroLtvCac">0.0x</strong>
+          </div>
+
+          <div class="terminal-row">
+            <span>Verdict</span>
+            <strong id="heroVerdict">Model Needed</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section tool-section">
+      <div class="command-centre">
+        <div class="command-header">
+          <div>
+            <p class="command-kicker">Control Centre</p>
+            <h2>Model your ad economics</h2>
+            <p class="section-desc">
+              Enter your numbers, hit RUN, and see whether the offer can handle paid traffic.
+            </p>
+          </div>
+
+          <div class="command-actions">
+            <button class="btn secondary" id="resetBtn" type="button">Reset</button>
+            <button class="btn run-btn" id="runModelBtn" type="button">RUN</button>
+          </div>
+        </div>
+
+        <div class="config-strip" id="modelControls" aria-label="Model variables">
+          <button class="config-tile" type="button" data-open-modal="offerModal" aria-haspopup="dialog">
+            <span class="config-index">01</span>
+            <strong>Offer</strong>
+            <span id="offerSummary">&pound;99 AOV / 65% margin / &pound;180 LTV</span>
+          </button>
+
+          <button class="config-tile" type="button" data-open-modal="trafficModal" aria-haspopup="dialog">
+            <span class="config-index">02</span>
+            <strong>Traffic</strong>
+            <span id="trafficSummary">&pound;1.20 CPC / 2.5% CVR / 25% close</span>
+          </button>
+
+          <button class="config-tile" type="button" data-open-modal="budgetModal" aria-haspopup="dialog">
+            <span class="config-index">03</span>
+            <strong>Budget</strong>
+            <span id="budgetSummary">&pound;50/day / &pound;1,500/mo / 80% capacity</span>
+          </button>
+        </div>
+
+        <div id="offerModal" class="config-modal hidden" role="dialog" aria-modal="true" aria-labelledby="offerModalTitle">
+          <div class="config-dialog">
+            <div class="modal-head">
+              <div>
+                <p class="command-kicker">Variables</p>
+                <h3 id="offerModalTitle">Offer economics</h3>
+              </div>
+
+              <button class="modal-close" type="button" data-close-modal aria-label="Close offer settings">&times;</button>
+            </div>
+
+            <div class="modal-body">
+              <div class="control-group">
+                <h3>Business Model</h3>
+
+                <div class="field">
+                  <label for="businessModel">Model Type</label>
+                  <select id="businessModel">
+                    <option>E-commerce</option>
+                    <option>Lead generation</option>
+                    <option>Service business</option>
+                    <option>Subscription</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <h3>Offer Economics</h3>
+
+                <div class="field-grid three">
+                  <div class="field">
+                    <label for="offerPrice">Offer Price (&pound;)</label>
+                    <input id="offerPrice" type="number" value="99" min="1" />
+                  </div>
+
+                  <div class="field">
+                    <label for="aov">AOV (&pound;)</label>
+                    <input id="aov" type="number" value="99" min="1" />
+                  </div>
+
+                  <div class="field">
+                    <label for="margin">Margin (%)</label>
+                    <input id="margin" type="number" value="65" min="1" max="100" />
+                  </div>
+
+                  <div class="field">
+                    <label for="ltv">LTV (&pound;)</label>
+                    <input id="ltv" type="number" value="180" min="1" />
+                  </div>
+
+                  <div class="field">
+                    <label for="refundRate">Refund Rate (%)</label>
+                    <input id="refundRate" type="number" value="5" min="0" max="90" />
+                  </div>
+
+                  <div class="field">
+                    <label for="upsellRate">Upsell Rate (%)</label>
+                    <input id="upsellRate" type="number" value="15" min="0" max="100" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn secondary" type="button" data-close-modal>Done</button>
+              <button class="btn" type="button" data-close-modal>Apply Settings</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="trafficModal" class="config-modal hidden" role="dialog" aria-modal="true" aria-labelledby="trafficModalTitle">
+          <div class="config-dialog">
+            <div class="modal-head">
+              <div>
+                <p class="command-kicker">Variables</p>
+                <h3 id="trafficModalTitle">Traffic and funnel</h3>
+              </div>
+
+              <button class="modal-close" type="button" data-close-modal aria-label="Close traffic settings">&times;</button>
+            </div>
+
+            <div class="modal-body">
+              <div class="control-group">
+                <h3>Funnel Metrics</h3>
+
+                <div class="field">
+                  <label>CPC Low / Expected / High (&pound;)</label>
+                  <div class="range-row">
+                    <input id="cpcLow" type="number" value="0.60" step="0.01" />
+                    <input id="cpcExp" type="number" value="1.20" step="0.01" />
+                    <input id="cpcHigh" type="number" value="2.20" step="0.01" />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label>CVR Low / Expected / High (%)</label>
+                  <div class="range-row">
+                    <input id="cvrLow" type="number" value="1.2" step="0.1" />
+                    <input id="cvrExp" type="number" value="2.5" step="0.1" />
+                    <input id="cvrHigh" type="number" value="4.5" step="0.1" />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="closeRate">Lead Close Rate (%)</label>
+                  <input id="closeRate" type="number" value="25" min="1" max="100" />
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn secondary" type="button" data-close-modal>Done</button>
+              <button class="btn" type="button" data-close-modal>Apply Settings</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="budgetModal" class="config-modal hidden" role="dialog" aria-modal="true" aria-labelledby="budgetModalTitle">
+          <div class="config-dialog">
+            <div class="modal-head">
+              <div>
+                <p class="command-kicker">Variables</p>
+                <h3 id="budgetModalTitle">Budget and readiness</h3>
+              </div>
+
+              <button class="modal-close" type="button" data-close-modal aria-label="Close budget settings">&times;</button>
+            </div>
+
+            <div class="modal-body">
+              <div class="control-group">
+                <h3>Budget</h3>
+
+                <div class="field-grid two">
+                  <div class="field">
+                    <label for="dailySpend">Daily Spend (&pound;)</label>
+                    <input id="dailySpend" type="number" value="50" min="1" />
+                  </div>
+
+                  <div class="field">
+                    <label for="monthlySpend">Monthly Spend (&pound;)</label>
+                    <input id="monthlySpend" type="number" value="1500" min="1" />
+                  </div>
+
+                  <div class="field">
+                    <label for="fixedCosts">Fixed Costs (&pound;)</label>
+                    <input id="fixedCosts" type="number" value="250" min="0" />
+                  </div>
+
+                  <div class="field">
+                    <label for="paybackDays">Payback Days</label>
+                    <input id="paybackDays" type="number" value="30" min="1" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <h3>Strategic Inputs</h3>
+
+                <div class="field-grid three">
+                  <div class="field">
+                    <label for="proofStrength">Proof (%)</label>
+                    <input id="proofStrength" type="number" value="55" min="0" max="100" />
+                  </div>
+
+                  <div class="field">
+                    <label for="urgency">Urgency (%)</label>
+                    <input id="urgency" type="number" value="45" min="0" max="100" />
+                  </div>
+
+                  <div class="field">
+                    <label for="capacity">Capacity (%)</label>
+                    <input id="capacity" type="number" value="80" min="0" max="100" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn secondary" type="button" data-close-modal>Done</button>
+              <button class="btn" type="button" data-close-modal>Apply Settings</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resultsArea" class="results-area">
+        <div class="kpi-grid">
+          <div class="kpi">
+            <span>Expected Profit P50</span>
+            <strong id="kpiProfit">&pound;0</strong>
+            <em class="tag" id="kpiProfitTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>Worst Case P10</span>
+            <strong id="kpiWorst">&pound;0</strong>
+            <em class="tag" id="kpiWorstTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>Best Case P90</span>
+            <strong id="kpiBest">&pound;0</strong>
+            <em class="tag" id="kpiBestTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>Probability of Profit</span>
+            <strong id="kpiProb">0%</strong>
+            <em class="tag" id="kpiProbTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>Projected CAC</span>
+            <strong id="kpiCAC">&pound;0</strong>
+            <em class="tag" id="kpiCACTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>Max Allowable CAC</span>
+            <strong id="kpiMaxCAC">&pound;0</strong>
+            <em class="tag">Target</em>
+          </div>
+
+          <div class="kpi">
+            <span>CAC Headroom</span>
+            <strong id="kpiHeadroom">&pound;0</strong>
+            <em class="tag" id="kpiHeadroomTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>LTV:CAC Ratio</span>
+            <strong id="kpiLtvCac">0.0x</strong>
+            <em class="tag" id="kpiLtvCacTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>ROAS</span>
+            <strong id="kpiROAS">0.0x</strong>
+            <em class="tag" id="kpiROASTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>Break-even ROAS</span>
+            <strong id="kpiBEROAS">0.0x</strong>
+            <em class="tag">Floor</em>
+          </div>
+
+          <div class="kpi">
+            <span>Recommended Daily Budget</span>
+            <strong id="kpiRecBudget">&pound;0</strong>
+            <em class="tag" id="kpiBudgetTag">Run Model</em>
+          </div>
+
+          <div class="kpi">
+            <span>Refund Impact</span>
+            <strong id="kpiRefundImpact">&pound;0</strong>
+            <em class="tag warning">Leakage</em>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="lockedContent" class="locked-preview">
+      <section class="section">
+        <h2>Offer Strength Score</h2>
+        <p class="section-desc">
+          A weighted score based on margin, conversion power, LTV, refund risk, proof, urgency and capacity.
+        </p>
+
+        <div class="score-wrap">
+          <div class="score-ring" id="scoreRing" style="--score: 0">
+            <div class="score-inner">
+              <strong id="offerScore">0</strong>
+              <span id="offerVerdict">Weak</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="score-bars" id="scoreBars"></div>
+
+            <div class="diagnosis-card">
+              <h3>Primary Constraint</h3>
+              <p id="constraintText">Run your model to identify the biggest constraint.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Interactive Charts</h2>
+        <p class="section-desc">
+          Profit range, scaling curve, CAC safety margin, sensitivity, scenarios and Monte Carlo risk distribution.
+        </p>
+
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h3>Profit Range Chart</h3>
+            <canvas id="profitRangeChart"></canvas>
+          </div>
+
+          <div class="chart-card">
+            <h3>Scaling Curve</h3>
+            <canvas id="scalingChart"></canvas>
+          </div>
+
+          <div class="chart-card">
+            <h3>CAC vs Allowable CAC</h3>
+            <canvas id="cacChart"></canvas>
+          </div>
+
+          <div class="chart-card">
+            <h3>Sensitivity Analysis</h3>
+            <canvas id="sensitivityChart"></canvas>
+          </div>
+
+          <div class="chart-card">
+            <h3>Scenario Comparison</h3>
+            <canvas id="scenarioChart"></canvas>
+          </div>
+
+          <div class="chart-card">
+            <h3>Monte Carlo Distribution</h3>
+            <canvas id="monteCarloChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Scenario Builder</h2>
+        <p class="section-desc">
+          Compare what happens when you change price, LTV, CVR, CPC, refunds, upsells and budget.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Scenario</th>
+                <th>Profit</th>
+                <th>CAC</th>
+                <th>ROAS</th>
+                <th>LTV:CAC</th>
+                <th>Risk</th>
+                <th>Verdict</th>
+              </tr>
+            </thead>
+
+            <tbody id="scenarioTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Breakpoint Analysis</h2>
+        <p class="section-desc">The exact thresholds that break or protect profitability.</p>
+
+        <div class="kpi-grid">
+          <div class="kpi">
+            <span>Max CPC Before Loss</span>
+            <strong id="bpMaxCpc">&pound;0</strong>
+            <em class="tag">Threshold</em>
+          </div>
+
+          <div class="kpi">
+            <span>Minimum CVR Required</span>
+            <strong id="bpMinCvr">0%</strong>
+            <em class="tag">Threshold</em>
+          </div>
+
+          <div class="kpi">
+            <span>Minimum LTV Required</span>
+            <strong id="bpMinLtv">&pound;0</strong>
+            <em class="tag">Threshold</em>
+          </div>
+
+          <div class="kpi">
+            <span>Max Refund Rate</span>
+            <strong id="bpMaxRefund">0%</strong>
+            <em class="tag">Threshold</em>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Scaling Simulator</h2>
+        <p class="section-desc">
+          See what happens at common spend levels with simulated diminishing returns.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Spend Level</th>
+                <th>Monthly Spend</th>
+                <th>Profit</th>
+                <th>CAC</th>
+                <th>Risk Level</th>
+                <th>Recommendation</th>
+              </tr>
+            </thead>
+
+            <tbody id="scalingTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="diagnosis">
+          <div class="diagnosis-card">
+            <h3>Bottleneck Diagnosis Engine</h3>
+            <p><strong id="primaryBottleneck">Model pending</strong></p>
+            <p id="bottleneckWhy">Run your model to diagnose the first constraint.</p>
+          </div>
+
+          <div class="diagnosis-card">
+            <h3>Recommended Action Plan</h3>
+            <ul id="actionPlan"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="verdict">
+          <div>
+            <h2 id="finalVerdict">Model Pending</h2>
+            <p class="section-desc" id="finalReason">
+              Run your model to generate your ad scaling verdict.
+            </p>
+          </div>
+
+          <div class="risk-pill" id="riskPill">Risk: Unknown</div>
+        </div>
+      </section>
+    </div>
+
+    <section id="lead" class="section">
+      <h2>Here's what you should do instead</h2>
+      <p class="section-desc">
+        Do not scale spend from a single result. Use the model to find the weakest constraint, then decide whether pricing, conversion rate, LTV, margin or spend needs attention first.
+      </p>
+      <div class="hero-actions action-spacer">
+        <a href="../../contact.html" class="btn">Talk To Jora</a>
+        <a href="../" class="btn secondary">View More Tools</a>
+      </div>
+
+    </section>
+  </main>
+<script src="../assets/jora-tools.js"></script>
+  <script src="../assets/tools/ad-profit-command-centre.js"></script>
+  <footer class="site-footer tools-site-footer">
+    <div class="footer-grid">
+      <div><a class="brand footer-brand" href="../../index.html"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a><p>SEO, web design and digital marketing systems for businesses that want clearer growth from search, content and conversion.</p></div>
+      <div><h3>Pages</h3><a data-page-link="home" href="../../index.html">Home</a><a data-page-link="services" href="../../services.html">Services</a><a data-page-link="web" href="../../web-design.html">Web Design</a><a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a><a data-page-link="seo" href="../../seo.html">SEO</a><a data-page-link="results" href="../../results.html">Results</a><a data-page-link="about" href="../../about.html">About</a><a data-page-link="blog" href="../../blog/">Blog</a><a data-page-link="tools" href="../../tools/">Tools</a>
+        <a data-page-link="contact" href="../../contact.html">Contact</a></div>
+      <div><h3>Commercial</h3><a href="../../small-business-seo-services.html">Small business SEO</a><a href="../../medium-business-seo-services.html">Medium business SEO</a><a href="../../local-seo-services.html">Local SEO</a><a href="../../lead-generation-web-design.html">Lead generation web design</a></div>
+      <div><h3>Start</h3><a href="../../contact.html">Get your growth plan</a><a href="../../tools/">Use the calculators</a><a href="../../blog/">Read the blog</a></div>
+    </div>
+  </footer>
+  <script src="../../script.js?v=aurora-services-20260420"></script>
+</body>
+</html>
+
+
+
+
+
