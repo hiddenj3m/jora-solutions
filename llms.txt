@@ -10,6 +10,7 @@ Website: https://jora.solutions/
 - Services: https://jora.solutions/services
 - Results and case studies: https://jora.solutions/results
 - Marketing calculators: https://jora.solutions/tools/
+- Growth plan diagnostic: https://jora.solutions/jora_business_lead_funnel
 - About: https://jora.solutions/about
 - Contact: https://jora.solutions/contact
 

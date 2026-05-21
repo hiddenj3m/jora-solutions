@@ -7,7 +7,7 @@
   <meta name="description" content="CRM setup and integration services for clearer lead tracking, cleaner follow-up, connected tools and better sales reporting.">
   <link rel="canonical" href="/crm-integrations">
   <title>CRM Setup & Integration Services | Jora</title>
-  <link rel="stylesheet" href="styles.css?v=aurora-services-20260420">
+  <link rel="stylesheet" href="styles.css?v=crm-nodes-20260518">
 </head>
 <body data-page="crm">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,7 +39,7 @@
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
-      <a class="nav-cta" href="contact.html">Growth plan</a>
+      <a class="nav-cta" href="jora_business_lead_funnel.html">Growth plan</a>
     </div>
   </header>
 
@@ -50,38 +50,22 @@
       <div class="service-hero-grid">
         <div class="service-hero-copy reveal">
           <p class="eyebrow">Custom CRM & integrations</p>
-          <h1 id="crm-hero-title">CRM setup and integrations that keep leads, follow-up, and reporting in one place.</h1>
-          <p>We connect website forms, enquiries, booking tools, follow-up reminders, pipeline stages, calendars, and reports so your team can see what is happening without chasing information across different systems.</p>
+          <h1 id="crm-hero-title">Integrated systems and effortless <span class="crm-hero-nowrap">automation</span></h1>
+          <p>We connect the tools, triggers, handoffs, and reporting your team relies on so leads move cleanly from first enquiry to follow-up, sale, and delivery without manual chasing.</p>
           <div class="hero-cta-row">
             <a class="arrow-cta growth-trigger" href="contact.html">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
               </svg>
-              <span class="arrow-cta-text">Plan your system</span>
+              <span class="arrow-cta-text">Discover the art of the possible</span>
             </a>
-            <a class="secondary-cta" href="#crm-system">See the system</a>
+            <a class="secondary-cta" href="#crm-system">Find your time saving opportunities</a>
           </div>
         </div>
-        <div class="service-mock crm-stack reveal" aria-label="Illustrative CRM and integrations system mockup">
-          <div class="glass-card crm-panel">
-            <div class="crm-panel-top">
-              <div class="crm-chip"><strong>Leads:</strong>&nbsp; Clear next step</div>
-              <div class="crm-chip"><strong>Ops:</strong>&nbsp; Live sync</div>
-            </div>
-            <div class="crm-system-row">
-              <div class="crm-module"><span>Lead source</span><strong>Website forms</strong></div>
-              <div class="crm-module"><span>Follow-up</span><strong>Tasks and reminders</strong></div>
-              <div class="crm-module"><span>Sales view</span><strong>Pipeline stages</strong></div>
-            </div>
-            <div class="crm-flow-row" aria-hidden="true">
-              <div class="crm-badge">Ads</div>
-              <span class="crm-flow-line"></span>
-              <div class="crm-badge">CRM</div>
-              <div class="crm-badge">Ops</div>
-            </div>
-            <div class="crm-status"><small>Reporting</small><strong>Clearer lead visibility</strong></div>
+        <div class="crm-node-stage" data-crm-node-stage>
+          <div class="crm-node-artefact reveal" data-crm-node-artefact data-crm-node-booting role="img" aria-label="Abstract cyan network of connected CRM systems and automations">
+            <canvas class="crm-network-canvas" data-crm-network-canvas aria-hidden="true"></canvas>
           </div>
-          <div class="glass-card crm-score"><span>System clarity</span><strong>Connected lead flow</strong><small>Marketing, sales, and delivery working from the same information.</small></div>
         </div>
       </div>
     </section>
@@ -164,6 +148,573 @@
     </div>
   </footer>
   <script src="script.js?v=aurora-services-20260420"></script>
+  <script>
+    (function () {
+      const artefact = document.querySelector("[data-crm-node-artefact]");
+      const stage = document.querySelector("[data-crm-node-stage]");
+      const hero = document.querySelector(".crm-hero");
+      const canvas = artefact?.querySelector("[data-crm-network-canvas]");
+      if (!artefact || !canvas) return;
+
+      const context = canvas.getContext("2d");
+      if (!context) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const desktopQuery = window.matchMedia("(min-width: 961px)");
+      const pointer = { x: -9999, y: -9999, active: false };
+      const nodes = [];
+      let width = 0;
+      let height = 0;
+      let frame = 0;
+      let animationId = 0;
+      let expansion = 0;
+      let expansionVelocity = 0;
+      let targetExpansion = 0;
+      let activeLayout = "";
+      let nextWaveAt = 0;
+      let waveStartedAt = -Infinity;
+      let waveOrigin = { x: 0.5, y: 0.48 };
+      let nextSynapseAt = 0;
+      let initialFrame = 0;
+      let scrollFrame = 0;
+      const synapsePulses = [];
+
+      function seededRandom(seed) {
+        return function () {
+          seed |= 0;
+          seed = seed + 0x6D2B79F5 | 0;
+          let value = Math.imul(seed ^ seed >>> 15, 1 | seed);
+          value = value + Math.imul(value ^ value >>> 7, 61 | value) ^ value;
+          return ((value ^ value >>> 14) >>> 0) / 4294967296;
+        };
+      }
+
+      function createPageSeed() {
+        const values = new Uint32Array(1);
+        window.crypto?.getRandomValues?.(values);
+        return values[0] || Math.floor(Math.random() * 4294967295);
+      }
+
+      const pageSeed = createPageSeed();
+      let random = seededRandom(pageSeed);
+      function clamp(value, min, max) {
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function easeOutCubic(value) {
+        return 1 - Math.pow(1 - value, 3);
+      }
+
+      function addCluster({
+        x,
+        y,
+        spreadX,
+        spreadY,
+        count,
+        stretchX = 1.1,
+        stretchY = 1.08,
+        radiusMin = 2,
+        radiusRange = 2.4
+      }) {
+        for (let index = 0; index < count; index += 1) {
+          const baseX = x + (random() - 0.5) * spreadX;
+          const baseY = y + (random() - 0.5) * spreadY;
+          const stretchedX = x + (baseX - x) * stretchX;
+          const stretchedY = y + (baseY - y) * stretchY;
+
+          nodes.push({
+            x: baseX,
+            y: baseY,
+            expandedX: clamp(stretchedX, 0.08, 0.92),
+            expandedY: clamp(stretchedY, 0.10, 0.88),
+            r: radiusMin + random() * radiusRange,
+            drift: random() * Math.PI * 2,
+            speed: 0.45 + random() * 0.8
+          });
+        }
+      }
+
+      function getGraphConfig() {
+        if (desktopQuery.matches) {
+          return {
+            layout: "desktop",
+            seed: pageSeed + 84,
+            count: 40,
+            spreadX: 0.76,
+            spreadY: 0.64,
+            stretchX: 1.16,
+            stretchY: 1.1,
+            radiusMin: 2.2,
+            radiusRange: 2.6
+          };
+        }
+
+        return {
+          layout: "compact",
+          seed: pageSeed + 42,
+          count: 20,
+          spreadX: 0.48,
+          spreadY: 0.42
+        };
+      }
+
+      function buildNodes() {
+        const config = getGraphConfig();
+        activeLayout = config.layout;
+        random = seededRandom(config.seed);
+        nodes.length = 0;
+        synapsePulses.length = 0;
+        nextSynapseAt = 0;
+        addCluster({ x: 0.5, y: 0.48, ...config });
+      }
+
+      function resize() {
+        if (animationId) window.cancelAnimationFrame(animationId);
+        if (activeLayout && activeLayout !== getGraphConfig().layout) {
+          buildNodes();
+        }
+        const rect = artefact.classList.contains("is-scroll-ambient") && stage
+          ? stage.getBoundingClientRect()
+          : artefact.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = Math.max(1, Math.floor(rect.width));
+        height = Math.max(1, Math.floor(rect.height));
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        context.setTransform(dpr, 0, 0, dpr, 0, 0);
+        draw();
+        updateScrollState();
+      }
+
+      function updateExpansion() {
+        if (reduceMotion) {
+          expansion = targetExpansion;
+          expansionVelocity = 0;
+          return;
+        }
+
+        const tension = targetExpansion > expansion ? 0.045 : 0.05;
+        expansionVelocity += (targetExpansion - expansion) * tension;
+        expansionVelocity *= 0.74;
+        expansion = clamp(expansion + expansionVelocity, 0, 1);
+
+        if (Math.abs(targetExpansion - expansion) < 0.001 && Math.abs(expansionVelocity) < 0.001) {
+          expansion = targetExpansion;
+          expansionVelocity = 0;
+        }
+      }
+
+      function scheduleNextWave(now) {
+        nextWaveAt = targetExpansion > 0
+          ? now + 2000
+          : now + 5000 + Math.random() * 5000;
+      }
+
+      function updateWave(now) {
+        if (reduceMotion) return;
+
+        if (!nextWaveAt) {
+          scheduleNextWave(now);
+          return;
+        }
+
+        if (now < nextWaveAt) return;
+
+        waveStartedAt = now;
+        waveOrigin = {
+          x: 0.22 + Math.random() * 0.56,
+          y: 0.24 + Math.random() * 0.52
+        };
+        scheduleNextWave(now);
+      }
+
+      function getWaveOffset(node, currentX, currentY, now) {
+        const elapsed = now - waveStartedAt;
+        const duration = 1650;
+
+        if (reduceMotion || elapsed < 0 || elapsed > duration) {
+          return { x: 0, y: 0, level: 0 };
+        }
+
+        const dx = currentX - waveOrigin.x;
+        const dy = currentY - waveOrigin.y;
+        const distance = Math.hypot(dx, dy) || 1;
+        const progress = elapsed / duration;
+        const front = progress * 1.08;
+        const band = 0.16;
+        const envelope = clamp(1 - Math.abs(distance - front) / band, 0, 1);
+        const fade = Math.sin(progress * Math.PI);
+        const level = envelope * envelope * fade;
+        const amplitude = Math.min(width, height) * (desktopQuery.matches ? 0.014 : 0.011) * level;
+        const jitter = Math.sin(elapsed * 0.052 + node.drift) * 0.42;
+        const driftX = Math.cos(node.drift * 1.7 + elapsed * 0.024) * amplitude * jitter;
+        const driftY = Math.sin(node.drift * 1.4 + elapsed * 0.024) * amplitude * jitter;
+
+        return {
+          x: (dx / distance) * amplitude + driftX,
+          y: (dy / distance) * amplitude + driftY,
+          level
+        };
+      }
+
+      function scheduleNextSynapse(now) {
+        const rateBoost = targetExpansion > 0 ? 2.4 : 1;
+        nextSynapseAt = now + (450 + Math.random() * 1250) / rateBoost;
+      }
+
+      function updateSynapses(now, points, threshold) {
+        if (reduceMotion) return;
+
+        for (let index = synapsePulses.length - 1; index >= 0; index -= 1) {
+          const pulse = synapsePulses[index];
+          if (now - pulse.startedAt > pulse.duration) {
+            synapsePulses.splice(index, 1);
+          }
+        }
+
+        if (!nextSynapseAt) {
+          scheduleNextSynapse(now);
+          return;
+        }
+
+        const maxSynapsePulses = targetExpansion > 0 ? 18 : 8;
+        if (now < nextSynapseAt || synapsePulses.length > maxSynapsePulses) return;
+
+        const candidates = [];
+        for (let a = 0; a < points.length; a += 1) {
+          for (let b = a + 1; b < points.length; b += 1) {
+            const distance = Math.hypot(points[a].x - points[b].x, points[a].y - points[b].y);
+            if (distance < threshold * 0.82 && distance > threshold * 0.18) {
+              candidates.push({ a, b });
+            }
+          }
+        }
+
+        if (candidates.length) {
+          const hoverActive = targetExpansion > 0;
+          const burstCount = hoverActive && candidates.length > 2
+            ? (Math.random() < 0.5 ? 3 : 2)
+            : (Math.random() < 0.28 && candidates.length > 1 ? 2 : 1);
+          for (let index = 0; index < burstCount; index += 1) {
+            const link = candidates[Math.floor(Math.random() * candidates.length)];
+            synapsePulses.push({
+              a: link.a,
+              b: link.b,
+              startedAt: now + index * 140,
+              duration: 720 + Math.random() * 760,
+              intensity: 0.18 + Math.random() * 0.16,
+              direction: Math.random() < 0.5 ? -1 : 1
+            });
+          }
+        }
+
+        scheduleNextSynapse(now);
+      }
+
+      function getSynapse(a, b, now) {
+        return synapsePulses.reduce((active, pulse) => {
+          if (pulse.a !== a || pulse.b !== b) return active;
+
+          const progress = clamp((now - pulse.startedAt) / pulse.duration, 0, 1);
+          if (progress <= 0 || progress >= 1) return active;
+
+          const level = Math.sin(progress * Math.PI) * pulse.intensity;
+          return {
+            level: Math.min(0.42, active.level + level),
+            progress: level > active.level ? progress : active.progress,
+            direction: level > active.level ? pulse.direction : active.direction
+          };
+        }, { level: 0, progress: 0, direction: 1 });
+      }
+
+      function getPoint(node, time, now) {
+        const sway = reduceMotion ? 0 : Math.sin(time * node.speed + node.drift) * 2.8;
+        const expansionLevel = clamp(expansion, 0, 1);
+        const easedExpansion = expansionLevel * expansionLevel * (3 - 2 * expansionLevel);
+        const currentX = node.x + (node.expandedX - node.x) * easedExpansion;
+        const currentY = node.y + (node.expandedY - node.y) * easedExpansion;
+        let x = currentX * width + Math.cos(node.drift) * sway;
+        let y = currentY * height + Math.sin(node.drift * 1.3) * sway;
+        const wave = getWaveOffset(node, currentX, currentY, now);
+        x += wave.x;
+        y += wave.y;
+
+        if (pointer.active) {
+          const dx = x - pointer.x;
+          const dy = y - pointer.y;
+          const distance = Math.hypot(dx, dy) || 1;
+          const radius = Math.min(width, height) * 0.28;
+
+          if (distance < radius) {
+            const force = (1 - distance / radius) * 7;
+            x -= (dx / distance) * force;
+            y -= (dy / distance) * force;
+          }
+        }
+
+        return { x, y, wave: wave.level };
+      }
+
+      function draw(timestamp) {
+        const now = typeof timestamp === "number" ? timestamp : performance.now();
+        updateExpansion();
+        updateWave(now);
+        const time = frame * 0.012;
+        const points = nodes.map((node) => getPoint(node, time, now));
+        const expansionLevel = clamp(expansion, 0, 1);
+        const hoverGlow = expansionLevel * 0.06;
+        const threshold = Math.min(width, height) * (0.29 + expansionLevel * 0.03);
+        updateSynapses(now, points, threshold);
+        context.clearRect(0, 0, width, height);
+
+        context.save();
+        context.globalCompositeOperation = "lighter";
+
+        for (let a = 0; a < points.length; a += 1) {
+          for (let b = a + 1; b < points.length; b += 1) {
+            const dx = points[a].x - points[b].x;
+            const dy = points[a].y - points[b].y;
+            const distance = Math.hypot(dx, dy);
+
+            if (distance < threshold) {
+              const waveLift = Math.max(points[a].wave, points[b].wave) * 0.08;
+              const alpha = Math.pow(1 - distance / threshold, 1.35) * (0.46 + hoverGlow + waveLift);
+              context.strokeStyle = `rgba(54, 255, 241, ${alpha})`;
+              context.lineWidth = 0.7 + expansionLevel * 0.12;
+              context.beginPath();
+              context.moveTo(points[a].x, points[a].y);
+              context.lineTo(points[b].x, points[b].y);
+              context.stroke();
+
+              const synapse = getSynapse(a, b, now);
+              if (synapse.level > 0) {
+                const sparkProgress = synapse.direction > 0 ? synapse.progress : 1 - synapse.progress;
+                const sparkX = points[a].x + (points[b].x - points[a].x) * sparkProgress;
+                const sparkY = points[a].y + (points[b].y - points[a].y) * sparkProgress;
+
+                context.save();
+                context.shadowColor = "rgba(137, 255, 249, 0.85)";
+                context.shadowBlur = 12 + expansionLevel * 5 + synapse.level * 22;
+                context.strokeStyle = `rgba(137, 255, 249, ${0.18 + hoverGlow + synapse.level})`;
+                context.lineWidth = 0.85 + synapse.level * 2.2;
+                context.beginPath();
+                context.moveTo(points[a].x, points[a].y);
+                context.lineTo(points[b].x, points[b].y);
+                context.stroke();
+                context.fillStyle = `rgba(220, 255, 252, ${0.4 + synapse.level})`;
+                context.beginPath();
+                context.arc(sparkX, sparkY, 1.2 + synapse.level * 4.2, 0, Math.PI * 2);
+                context.fill();
+                context.restore();
+              }
+            }
+          }
+        }
+
+        points.forEach((point, index) => {
+          const node = nodes[index];
+          const pulse = reduceMotion ? 0 : Math.sin(time * 2 + node.drift) * 0.35;
+          const radius = node.r * (1 + expansionLevel * 0.06) + pulse + point.wave * 1.05;
+          context.fillStyle = `rgba(38, 255, 240, ${0.92 + hoverGlow})`;
+          context.shadowColor = "rgba(34, 255, 239, 0.9)";
+          context.shadowBlur = 10 + expansionLevel * 5 + point.wave * 9;
+          context.beginPath();
+          context.arc(point.x, point.y, radius, 0, Math.PI * 2);
+          context.fill();
+        });
+
+        context.restore();
+
+        if (!reduceMotion) {
+          frame += 1;
+          animationId = window.requestAnimationFrame(draw);
+        }
+      }
+
+      function updatePointer(event) {
+        if (artefact.classList.contains("is-scroll-ambient") && hero && getHeroProgress() > 0.01) {
+          pointer.active = false;
+          return;
+        }
+
+        const rect = artefact.getBoundingClientRect();
+        const isInside = event.clientX >= rect.left &&
+          event.clientX <= rect.right &&
+          event.clientY >= rect.top &&
+          event.clientY <= rect.bottom;
+
+        if (!isInside) {
+          pointer.active = false;
+          return;
+        }
+
+        pointer.x = event.clientX - rect.left;
+        pointer.y = event.clientY - rect.top;
+        pointer.active = true;
+      }
+
+      function clearAmbientState() {
+        artefact.classList.remove("is-scroll-ambient", "is-hero-interactive");
+        [
+          "--crm-node-fixed-top",
+          "--crm-node-fixed-left",
+          "--crm-node-fixed-width",
+          "--crm-node-fixed-height",
+          "--crm-node-fixed-scale",
+          "--crm-node-fixed-opacity",
+          "--crm-node-fixed-blur"
+        ].forEach((property) => artefact.style.removeProperty(property));
+      }
+
+      function getHeroProgress() {
+        const heroRect = hero.getBoundingClientRect();
+        const heroTop = window.scrollY + heroRect.top;
+        const travel = Math.max(360, hero.offsetHeight * 0.72);
+        return clamp((window.scrollY - heroTop) / travel, 0, 1);
+      }
+
+      function getStageCentre(stageRect) {
+        const desktopOffset = desktopQuery.matches ? Math.min(window.innerWidth * 0.03, 32) : 0;
+        return {
+          x: stageRect.left + stageRect.width / 2 + desktopOffset,
+          y: stageRect.top + stageRect.height / 2
+        };
+      }
+
+      function setAmbientPosition({ x, y, width, height, scale, opacity, blur }) {
+        artefact.style.setProperty("--crm-node-fixed-top", `${y}px`);
+        artefact.style.setProperty("--crm-node-fixed-left", `${x}px`);
+        artefact.style.setProperty("--crm-node-fixed-width", `${Math.max(1, width)}px`);
+        artefact.style.setProperty("--crm-node-fixed-height", `${Math.max(1, height)}px`);
+        artefact.style.setProperty("--crm-node-fixed-scale", scale.toFixed(3));
+        artefact.style.setProperty("--crm-node-fixed-opacity", opacity.toFixed(3));
+        artefact.style.setProperty("--crm-node-fixed-blur", `${blur.toFixed(2)}px`);
+      }
+
+      function updateScrollState() {
+        if (!stage || !hero || reduceMotion) {
+          clearAmbientState();
+          return;
+        }
+
+        const progress = getHeroProgress();
+
+        if (progress <= 0.01) {
+          if (artefact.classList.contains("is-scroll-ambient")) {
+            const stageRect = stage.getBoundingClientRect();
+            const stageCentre = getStageCentre(stageRect);
+            artefact.classList.add("is-hero-interactive");
+            setAmbientPosition({
+              x: stageCentre.x,
+              y: stageCentre.y,
+              width: stageRect.width,
+              height: stageRect.height,
+              scale: 1,
+              opacity: 1,
+              blur: 0
+            });
+            return;
+          }
+
+          clearAmbientState();
+          return;
+        }
+
+        artefact.classList.remove("is-hero-interactive");
+        pointer.active = false;
+
+        const stageRect = stage.getBoundingClientRect();
+        const eased = easeOutCubic(progress);
+        const stageCentre = getStageCentre(stageRect);
+        const startX = stageCentre.x;
+        const startY = stageCentre.y;
+        const targetX = window.innerWidth * 0.5;
+        const targetY = window.innerHeight * (desktopQuery.matches ? 0.57 : 0.54);
+        const fixedX = startX + (targetX - startX) * eased;
+        const fixedY = startY + (targetY - startY) * eased;
+        const fixedScale = 1 + eased * (desktopQuery.matches ? 0.68 : 0.42);
+        const fixedOpacity = 1 - eased * (desktopQuery.matches ? 0.84 : 0.78);
+        const fixedBlur = eased * (desktopQuery.matches ? 8 : 5);
+
+        setAmbientPosition({
+          x: fixedX,
+          y: fixedY,
+          width: stageRect.width,
+          height: stageRect.height,
+          scale: fixedScale,
+          opacity: fixedOpacity,
+          blur: fixedBlur
+        });
+        artefact.classList.add("is-scroll-ambient");
+      }
+
+      function requestScrollStateUpdate() {
+        if (scrollFrame) return;
+        scrollFrame = window.requestAnimationFrame(() => {
+          scrollFrame = 0;
+          updateScrollState();
+        });
+      }
+
+      function completeInitialLayout() {
+        resize();
+        updateScrollState();
+        artefact.removeAttribute("data-crm-node-booting");
+      }
+
+      const activeExpansionTriggers = new Set();
+      const ctas = document.querySelectorAll(".crm-hero .arrow-cta, .crm-hero .secondary-cta");
+
+      function setExpansionTrigger(key, isActive) {
+        const wasActive = activeExpansionTriggers.size > 0;
+
+        if (isActive) {
+          activeExpansionTriggers.add(key);
+        } else {
+          activeExpansionTriggers.delete(key);
+        }
+
+        targetExpansion = activeExpansionTriggers.size ? 1 : 0;
+
+        if (!wasActive && activeExpansionTriggers.size && !reduceMotion) {
+          const now = performance.now();
+          nextSynapseAt = Math.min(nextSynapseAt || Infinity, now + 90);
+          nextWaveAt = Math.min(nextWaveAt || Infinity, now + 160);
+        }
+
+        if (wasActive && !activeExpansionTriggers.size && !reduceMotion) {
+          scheduleNextWave(performance.now());
+        }
+
+        if (reduceMotion) {
+          draw();
+        }
+      }
+
+      buildNodes();
+      initialFrame = window.requestAnimationFrame(completeInitialLayout);
+      window.addEventListener("pointermove", updatePointer, { passive: true });
+      artefact.addEventListener("pointermove", updatePointer);
+      artefact.addEventListener("pointerleave", () => {
+        pointer.active = false;
+      });
+      ctas.forEach((cta, index) => {
+        cta.addEventListener("pointerenter", () => setExpansionTrigger(`${index}-pointer`, true));
+        cta.addEventListener("pointerleave", () => setExpansionTrigger(`${index}-pointer`, false));
+        cta.addEventListener("focus", () => setExpansionTrigger(`${index}-focus`, true));
+        cta.addEventListener("blur", () => setExpansionTrigger(`${index}-focus`, false));
+      });
+      window.addEventListener("resize", resize);
+      window.addEventListener("scroll", requestScrollStateUpdate, { passive: true });
+      window.addEventListener("pagehide", () => {
+        window.cancelAnimationFrame(initialFrame);
+        window.cancelAnimationFrame(animationId);
+        window.cancelAnimationFrame(scrollFrame);
+      });
+    })();
+  </script>
 </body>
 </html>
 

@@ -21,6 +21,7 @@
     const header = document.querySelector(".site-header");
     const nav = header?.querySelector("nav");
     if (!header || !nav || document.querySelector("[data-index3-menu-toggle]") || document.querySelector(".mobile-menu-toggle")) return;
+    const headerCtaHref = header.querySelector(".header-actions .nav-cta")?.getAttribute("href") || "jora_business_lead_funnel.html";
 
     const button = document.createElement("button");
     button.className = "mobile-menu-toggle";
@@ -41,7 +42,7 @@
         <nav class="mobile-drawer-nav" aria-label="Mobile"></nav>
         <div class="mobile-drawer-actions">
           <button class="theme-toggle mobile-drawer-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
-          <a class="nav-cta" href="contact.html">Growth plan</a>
+          <a class="nav-cta" href="${headerCtaHref}">Growth plan</a>
         </div>
       </aside>
     `;
@@ -112,6 +113,49 @@
 
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1120 && shell.classList.contains("is-open")) setOpen(false);
+    });
+  }
+
+  function setupNavDropdowns() {
+    const dropdowns = Array.from(document.querySelectorAll(".nav-dropdown"));
+    if (!dropdowns.length) return;
+
+    dropdowns.forEach((dropdown) => {
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      let closeTimer = 0;
+
+      function cancelClose() {
+        if (!closeTimer) return;
+        window.clearTimeout(closeTimer);
+        closeTimer = 0;
+      }
+
+      function setOpen(open) {
+        cancelClose();
+        dropdown.classList.toggle("is-open", open);
+        toggle?.setAttribute("aria-expanded", String(open));
+      }
+
+      function scheduleClose() {
+        cancelClose();
+        closeTimer = window.setTimeout(() => setOpen(false), reduceMotion ? 0 : 220);
+      }
+
+      toggle?.setAttribute("aria-expanded", "false");
+      dropdown.addEventListener("pointerenter", () => setOpen(true));
+      dropdown.addEventListener("pointerleave", scheduleClose);
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) scheduleClose();
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      dropdowns.forEach((dropdown) => {
+        dropdown.classList.remove("is-open");
+        dropdown.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
@@ -707,6 +751,7 @@
   }
 
   setupMobileNavigation();
+  setupNavDropdowns();
   setupActiveNav();
   setupTheme();
   createParticles();

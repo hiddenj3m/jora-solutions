@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo-black.png">
+  <meta name="description" content="Use the Jora Growth Plan diagnostic to identify your current growth stage and the next roadmap pillar to focus on.">
+  <link rel="canonical" href="/jora_business_lead_funnel">
+  <title>Growth Plan Diagnostic | Jora Solutions</title>
+  <link rel="stylesheet" href="styles.css?v=growth-plan-20260518">
+</head>
+<body class="growth-plan-page" data-page="growth-plan" data-growth-plan-page>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="top-rank-banner" href="seo.html"><span>Rank page 1 on Google</span><span aria-hidden="true">-&gt;</span></a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jora Solutions home"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span><span>Jora Solutions</span></a>
+        <nav aria-label="Primary">
+      <a data-page-link="home" href="index.html">Home</a>
+      <a data-page-link="services" href="services.html">Services</a>
+      <a data-page-link="web" href="web-design.html">Web Design</a>
+      <a data-page-link="crm" href="crm-integrations.html">CRM &amp; Integrations</a>
+      <a data-page-link="seo" href="seo.html">SEO</a>
+      <a data-page-link="results" href="results.html">Results</a>
+      <a data-page-link="about" href="about.html">About</a>
+      <a data-page-link="blog" href="blog/">Blog</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle" data-page-link="tools" href="tools/" aria-haspopup="true">Tools</a>
+        <div class="nav-dropdown-panel" aria-label="Marketing tools">
+          <a href="tools/ad-profit-command-centre/">Ad Profit Command Centre</a>
+          <a href="tools/discount-margin/">Discount Margin Calculator</a>
+          <a href="tools/break-even-roas/">Break-even ROAS Calculator</a>
+          <a href="tools/cac-ceiling/">CAC Ceiling Calculator</a>
+          <a href="tools/lead-value/">Lead Value Calculator</a>
+          <a href="tools/cvr-impact/">CVR Impact Calculator</a>
+        </div>
+      </div>
+      <a data-page-link="contact" href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
+      <a class="nav-cta" href="jora_business_lead_funnel.html">Growth plan</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero growth-plan-hero" aria-labelledby="growth-plan-title">
+      <div class="particles" id="particles" aria-hidden="true"></div>
+      <div class="page-hero-grid">
+        <div class="page-hero-copy reveal">
+          <p class="eyebrow">Jora Growth Plan</p>
+          <h1 id="growth-plan-title">Find the next move your growth system needs.</h1>
+          <p>Answer a short diagnostic and get a clearer read on your current business stage, the next Jora roadmap pillar, and the operational focus that should come before more spend.</p>
+          <div class="hero-cta-row">
+            <button class="primary-cta growth-trigger" type="button" data-growth-plan-open><span>Start diagnostic</span><span aria-hidden="true">-&gt;</span></button>
+            <a class="secondary-cta" href="#growth-plan-roadmap">Preview roadmap</a>
+          </div>
+        </div>
+
+        <div class="page-visual growth-plan-visual" aria-hidden="true">
+          <div class="growth-map-visual">
+            <div class="growth-map-core">
+              <span>Plan</span>
+              <strong>JORA</strong>
+            </div>
+            <div class="growth-map-ring growth-map-ring-one"></div>
+            <div class="growth-map-ring growth-map-ring-two"></div>
+            <div class="growth-map-node growth-map-node-a">Traffic</div>
+            <div class="growth-map-node growth-map-node-b">Convert</div>
+            <div class="growth-map-node growth-map-node-c">Capture</div>
+            <div class="growth-map-node growth-map-node-d">Systemise</div>
+            <svg class="growth-map-line" viewBox="0 0 520 340" focusable="false">
+              <path d="M44 264 C132 206 170 226 242 148 S374 84 474 58" pathLength="1"></path>
+              <circle cx="44" cy="264" r="6"></circle>
+              <circle cx="242" cy="148" r="6"></circle>
+              <circle cx="474" cy="58" r="6"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section growth-plan-workspace" aria-labelledby="growth-plan-workspace-title">
+      <div class="growth-plan-shell">
+        <div class="growth-plan-board">
+          <div class="growth-plan-board-head">
+            <p class="eyebrow">Interactive flow chart</p>
+            <h2 id="growth-plan-workspace-title">Your stage is determined by the first constraint that fails.</h2>
+            <p>The question set opens in a modal so the page stays calm while the underlying flow chart updates in place.</p>
+          </div>
+
+          <ol class="growth-question-track" id="growthQuestionTrack" aria-label="Growth diagnostic flow"></ol>
+
+          <div class="growth-plan-board-actions">
+            <button class="primary-cta" type="button" data-growth-plan-open><span>Open question set</span><span aria-hidden="true">-&gt;</span></button>
+            <button class="secondary-cta" type="button" data-growth-plan-reset>Reset</button>
+          </div>
+        </div>
+
+        <aside class="growth-result-card" id="growthResultCard" aria-live="polite">
+          <p class="eyebrow">Your result</p>
+          <h2>Not started yet.</h2>
+          <p>Open the question set to map the business to a stage and roadmap pillar.</p>
+          <div class="growth-result-empty">
+            <span>0/5</span>
+            <small>questions answered</small>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section growth-stage-section" aria-labelledby="growth-stage-title">
+      <div class="section-head left">
+        <p class="eyebrow">Business stages</p>
+        <h2 id="growth-stage-title">The diagnostic maps the business to one of six stages.</h2>
+        <p>Each stage changes the commercial job. The right plan depends on the current constraint, not the most exciting tactic.</p>
+      </div>
+      <div class="growth-stage-grid" id="growthStageGrid"></div>
+    </section>
+
+    <section class="section growth-plan-roadmap" id="growth-plan-roadmap" aria-labelledby="growth-roadmap-title">
+      <div class="growth-roadmap-panel">
+        <div class="growth-roadmap-heading">
+          <p class="eyebrow">Jora scaling roadmap</p>
+          <h2 id="growth-roadmap-title">Full JORA Scaling Roadmap</h2>
+          <p>The diagnostic above identifies your current business stage first. Then the JORA roadmap translates that stage into the right execution pillar.</p>
+        </div>
+        <div class="growth-roadmap-focus" id="growthRoadmapFocus" aria-live="polite"></div>
+        <div class="growth-roadmap-matrix-wrap" aria-label="Full JORA Scaling Roadmap">
+          <div class="growth-roadmap-matrix" id="growthRoadmapMatrix"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-panel growth-plan-contact reveal" aria-labelledby="growth-plan-contact-title">
+      <div class="cta-panel-copy">
+        <p class="eyebrow">Want the human version?</p>
+        <h2 id="growth-plan-contact-title">Send the result to Josh and Rahul, then use the first call to pressure-test the next move.</h2>
+        <p>The diagnostic is a starting point. The useful part is checking the result against the real website, channels, offer, and follow-up process.</p>
+      </div>
+      <div class="cta-panel-actions">
+        <a class="primary-cta" href="contact.html"><span>Talk through the plan</span><span aria-hidden="true">-&gt;</span></a>
+        <a class="secondary-cta" href="services.html">View services</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div><a class="brand footer-brand" href="index.html"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="logo-white.png" alt=""><img class="brand-logo-light" src="logo-black.png" alt=""></span><span>Jora Solutions</span></a><p>SEO, web design, content, conversion, CRM, and digital growth support for businesses that want clearer growth.</p></div>
+      <div><h3>Pages</h3><a data-page-link="home" href="index.html">Home</a><a data-page-link="services" href="services.html">Services</a><a data-page-link="web" href="web-design.html">Web Design</a><a data-page-link="crm" href="crm-integrations.html">CRM &amp; Integrations</a><a data-page-link="seo" href="seo.html">SEO</a><a data-page-link="results" href="results.html">Results</a><a data-page-link="about" href="about.html">About</a><a data-page-link="tools" href="tools/">Tools</a><a data-page-link="contact" href="contact.html">Contact</a></div>
+      <div><h3>Plan first</h3><a href="jora_business_lead_funnel.html">Growth plan</a><a href="results.html">Results</a><a href="about.html">Meet the partners</a></div>
+      <div><h3>Next step</h3><p class="footer-note">Use the diagnostic to clarify the stage, then talk through the right growth plan with the people doing the work.</p></div>
+    </div>
+  </footer>
+
+  <div class="modal growth-plan-modal" id="growthPlanModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="growthModalTitle" hidden>
+    <button class="modal-bg" type="button" data-growth-modal-close aria-label="Close growth plan diagnostic"></button>
+    <section class="modal-panel growth-question-panel">
+      <button class="modal-close" type="button" data-growth-modal-close>Close</button>
+
+      <div class="growth-question-view" data-growth-question-view>
+        <div class="growth-modal-topline">
+          <span id="growthModalStep">Question 1 of 5</span>
+          <span id="growthModalProgressText">0% complete</span>
+        </div>
+        <div class="growth-progress-bar" aria-hidden="true"><span id="growthModalProgress"></span></div>
+        <p class="eyebrow">Decision point</p>
+        <h2 id="growthModalTitle">Question text</h2>
+        <p id="growthModalHint"></p>
+        <div class="growth-answer-grid">
+          <button type="button" data-growth-answer="yes"><strong>Yes</strong><span>This is true right now.</span></button>
+          <button type="button" data-growth-answer="no"><strong>No</strong><span>This is the constraint.</span></button>
+        </div>
+      </div>
+
+      <div class="growth-modal-controls">
+        <button class="secondary-cta" type="button" data-growth-back>Back</button>
+        <button class="secondary-cta" type="button" data-growth-plan-reset>Reset</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js?v=aurora-services-20260420"></script>
+  <script>
+    (function () {
+      const page = document.querySelector("[data-growth-plan-page]");
+      if (!page) return;
+
+      const stages = [
+        {
+          id: 0,
+          title: "Stage 0",
+          name: "Idea / Pre-launch",
+          label: "Validate the problem",
+          description: "You are still shaping the offer, testing the problem, or preparing the first route to market.",
+          pillar: "launch",
+          colour: "#72d7ff",
+          focus: ["Validate demand", "Clarify the offer", "Talk to target buyers"]
+        },
+        {
+          id: 1,
+          title: "Stage 1",
+          name: "Early traction",
+          label: "Prove repeatable demand",
+          description: "You have some customers, but the offer, message, or acquisition path is not repeatable yet.",
+          pillar: "launch",
+          colour: "#38bdf8",
+          focus: ["Sharpen messaging", "Improve first conversions", "Build simple follow-up"]
+        },
+        {
+          id: 2,
+          title: "Stage 2",
+          name: "Growth",
+          label: "Make growth predictable",
+          description: "There is demand, but revenue depends too much on inconsistent channels, manual effort, or weak tracking.",
+          pillar: "optimise",
+          colour: "#3654ff",
+          focus: ["Improve conversion", "Track lead quality", "Reduce wasted activity"]
+        },
+        {
+          id: 3,
+          title: "Stage 3",
+          name: "Scaling",
+          label: "Increase controlled volume",
+          description: "Growth is working, but the team, process, channels, or unit economics are starting to limit scale.",
+          pillar: "scale",
+          colour: "#f4d8a6",
+          focus: ["Expand channels", "Protect unit economics", "Build capacity"]
+        },
+        {
+          id: 4,
+          title: "Stage 4",
+          name: "Optimising",
+          label: "Compound efficiency",
+          description: "The business is scaling well and now needs better leverage, attribution, retention, and profitability.",
+          pillar: "systemise",
+          colour: "#18c8a0",
+          focus: ["Automate the funnel", "Improve LTV", "Compound authority"]
+        },
+        {
+          id: 5,
+          title: "Stage 5",
+          name: "Leading",
+          label: "Extend category advantage",
+          description: "You have a strong, scalable business and the priority is extending market position without losing quality.",
+          pillar: "systemise",
+          colour: "#b8e6ff",
+          focus: ["Build leadership", "Innovate carefully", "Invest in long-term value"]
+        }
+      ];
+
+      const questions = [
+        {
+          id: "selling",
+          question: "Do you have a product or service you are actively selling to customers?",
+          hint: "If the offer is still being built or validated, the right plan starts with launch fundamentals.",
+          noStage: 0
+        },
+        {
+          id: "customers",
+          question: "Do you have consistent customers and revenue?",
+          hint: "A few wins are useful, but consistency is what separates early traction from a repeatable growth system.",
+          noStage: 1
+        },
+        {
+          id: "repeatable",
+          question: "Is your growth predictable and repeatable?",
+          hint: "Think about whether enquiries, sales, and lead quality can be forecast with reasonable confidence.",
+          noStage: 2
+        },
+        {
+          id: "systems",
+          question: "Are your systems, team, and operations ready for more volume?",
+          hint: "If extra leads would create follow-up gaps, delivery strain, or tracking problems, scale is not the first move.",
+          noStage: 3
+        },
+        {
+          id: "profit",
+          question: "Is the business producing sustained profitable growth with strong unit economics?",
+          hint: "This is where the plan moves from scaling volume to compounding efficiency, LTV, and category strength.",
+          noStage: 4,
+          yesStage: 5
+        }
+      ];
+
+      const pillarOrder = ["launch", "optimise", "scale", "systemise"];
+      const moduleOrder = ["Traffic", "Conversion", "Capture", "Automation", "SEO", "Scale"];
+
+      const roadmap = {
+        launch: {
+          title: "1. Launch",
+          label: "Validate & Generate",
+          color: "#1463ff",
+          description: "You should focus on proving demand, generating first leads and validating the offer before overbuilding the system.",
+          outcome: "First leads",
+          modules: {
+            Traffic: ["Meta Ads with 1&ndash;2 campaigns", "Broad targeting", "Test offers and audiences"],
+            Conversion: ["One high-converting landing page", "Clear CTA", "Mobile optimised"],
+            Capture: ["Simple lead form", "Basic validation", "Lead magnet opt-in"],
+            Automation: ["Manual follow-up", "Basic email reply"],
+            SEO: ["Technical audit", "Fix critical issues", "Foundation setup"],
+            Scale: ["Not applicable yet", "Focus on validation"]
+          }
+        },
+        optimise: {
+          title: "2. Optimise",
+          label: "Improve & Convert",
+          color: "#4823a3",
+          description: "You have demand, but the system needs better efficiency. Focus on conversion rate, lead quality, tracking and follow-up speed.",
+          outcome: "Better conversion",
+          modules: {
+            Traffic: ["Refine targeting", "Creative testing", "Improve CTR and CPL"],
+            Conversion: ["CRO improvements", "A/B testing", "Improve CVR"],
+            Capture: ["CRM setup", "Lead pipeline", "Basic lead scoring"],
+            Automation: ["Instant email/SMS reply", "Simple follow-up", "Appointment reminders"],
+            SEO: ["Keyword research", "On-page optimisation", "Light content"],
+            Scale: ["Small-scale tests", "Budget efficiency", "Audience insights"]
+          }
+        },
+        scale: {
+          title: "3. Scale",
+          label: "Increase controlled volume",
+          color: "#ec6b1f",
+          description: "You have a working system. Now focus on increasing controlled volume through campaign structure, attribution, nurture and channel expansion.",
+          outcome: "Increased volume",
+          modules: {
+            Traffic: ["Multi-campaign structure", "Retargeting audiences", "Lookalike expansion"],
+            Conversion: ["Multiple intent-based pages", "Offer diversification", "Dynamic content"],
+            Capture: ["Source tracking", "UTM and attribution", "Advanced lead scoring"],
+            Automation: ["Multi-step follow-ups", "Behaviour-based triggers", "Nurture sequences"],
+            SEO: ["2&ndash;4 high-intent pages per month", "Internal linking", "Content clusters"],
+            Scale: ["Retargeting campaigns", "New channels", "Offer scaling"]
+          }
+        },
+        systemise: {
+          title: "4. Systemise",
+          label: "Maximise & Compound",
+          color: "#078c68",
+          description: "You are ready to compound. Focus on full-funnel optimisation, attribution, automation, retention, LTV and long-term authority.",
+          outcome: "Predictable growth",
+          modules: {
+            Traffic: ["Scale budgets", "Full-funnel ads", "Growth experiments"],
+            Conversion: ["Full-funnel optimisation", "Personalised experiences", "Ongoing CRO programme"],
+            Capture: ["Full pipeline visibility", "Revenue attribution", "Data-driven decisions"],
+            Automation: ["Full automation flows", "Re-engagement", "Lifecycle marketing"],
+            SEO: ["Content engine", "Topical authority", "Link building and PR"],
+            Scale: ["Advanced scaling", "Channel mix optimisation", "Profit and LTV focus"]
+          }
+        }
+      };
+
+      const moduleMeta = {
+        Traffic: { label: "Traffic", subtitle: "Generate targeted demand", icon: "traffic" },
+        Conversion: { label: "Conversion", subtitle: "Turn traffic into high-quality leads", icon: "conversion" },
+        Capture: { label: "Capture", subtitle: "Store, track and manage leads", icon: "capture" },
+        Automation: { label: "Automation", subtitle: "Nurture and follow up automatically", icon: "automation" },
+        SEO: { label: "SEO", subtitle: "Build long-term compounding growth", icon: "seo" },
+        Scale: { label: "Scale", subtitle: "Expand reach and improve efficiency", icon: "scale" },
+        Outcome: { label: "Key outcome", subtitle: "Focus", icon: "outcome" }
+      };
+
+      const iconPaths = {
+        traffic: '<path d="M4 12h4l8-6v16l-8-6H4z"></path><path d="M18 9.5c1.3 1.2 1.3 3.8 0 5"></path>',
+        conversion: '<circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3"></path><path d="M22 12h-3"></path>',
+        capture: '<rect x="4" y="6" width="16" height="12" rx="2"></rect><path d="M7 10h5"></path><path d="M7 14h8"></path><circle cx="17" cy="11" r="1.5"></circle>',
+        automation: '<path d="M13 2 5 13h6l-1 9 9-13h-6z"></path>',
+        seo: '<circle cx="10.5" cy="10.5" r="5.5"></circle><path d="m15 15 5 5"></path><path d="M8 10.5h5"></path>',
+        scale: '<path d="M5 19V9"></path><path d="M12 19V5"></path><path d="M19 19v-7"></path><path d="M4 19h16"></path>',
+        outcome: '<path d="M8 21h8"></path><path d="M12 17v4"></path><path d="M7 4h10v5a5 5 0 0 1-10 0z"></path><path d="M17 6h3a3 3 0 0 1-3 3"></path><path d="M7 6H4a3 3 0 0 0 3 3"></path>'
+      };
+
+      let currentQuestion = 0;
+      let selectedStageId = null;
+      let answers = [];
+      let previousFocus = null;
+
+      const modal = document.getElementById("growthPlanModal");
+      const questionView = modal.querySelector("[data-growth-question-view]");
+      const track = document.getElementById("growthQuestionTrack");
+      const stageGrid = document.getElementById("growthStageGrid");
+      const roadmapFocus = document.getElementById("growthRoadmapFocus");
+      const roadmapMatrix = document.getElementById("growthRoadmapMatrix");
+      const resultCard = document.getElementById("growthResultCard");
+      const progressBar = document.getElementById("growthModalProgress");
+      const progressText = document.getElementById("growthModalProgressText");
+      const stepText = document.getElementById("growthModalStep");
+      const title = document.getElementById("growthModalTitle");
+      const hint = document.getElementById("growthModalHint");
+      const backButton = modal.querySelector("[data-growth-back]");
+
+      function getSelectedStage() {
+        return stages.find((stage) => stage.id === selectedStageId);
+      }
+
+      function getProgressCount() {
+        return selectedStageId === null ? answers.filter(Boolean).length : questions.length;
+      }
+
+      function icon(name) {
+        return `<svg class="growth-roadmap-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${iconPaths[name] || iconPaths.outcome}</svg>`;
+      }
+
+      function getSelectedPillarKey() {
+        return getSelectedStage()?.pillar || null;
+      }
+
+      function renderList(items) {
+        return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+      }
+
+      function renderTrack() {
+        track.innerHTML = questions.map((question, index) => {
+          const isAnswered = Boolean(answers[index]);
+          const isActive = selectedStageId === null && index === currentQuestion;
+          const isLocked = selectedStageId !== null && !isAnswered;
+          const state = isAnswered ? "done" : isLocked ? "locked" : isActive ? "active" : "pending";
+          const answer = answers[index] ? answers[index].toUpperCase() : isLocked ? "Not needed" : isActive ? "Current" : "Pending";
+
+          return `
+            <li class="growth-question-step ${state}">
+              <button type="button" data-growth-plan-open>
+                <span class="growth-question-index">${index + 1}</span>
+                <span>
+                  <strong>${question.question}</strong>
+                  <small>${answer}</small>
+                </span>
+              </button>
+            </li>
+          `;
+        }).join("");
+      }
+
+      function renderStages() {
+        stageGrid.innerHTML = stages.map((stage) => `
+          <article class="growth-stage-card ${stage.id === selectedStageId ? "active" : ""}" style="--stage-colour: ${stage.colour};">
+            <span>${stage.title}</span>
+            <h3>${stage.name}</h3>
+            <p>${stage.description}</p>
+            <strong>${stage.label}</strong>
+          </article>
+        `).join("");
+      }
+
+      function renderRoadmap() {
+        renderRoadmapFocus();
+        renderRoadmapMatrix();
+      }
+
+      function renderRoadmapFocus() {
+        const stage = getSelectedStage();
+
+        if (!stage) {
+          roadmapFocus.className = "growth-roadmap-focus is-empty";
+          roadmapFocus.removeAttribute("style");
+          roadmapFocus.innerHTML = `
+            <div>
+              <p class="eyebrow">Result-linked roadmap</p>
+              <h3>Answer the diagnostic to reveal the relevant section.</h3>
+              <p>Your result will pull one pillar out of the full matrix and show the exact modules to focus on next.</p>
+            </div>
+            <button class="primary-cta" type="button" data-growth-plan-open><span>Start diagnostic</span><span aria-hidden="true">-&gt;</span></button>
+          `;
+          return;
+        }
+
+        const pillar = roadmap[stage.pillar];
+        roadmapFocus.className = "growth-roadmap-focus is-active";
+        roadmapFocus.style.setProperty("--pillar-color", pillar.color);
+        roadmapFocus.innerHTML = `
+          <div class="growth-roadmap-focus-head">
+            <div>
+              <p class="eyebrow">Relevant roadmap section</p>
+              <h3>${pillar.title}: ${pillar.label}</h3>
+              <p>${pillar.description}</p>
+            </div>
+            <div class="growth-roadmap-outcome">
+              ${icon("outcome")}
+              <span>Key outcome</span>
+              <strong>${pillar.outcome}</strong>
+            </div>
+          </div>
+          <div class="growth-roadmap-focus-grid">
+            ${moduleOrder.map((module) => {
+              const meta = moduleMeta[module];
+              return `
+                <article>
+                  <div class="growth-roadmap-module-head">
+                    ${icon(meta.icon)}
+                    <div>
+                      <h4>${meta.label}</h4>
+                      <p>${meta.subtitle}</p>
+                    </div>
+                  </div>
+                  ${renderList(pillar.modules[module])}
+                </article>
+              `;
+            }).join("")}
+          </div>
+        `;
+      }
+
+      function renderRoadmapMatrix() {
+        const selectedPillarKey = getSelectedPillarKey();
+        roadmapMatrix.className = `growth-roadmap-matrix ${selectedPillarKey ? "is-focused" : ""}`;
+        roadmapMatrix.innerHTML = `
+          <div class="growth-matrix-cell growth-matrix-module">
+            <strong>The pillars</strong>
+            <small>Modules</small>
+          </div>
+
+          ${pillarOrder.map((key) => {
+            const pillar = roadmap[key];
+            const state = selectedPillarKey ? key === selectedPillarKey ? "is-selected" : "is-muted" : "";
+            return `
+              <div class="growth-matrix-cell growth-matrix-head ${state}" style="--pillar-color: ${pillar.color};">
+                <strong>${pillar.title}</strong>
+                <small>${pillar.label}</small>
+              </div>
+            `;
+          }).join("")}
+
+          ${moduleOrder.map((module) => {
+            const meta = moduleMeta[module];
+            return `
+              <div class="growth-matrix-cell growth-matrix-module">
+                <strong>${icon(meta.icon)} ${meta.label}</strong>
+                <small>${meta.subtitle}</small>
+              </div>
+              ${pillarOrder.map((key) => {
+                const state = selectedPillarKey ? key === selectedPillarKey ? "is-selected" : "is-muted" : "";
+                return `
+                  <div class="growth-matrix-cell growth-matrix-data ${state}">
+                    ${renderList(roadmap[key].modules[module])}
+                  </div>
+                `;
+              }).join("")}
+            `;
+          }).join("")}
+
+          <div class="growth-matrix-cell growth-matrix-module">
+            <strong>${icon("outcome")} Key outcome</strong>
+            <small>Focus</small>
+          </div>
+
+          ${pillarOrder.map((key) => {
+            const pillar = roadmap[key];
+            const state = selectedPillarKey ? key === selectedPillarKey ? "is-selected" : "is-muted" : "";
+            return `
+              <div class="growth-matrix-cell growth-matrix-data growth-matrix-outcome ${state}">
+                <strong>${pillar.outcome}</strong>
+                <small>${pillar.description}</small>
+              </div>
+            `;
+          }).join("")}
+        `;
+      }
+
+      function renderResultCard() {
+        const answered = getProgressCount();
+
+        if (selectedStageId === null) {
+          resultCard.innerHTML = `
+            <p class="eyebrow">Your result</p>
+            <h2>Not started yet.</h2>
+            <p>Open the question set to map the business to a stage and roadmap pillar.</p>
+            <div class="growth-result-empty">
+              <span>${answered}/5</span>
+              <small>questions answered</small>
+            </div>
+          `;
+          return;
+        }
+
+        const stage = getSelectedStage();
+        const pillar = roadmap[stage.pillar];
+
+        resultCard.innerHTML = `
+          <p class="eyebrow">Your result</p>
+          <h2>${stage.title}: ${stage.name}</h2>
+          <p>${stage.description}</p>
+          <div class="growth-result-pill">
+            <span>Recommended pillar</span>
+            <strong>${pillar.title}: ${pillar.label}</strong>
+          </div>
+          <ul>
+            ${stage.focus.map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+          <a class="primary-cta" href="#growth-plan-roadmap"><span>View roadmap focus</span><span aria-hidden="true">-&gt;</span></a>
+          <a class="secondary-cta" href="contact.html">Talk through this plan</a>
+        `;
+      }
+
+      function renderModalQuestion() {
+        const question = questions[currentQuestion];
+        const answered = getProgressCount();
+        const percent = Math.round((answered / questions.length) * 100);
+
+        modal.setAttribute("aria-labelledby", "growthModalTitle");
+        questionView.hidden = false;
+        title.textContent = question.question;
+        hint.textContent = question.hint;
+        stepText.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+        progressText.textContent = `${percent}% complete`;
+        progressBar.style.width = `${percent}%`;
+        backButton.disabled = currentQuestion === 0 || selectedStageId !== null;
+      }
+
+      function renderAll() {
+        renderTrack();
+        renderStages();
+        renderRoadmap();
+        renderResultCard();
+      }
+
+      function openModal() {
+        if (selectedStageId !== null) {
+          roadmapFocus.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+
+        previousFocus = document.activeElement;
+        modal.hidden = false;
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+
+        renderModalQuestion();
+
+        window.requestAnimationFrame(() => {
+          const focusTarget = modal.querySelector("[data-growth-answer='yes']");
+          focusTarget?.focus();
+        });
+      }
+
+      function closeModal(scrollTarget) {
+        modal.hidden = true;
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+        previousFocus?.focus?.();
+
+        const target = scrollTarget || (selectedStageId !== null ? resultCard : null);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      function answerQuestion(isYes) {
+        if (selectedStageId !== null) return;
+
+        const question = questions[currentQuestion];
+        answers[currentQuestion] = isYes ? "yes" : "no";
+
+        if (!isYes) {
+          selectedStageId = question.noStage;
+        } else if (question.yesStage !== undefined) {
+          selectedStageId = question.yesStage;
+        } else {
+          currentQuestion += 1;
+        }
+
+        renderAll();
+
+        if (selectedStageId !== null) {
+          closeModal(roadmapFocus);
+          return;
+        }
+
+        renderModalQuestion();
+      }
+
+      function resetDiagnostic() {
+        currentQuestion = 0;
+        selectedStageId = null;
+        answers = [];
+        renderAll();
+        renderModalQuestion();
+      }
+
+      function goBack() {
+        if (selectedStageId !== null || currentQuestion === 0) return;
+        answers[currentQuestion] = null;
+        currentQuestion -= 1;
+        answers[currentQuestion] = null;
+        renderAll();
+        renderModalQuestion();
+      }
+
+      function trapFocus(event) {
+        if (modal.hidden || event.key !== "Tab") return;
+
+        const focusable = Array.from(modal.querySelectorAll("button:not(:disabled), a[href], [tabindex]:not([tabindex='-1'])"))
+          .filter((element) => element.offsetParent !== null);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (!first || !last) return;
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+
+      document.addEventListener("click", (event) => {
+        const trigger = event.target.closest("[data-growth-plan-open]");
+        if (trigger && page.contains(trigger)) openModal();
+      });
+
+      document.querySelectorAll("[data-growth-plan-reset]").forEach((button) => {
+        button.addEventListener("click", resetDiagnostic);
+      });
+
+      modal.querySelectorAll("[data-growth-modal-close]").forEach((button) => {
+        button.addEventListener("click", () => closeModal());
+      });
+
+      modal.querySelectorAll("[data-growth-answer]").forEach((button) => {
+        button.addEventListener("click", () => answerQuestion(button.dataset.growthAnswer === "yes"));
+      });
+
+      backButton.addEventListener("click", goBack);
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) closeModal();
+        trapFocus(event);
+      });
+
+      renderAll();
+    })();
+  </script>
+</body>
+</html>
