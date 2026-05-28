@@ -1,29 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CVR Impact Calculator | Jora Solutions</title>
-  <meta name="description" content="Estimate revenue, CAC and profit impact from improving landing-page conversion rate. Runs in your browser with no signup required." />
-  <link rel="canonical" href="https://jora.solutions/tools/cvr-impact/" />
-  <meta property="og:title" content="CVR Impact Calculator | Jora Solutions" />
-  <meta property="og:description" content="Estimate revenue, CAC and profit impact from improving landing-page conversion rate. Runs in your browser with no signup required." />
+  <title>Meta Ads Report Tool | Jora Solutions</title>
+  <meta name="description" content="Build a simple Meta Ads funnel report from spend, leads, add to carts, initiate checkouts, optional sales and revenue. Export a PDF-ready report from your browser." />
+  <link rel="canonical" href="https://jora.solutions/tools/meta-ads-report/" />
+  <meta property="og:title" content="Meta Ads Report Tool | Jora Solutions" />
+  <meta property="og:description" content="Build a simple Meta Ads funnel report from spend, leads, add to carts, initiate checkouts, optional sales and revenue. Export a PDF-ready report from your browser." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jora.solutions/tools/cvr-impact/" />
+  <meta property="og:url" content="https://jora.solutions/tools/meta-ads-report/" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/png" href="../../logo-black.png" />
   <link rel="stylesheet" href="../../styles.css?v=aurora-services-20260420" />
   <link rel="stylesheet" href="../assets/jora-tools.css" />
   <script src="../assets/jora-tools.js" defer></script>
-  <script src="../assets/tools/cvr-impact.js" defer></script>
+  <script src="../assets/tools/meta-ads-report.js" defer></script>
   <script type="application/ld+json">
 {
     "@context":  "https://schema.org",
     "@type":  "WebApplication",
-    "name":  "CVR Impact Calculator",
-    "url":  "https://jora.solutions/tools/cvr-impact/",
-    "description":  "Estimate revenue, CAC and profit impact from improving landing-page conversion rate. Runs in your browser with no signup required.",
+    "name":  "Meta Ads Report Tool",
+    "url":  "https://jora.solutions/tools/meta-ads-report/",
+    "description":  "Build a simple Meta Ads funnel report from spend, leads, add to carts, initiate checkouts, optional sales and revenue. Export a PDF-ready report from your browser.",
     "applicationCategory":  "BusinessApplication",
     "operatingSystem":  "Any",
     "offers":  {
@@ -40,7 +40,7 @@
   </script>
 </head>
 
-<body class="tools-page" data-page="tools">
+<body class="tools-page meta-report-page" data-page="tools">
   <a class="skip-link" href="#main">Skip to content</a>
   <a class="top-rank-banner" href="../../seo.html"><span>Rank page 1 on Google</span><span aria-hidden="true">-&gt;</span></a>
 
@@ -80,93 +80,122 @@
       <div class="hero-copy">
         <div class="eyebrow">
           <span class="pulse"></span>
-          Jora Solutions / Conversion Tool
+          Jora Solutions / Meta Ads Tool
         </div>
 
-        <h1>CVR Impact Calculator</h1>
+        <h1>Meta Ads Report Tool</h1>
         <p>
-          Estimate how conversion-rate improvements change revenue, profit and CAC before rebuilding a page.
+          Turn spend, leads, add to carts, checkouts and optional sales into a clean funnel report with the metrics a client needs to understand what happened.
         </p>
 
         <div class="hero-actions">
-          <a href="#tool" class="btn">Run Calculation</a>
-          <a href="#lead" class="btn secondary">Here's what you should do instead</a>
+          <a href="#tool" class="btn">Build Report</a>
+          <a href="#report" class="btn secondary">View Output</a>
         </div>
       </div>
 
       <div class="terminal-card">
         <div class="terminal-top">
-          <span>Conversion lift</span>
-          <span data-tool-status="cvr-impact">Ready</span>
+          <span>Meta funnel report</span>
+          <span data-meta-report-status>Ready</span>
         </div>
 
         <div class="terminal-grid">
           <div class="terminal-row">
-            <span>Focus</span>
-            <strong>CVR lift</strong>
+            <span>Input</span>
+            <strong>Spend + stages</strong>
           </div>
           <div class="terminal-row">
             <span>Output</span>
-            <strong>Profit impact</strong>
+            <strong>Metrics + charts</strong>
           </div>
           <div class="terminal-row">
-            <span>Runs</span>
-            <strong>In browser</strong>
+            <span>Export</span>
+            <strong>Print to PDF</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="tool" class="section">
+    <section id="tool" class="section meta-report-tool">
       <div class="tool-shell">
-        <form name="jora-tool-cvr-impact" method="POST" data-netlify="true" class="tool-form" data-tool-form="cvr-impact">
-          <input type="hidden" name="form-name" value="jora-tool-cvr-impact" />
+        <form name="jora-tool-meta-ads-report" method="POST" data-netlify="true" class="tool-form" data-meta-report-form novalidate>
+          <input type="hidden" name="form-name" value="jora-tool-meta-ads-report" />
           <p class="command-kicker">Inputs</p>
-          <h2>Model the lift</h2>
+          <h2>Build the report</h2>
 
           <div class="field">
-            <label for="cvr-visitors">Monthly visitors or clicks</label>
-            <input id="cvr-visitors" name="visitors" type="number" value="2500" min="1" step="1" />
+            <label for="mar-spend">Ad spend (&pound;)</label>
+            <input id="mar-spend" name="spend" type="number" value="1500" min="0" step="1" />
           </div>
 
           <div class="field">
-            <label for="cvr-current">Current CVR (%)</label>
-            <input id="cvr-current" name="currentCvr" type="number" value="2.0" min="0.1" max="100" step="0.1" />
+            <label for="mar-leads">Leads</label>
+            <input id="mar-leads" name="leads" type="number" value="120" min="0" step="1" />
           </div>
 
           <div class="field">
-            <label for="cvr-target">Improved CVR (%)</label>
-            <input id="cvr-target" name="targetCvr" type="number" value="3.0" min="0.1" max="100" step="0.1" />
+            <label for="mar-atc">Add to carts</label>
+            <input id="mar-atc" name="addToCarts" type="number" value="72" min="0" step="1" />
           </div>
 
           <div class="field">
-            <label for="cvr-aov">Average order value (&pound;)</label>
-            <input id="cvr-aov" name="aov" type="number" value="99" min="1" step="1" />
+            <label for="mar-checkouts">Initiate checkouts</label>
+            <input id="mar-checkouts" name="checkouts" type="number" value="38" min="0" step="1" />
           </div>
 
           <div class="field">
-            <label for="cvr-margin">Gross margin (%)</label>
-            <input id="cvr-margin" name="margin" type="number" value="65" min="1" max="100" step="1" />
+            <label for="mar-sales">Sales <span class="optional-label">optional</span></label>
+            <input id="mar-sales" name="sales" type="number" value="12" min="0" step="1" />
           </div>
 
           <div class="field">
-            <label for="cvr-spend">Monthly traffic cost (&pound;)</label>
-            <input id="cvr-spend" name="trafficCost" type="number" value="1500" min="0" step="1" />
+            <label for="mar-revenue">Revenue (&pound;) <span class="optional-label">optional</span></label>
+            <input id="mar-revenue" name="revenue" type="number" value="3600" min="0" step="1" />
           </div>
 
-          <button class="btn" type="submit">Calculate CVR Impact</button>
-          <p class="tool-note">Results stay on the page and update in your browser. No signup is required.</p>
+          <button class="btn" type="submit">Generate Report</button>
+          <button class="btn secondary" type="button" data-print-report>Export PDF</button>
+          <p class="tool-note">The report runs in your browser. Use Export PDF to open your browser print dialog and save the report as a PDF.</p>
         </form>
 
-        <div class="tool-results">
+        <div class="tool-results meta-report-print" id="report" data-meta-report>
+          <div class="result-panel meta-report-heading">
+            <p class="command-kicker">Report</p>
+            <h2>Meta Ads funnel report</h2>
+            <p data-report-summary>Enter the campaign numbers and generate the report.</p>
+          </div>
+
           <div class="result-panel">
-            <h2>Result</h2>
-            <div class="result-metric-grid" data-result-metrics="cvr-impact"></div>
+            <h2>Key metrics</h2>
+            <div class="result-metric-grid meta-report-metrics" data-report-metrics></div>
           </div>
 
           <div class="recommendation-panel">
             <h2>What to do next</h2>
-            <p data-result-recommendation="cvr-impact">Run the calculation to see whether conversion work is worth prioritising.</p>
+            <p data-report-recommendation>Run the report to find the weakest stage in the funnel.</p>
+          </div>
+
+          <div class="result-panel">
+            <h2>Funnel drop-off</h2>
+            <div class="meta-dropoff-list" data-report-dropoffs></div>
+          </div>
+
+          <div class="meta-chart-grid">
+            <div class="chart-card meta-chart-card">
+              <h3>Funnel volume</h3>
+              <div data-funnel-chart class="meta-bar-chart"></div>
+            </div>
+
+            <div class="chart-card meta-chart-card">
+              <h3>Cost by stage</h3>
+              <div data-cost-chart class="meta-bar-chart"></div>
+            </div>
+
+            <div class="chart-card meta-chart-card" data-roas-card>
+              <h3>ROAS potential</h3>
+              <div data-roas-chart class="meta-bar-chart"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -175,8 +204,7 @@
     <section id="lead" class="section">
       <h2>Here's what you should do instead</h2>
       <p class="section-desc">
-        Do not redesign blindly. Prioritise the page changes that improve clarity, proof,
-        offer strength and objection handling where the profit lift justifies the work.
+        Do not judge Meta Ads from spend alone. Look at the full path from lead to cart, checkout and sale, then fix the stage with the highest drop-off before increasing budget.
       </p>
     </section>
   </main>
@@ -192,8 +220,3 @@
   <script src="../../script.js?v=aurora-services-20260420"></script>
 </body>
 </html>
-
-
-
-
-

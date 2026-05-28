@@ -4658,6 +4658,132 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
   box-shadow: 0 0 0 4px rgba(56,189,248,0.14);
 }
 
+.privacy-form-note {
+  grid-column: 1 / -1;
+  margin: -0.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.privacy-form-note a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(114,215,255,0.45);
+  text-underline-offset: 0.18rem;
+}
+
+.audit-url-form .privacy-form-note {
+  margin: -0.12rem 0 0.15rem;
+  padding: 0 0.45rem;
+}
+
+.privacy-hero {
+  min-height: auto;
+}
+
+.privacy-hero-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 0.55fr);
+}
+
+.privacy-updated {
+  color: var(--warm);
+  font-size: 0.92rem;
+  font-weight: 780;
+}
+
+.privacy-summary,
+.privacy-toc,
+.privacy-content article {
+  border: 1px solid rgba(255,255,255,0.11);
+  background: var(--panel-bg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(24px);
+}
+
+.privacy-summary {
+  border-radius: 24px;
+  padding: clamp(1.25rem, 3vw, 1.8rem);
+}
+
+.privacy-summary h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+}
+
+.privacy-summary ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.privacy-section {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+.privacy-layout {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.32fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  max-width: 1180px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.privacy-toc {
+  position: sticky;
+  top: 7rem;
+  display: grid;
+  gap: 0.55rem;
+  border-radius: 24px;
+  padding: 1rem;
+}
+
+.privacy-toc a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 740;
+}
+
+.privacy-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.privacy-content article {
+  border-radius: 24px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.privacy-content h3 {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.35rem, 2.6vw, 2.15rem);
+  line-height: 1.05;
+}
+
+.privacy-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.privacy-content p + p {
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 820px) {
+  .privacy-hero-grid,
+  .privacy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-toc {
+    position: static;
+  }
+}
+
 .cta-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

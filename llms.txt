@@ -13,6 +13,7 @@ Website: https://jora.solutions/
 - Growth plan diagnostic: https://jora.solutions/jora_business_lead_funnel
 - About: https://jora.solutions/about
 - Contact: https://jora.solutions/contact
+- Privacy Policy: https://jora.solutions/privacy-policy
 
 ## Services
 
@@ -30,6 +31,7 @@ Website: https://jora.solutions/
 - CAC Ceiling Calculator: https://jora.solutions/tools/cac-ceiling/
 - Lead Value Calculator: https://jora.solutions/tools/lead-value/
 - CVR Impact Calculator: https://jora.solutions/tools/cvr-impact/
+- Meta Ads Report Tool: https://jora.solutions/tools/meta-ads-report/
 
 ## Case Studies
 

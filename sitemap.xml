@@ -61,6 +61,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jora.solutions/privacy-policy</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://jora.solutions/jora_business_lead_funnel</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -110,7 +116,7 @@
   </url>
   <url>
     <loc>https://jora.solutions/tools/</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -147,6 +153,12 @@
   <url>
     <loc>https://jora.solutions/tools/cvr-impact/</loc>
     <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jora.solutions/tools/meta-ads-report/</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
