@@ -5938,6 +5938,97 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
   margin: 0;
 }
 
+.report-wrap {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 8.5rem 1.5rem 5rem;
+}
+
+.report-hero {
+  margin: 0 0 1.4rem;
+  max-width: 920px;
+}
+
+.report-hero h1 {
+  font-size: 4rem;
+  letter-spacing: 0;
+  line-height: 1.04;
+  margin: 0.35rem 0 1rem;
+}
+
+.report-hero p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.report-body {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+[data-theme="light"] .report-body {
+  background: rgba(255,255,255,0.78);
+}
+
+.report-section + .report-section {
+  margin-top: 2.2rem;
+}
+
+.report-body h2 {
+  font-size: 2rem;
+  letter-spacing: 0;
+  line-height: 1.16;
+  margin: 0 0 0.85rem;
+}
+
+.report-body h3 {
+  color: var(--ink);
+  font-size: 1.28rem;
+  letter-spacing: 0;
+  line-height: 1.25;
+  margin: 1.55rem 0 0.6rem;
+}
+
+.report-body p,
+.report-body li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.report-body ul,
+.report-body ol {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.85rem 0 1.1rem;
+  padding-left: 1.35rem;
+}
+
+.report-body li::marker {
+  color: var(--accent);
+}
+
+.report-body blockquote {
+  background: rgba(75, 197, 157, 0.08);
+  border: 1px solid rgba(75, 197, 157, 0.25);
+  border-left: 4px solid var(--accent);
+  border-radius: 14px;
+  margin: 1.2rem 0;
+  padding: 1rem 1.25rem;
+}
+
+.report-body blockquote p {
+  color: var(--ink);
+  margin: 0;
+}
+
+.report-links {
+  margin-top: 1.25rem;
+}
+
 .article-links {
   margin-top: 1.25rem;
 }
@@ -6250,6 +6341,12 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
   .bottom-contact-form .primary-cta {
     width: 100%;
   }
+  .report-wrap {
+    padding-top: 8rem;
+  }
+  .report-hero h1 {
+    font-size: 3.1rem;
+  }
 }
 
 @media (max-width: 620px) {
@@ -6285,6 +6382,26 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+  .report-wrap {
+    padding: 7.25rem 1rem 4rem;
+  }
+  .report-hero h1 {
+    font-size: 2.15rem;
+    line-height: 1.08;
+  }
+  .report-hero p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+  .report-body {
+    border-radius: 14px;
+    padding: 1.15rem;
+  }
+  .report-body h2 {
+    font-size: 1.55rem;
+  }
+  .report-body h3 {
+    font-size: 1.16rem;
   }
   h1 {
     font-size: clamp(2.1rem, 10.6vw, 3.1rem);
