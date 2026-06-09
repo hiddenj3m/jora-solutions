@@ -6,6 +6,13 @@
     maximumFractionDigits: 0
   });
 
+  const moneyFormatterExact = new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency: "GBP",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+
   function toNumber(value) {
     const number = parseFloat(value);
     return Number.isFinite(number) ? Math.max(0, number) : 0;
@@ -21,6 +28,10 @@
 
   function formatMoney(value) {
     return Number.isFinite(value) ? moneyFormatter.format(value) : "n/a";
+  }
+
+  function formatMoneyExact(value) {
+    return Number.isFinite(value) ? moneyFormatterExact.format(value) : "n/a";
   }
 
   function formatNumber(value) {
@@ -138,9 +149,9 @@
       : null;
 
     const metrics = [
-      metric("Cost per lead", formatMoney(costs.costPerLead), "Spend divided by leads"),
-      metric("Cost per add to cart", formatMoney(costs.costPerAtc), "Spend divided by add to carts"),
-      metric("Cost per checkout", formatMoney(costs.costPerCheckout), "Spend divided by checkouts"),
+      metric("Cost per lead", formatMoneyExact(costs.costPerLead), "Spend divided by leads"),
+      metric("Cost per add to cart", formatMoneyExact(costs.costPerAtc), "Spend divided by add to carts"),
+      metric("Cost per checkout", formatMoneyExact(costs.costPerCheckout), "Spend divided by checkouts"),
       metric("Lead to add to cart", formatPercent((rates.leadToAtc || 0) * 100), "First intent step"),
       metric("Add to cart to checkout", formatPercent((rates.atcToCheckout || 0) * 100), "Cart progression"),
       metric("Spend", formatMoney(input.spend), "Total Meta Ads spend")
@@ -148,7 +159,7 @@
 
     if (input.hasSales) {
       metrics.push(
-        metric("Cost per sale", formatMoney(costs.costPerSale), "Spend divided by sales"),
+        metric("Cost per sale", formatMoneyExact(costs.costPerSale), "Spend divided by sales"),
         metric("Lead to sale", formatPercent((rates.leadToSale || 0) * 100), "End-to-end conversion"),
         metric("Checkout to sale", formatPercent((rates.checkoutToSale || 0) * 100), "Final-stage conversion")
       );
@@ -314,7 +325,7 @@
 
     renderDropoffs(doc.querySelector("[data-report-dropoffs]"), report.dropoffs);
     renderBars(doc.querySelector("[data-funnel-chart]"), report.stages, item => formatNumber(item));
-    renderBars(doc.querySelector("[data-cost-chart]"), report.costStages, item => formatMoney(item));
+    renderBars(doc.querySelector("[data-cost-chart]"), report.costStages, item => formatMoneyExact(item));
 
     const roasCard = doc.querySelector("[data-roas-card]");
     if (report.roasStages.length) {

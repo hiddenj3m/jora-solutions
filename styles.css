@@ -5902,6 +5902,42 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
   margin-top: 2rem;
 }
 
+.article-body h3 {
+  color: var(--ink);
+  font-size: 1.35rem;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 1.65rem 0 0.6rem;
+}
+
+.article-body ul,
+.article-body ol {
+  color: var(--muted);
+  display: grid;
+  gap: 0.65rem;
+  line-height: 1.75;
+  margin: 0.85rem 0 1.1rem;
+  padding-left: 1.35rem;
+}
+
+.article-body li::marker {
+  color: var(--accent);
+}
+
+.article-body blockquote {
+  background: rgba(75, 197, 157, 0.08);
+  border: 1px solid rgba(75, 197, 157, 0.25);
+  border-left: 4px solid var(--accent);
+  border-radius: 18px;
+  margin: 1.2rem 0;
+  padding: 1rem clamp(1rem, 2vw, 1.35rem);
+}
+
+.article-body blockquote p {
+  color: var(--ink);
+  margin: 0;
+}
+
 .article-links {
   margin-top: 1.25rem;
 }
