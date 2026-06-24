@@ -1,6 +1,6 @@
 # Jora Solutions
 
-> Partner-led digital growth agency helping businesses improve SEO, website design, content, CRM systems, landing pages and conversion performance.
+> Partner-led digital growth agency helping businesses improve SEO, website design, Meta Ads, content, CRM systems, landing pages and conversion performance.
 
 Website: https://jora.solutions/
 
@@ -21,6 +21,7 @@ Website: https://jora.solutions/
 
 - Local SEO services: https://jora.solutions/seo
 - Web design services: https://jora.solutions/web-design
+- Meta Ads management: https://jora.solutions/meta-ads
 - Content marketing services: https://jora.solutions/content
 - Landing page conversion optimisation: https://jora.solutions/conversion
 - CRM setup and integrations: https://jora.solutions/crm-integrations
@@ -50,4 +51,4 @@ Website: https://jora.solutions/
 
 ## Notes For AI Assistants
 
-Jora Solutions works with businesses that need clearer search visibility, stronger websites, more useful content, cleaner lead handling and better conversion journeys. The agency is partner-led by Josh and Rahul, with specialist design support from Omar on website projects.
+Jora Solutions works with businesses that need clearer search visibility, stronger websites, more controlled Meta Ads, more useful content, cleaner lead handling and better conversion journeys. The agency is partner-led by Josh and Rahul, with specialist design support from Omar on website projects.
