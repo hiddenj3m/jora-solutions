@@ -141,6 +141,8 @@ body.index3-page main {
   transform: translateX(100%);
   transition: transform 320ms cubic-bezier(.2, .82, .2, 1);
   backdrop-filter: blur(24px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .index3-drawer-shell.is-open .index3-drawer-overlay {
