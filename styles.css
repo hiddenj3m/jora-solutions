@@ -2217,6 +2217,52 @@ h1 { font-size: clamp(2.7rem, 7vw, 7.2rem); }
   text-transform: uppercase;
 }
 
+.flow-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.flow-chain-step {
+  flex: 1 1 150px;
+  border: 1px solid rgba(255,255,255,0.11);
+  background: var(--panel-bg);
+  border-radius: 18px;
+  padding: 0.9rem 1rem;
+  text-align: center;
+}
+
+.flow-chain-step strong {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: -0.01em;
+}
+
+.flow-chain-arrow {
+  align-self: center;
+  color: var(--muted);
+  font-size: 1rem;
+  flex: 0 0 auto;
+}
+
+.flow-chain.is-before .flow-chain-step {
+  color: var(--muted);
+}
+
+.flow-chain.is-after .flow-chain-step {
+  border-color: rgba(54, 255, 241, 0.28);
+}
+
+.flow-chain-label {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 0 0 0.1rem;
+}
+
 .seo-timeline {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -4263,6 +4309,55 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
 
 .results-proof-note .stat-chip span {
   color: var(--ink);
+}
+
+.work-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1180px;
+  margin: 0 auto 1.6rem;
+}
+
+.work-filter-btn {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.work-filter-btn:hover,
+.work-filter-btn:focus-visible {
+  color: var(--ink);
+  border-color: rgba(255,255,255,0.32);
+}
+
+.work-filter-btn[aria-pressed="true"] {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: #04121a;
+}
+
+.case-summary-card[hidden] {
+  display: none;
+}
+
+.work-empty-state {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.work-empty-state.is-visible {
+  display: block;
 }
 
 .case-summary-grid,

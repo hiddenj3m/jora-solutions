@@ -722,6 +722,13 @@ body.index3-page > .hero-audit-entry {
   transform: translateX(0.18rem);
 }
 
+.index3-client-marquee-label {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 0.6rem;
+  text-align: center;
+}
+
 .index3-client-marquee {
   position: relative;
   overflow: hidden;
