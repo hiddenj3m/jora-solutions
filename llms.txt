@@ -44,6 +44,11 @@ Website: https://jora.solutions/
 - Lead Value Calculator: https://jora.solutions/tools/lead-value/
 - CVR Impact Calculator: https://jora.solutions/tools/cvr-impact/
 - Meta Ads Report Tool: https://jora.solutions/tools/meta-ads-report/
+- Downtime Cost Calculator: https://jora.solutions/tools/downtime-cost/
+- Manual Admin Cost Calculator: https://jora.solutions/tools/admin-cost/
+- Lead Leakage Calculator: https://jora.solutions/tools/lead-leakage/
+- Customer Lifetime Value Calculator: https://jora.solutions/tools/customer-ltv/
+- Support Ticket Cost Calculator: https://jora.solutions/tools/support-ticket-cost/
 
 ## Case Studies
 

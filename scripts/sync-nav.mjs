@@ -81,6 +81,11 @@ function desktopNavInner(p) {
           <a href="${p}tools/lead-value/">Lead Value Calculator</a>
           <a href="${p}tools/cvr-impact/">CVR Impact Calculator</a>
           <a href="${p}tools/meta-ads-report/">Meta Ads Report</a>
+          <a href="${p}tools/downtime-cost/">Downtime Cost Calculator</a>
+          <a href="${p}tools/admin-cost/">Manual Admin Cost Calculator</a>
+          <a href="${p}tools/lead-leakage/">Lead Leakage Calculator</a>
+          <a href="${p}tools/customer-ltv/">Customer LTV Calculator</a>
+          <a href="${p}tools/support-ticket-cost/">Support Ticket Cost Calculator</a>
           <a data-page-link="services" href="${p}website-seo-audit.html">Free Website Audit</a>
         </div>
       </div>
@@ -118,6 +123,11 @@ function drawerNavInner(p) {
         <a href="${p}tools/lead-value/">Lead Value Calculator</a>
         <a href="${p}tools/cvr-impact/">CVR Impact Calculator</a>
         <a href="${p}tools/meta-ads-report/">Meta Ads Report</a>
+        <a href="${p}tools/downtime-cost/">Downtime Cost Calculator</a>
+        <a href="${p}tools/admin-cost/">Manual Admin Cost Calculator</a>
+        <a href="${p}tools/lead-leakage/">Lead Leakage Calculator</a>
+        <a href="${p}tools/customer-ltv/">Customer LTV Calculator</a>
+        <a href="${p}tools/support-ticket-cost/">Support Ticket Cost Calculator</a>
         <a data-page-link="services" href="${p}website-seo-audit.html">Free Website Audit</a>
       `;
 }

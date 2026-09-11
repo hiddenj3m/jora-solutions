@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Customer Lifetime Value Calculator | Jora Solutions</title>
+  <meta name="description" content="Calculate revenue and profit lifetime value, and check your acquisition cost against the commonly used 3:1 LTV:CAC target. Runs in your browser with no signup required." />
+  <link rel="canonical" href="https://jora.solutions/tools/customer-ltv/" />
+  <meta property="og:title" content="Customer Lifetime Value Calculator | Jora Solutions" />
+  <meta property="og:description" content="Calculate revenue and profit lifetime value, and check your acquisition cost against the commonly used 3:1 LTV:CAC target. Runs in your browser with no signup required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jora.solutions/tools/customer-ltv/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" href="../../logo-black.png" />
+  <link rel="stylesheet" href="../../styles.css?v=aurora-services-20260420" />
+  <link rel="stylesheet" href="../assets/jora-tools.css" />
+  <script src="../assets/jora-tools.js" defer></script>
+  <script src="../assets/tools/customer-ltv.js" defer></script>
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "WebApplication",
+    "name":  "Customer Lifetime Value Calculator",
+    "url":  "https://jora.solutions/tools/customer-ltv/",
+    "description":  "Calculate revenue and profit lifetime value, and check your acquisition cost against the commonly used 3:1 LTV:CAC target. Runs in your browser with no signup required.",
+    "applicationCategory":  "BusinessApplication",
+    "operatingSystem":  "Any",
+    "offers":  {
+                   "@type":  "Offer",
+                   "price":  "0",
+                   "priceCurrency":  "GBP"
+               },
+    "publisher":  {
+                      "@type":  "Organization",
+                      "name":  "Jora Solutions",
+                      "url":  "https://jora.solutions/"
+                  }
+}
+  </script>
+</head>
+
+<body class="tools-page" data-page="tools">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="top-rank-banner" href="../../seo.html"><span>Rank page 1 on Google</span><span aria-hidden="true">-&gt;</span></a>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Jora Solutions home"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a>
+    <nav aria-label="Primary">
+      <a data-page-link="home" href="../../index.html">Home</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle" data-page-link="services" href="../../services.html" aria-haspopup="true">Solutions</a>
+        <div class="nav-dropdown-panel nav-dropdown-panel-grouped" aria-label="Solutions">
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-group-title">Business Systems</p>
+            <a data-page-link="business-systems" href="../../business-systems.html">Business Systems</a>
+            <a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-group-title">Websites &amp; Ecommerce</p>
+            <a data-page-link="web" href="../../web-design.html">Web Design</a>
+            <a data-page-link="ecommerce" href="../../ecommerce-systems.html">Ecommerce Systems</a>
+            <a data-page-link="conversion" href="../../conversion.html">Conversion &amp; Landing Pages</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <p class="nav-dropdown-group-title">Marketing &amp; Growth</p>
+            <a data-page-link="seo" href="../../seo.html">SEO</a>
+            <a data-page-link="services" href="../../meta-ads.html">Meta Ads</a>
+            <a data-page-link="content" href="../../content.html">Content Marketing</a>
+          </div>
+        </div>
+      </div>
+      <a data-page-link="it-support" href="../../contact.html">IT Support</a>
+      <a data-page-link="results" href="../../results.html">Our Work</a>
+      <a data-page-link="about" href="../../about.html">About</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle" data-page-link="blog" href="../../blog/" aria-haspopup="true">Insights</a>
+        <div class="nav-dropdown-panel" aria-label="Insights">
+          <a data-page-link="blog" href="../../blog/">Blog</a>
+          <a data-page-link="tools" href="../../tools/">Tools</a>
+          <a href="../../tools/ad-profit-command-centre/">Ad Profit Command Centre</a>
+          <a href="../../tools/discount-margin/">Discount Margin Calculator</a>
+          <a href="../../tools/break-even-roas/">Break-even ROAS Calculator</a>
+          <a href="../../tools/cac-ceiling/">CAC Ceiling Calculator</a>
+          <a href="../../tools/lead-value/">Lead Value Calculator</a>
+          <a href="../../tools/cvr-impact/">CVR Impact Calculator</a>
+          <a href="../../tools/meta-ads-report/">Meta Ads Report</a>
+          <a href="../../tools/downtime-cost/">Downtime Cost Calculator</a>
+          <a href="../../tools/admin-cost/">Manual Admin Cost Calculator</a>
+          <a href="../../tools/lead-leakage/">Lead Leakage Calculator</a>
+          <a href="../../tools/customer-ltv/">Customer LTV Calculator</a>
+          <a href="../../tools/support-ticket-cost/">Support Ticket Cost Calculator</a>
+          <a data-page-link="services" href="../../website-seo-audit.html">Free Website Audit</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span class="theme-toggle-text">Dark</span></button>
+      <a class="nav-cta" href="../../business-tech-review.html">Request a free tech review</a>
+    </div>
+  </header>
+
+  <main id="main" class="apcc">
+    <section class="hero tool-hub-hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          Jora Solutions / Growth Tool
+        </div>
+
+        <h1>Customer Lifetime Value Calculator</h1>
+        <p>
+          Turn order value, purchase frequency and margin into a lifetime value figure, and check what you can actually afford to pay for a new customer.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tool" class="btn">Run Calculation</a>
+          <a href="#lead" class="btn secondary">Here's what you should do instead</a>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-top">
+          <span>Lifetime value</span>
+          <span data-tool-status="customer-ltv">Ready</span>
+        </div>
+
+        <div class="terminal-grid">
+          <div class="terminal-row">
+            <span>Focus</span>
+            <strong>Profit LTV</strong>
+          </div>
+          <div class="terminal-row">
+            <span>Output</span>
+            <strong>LTV : CAC</strong>
+          </div>
+          <div class="terminal-row">
+            <span>Runs</span>
+            <strong>In browser</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tool" class="section">
+      <div class="tool-shell">
+        <form name="jora-tool-customer-ltv" method="POST" data-netlify="true" class="tool-form" data-tool-form="customer-ltv">
+          <input type="hidden" name="form-name" value="jora-tool-customer-ltv" />
+          <p class="command-kicker">Inputs</p>
+          <h2>Model the customer</h2>
+
+          <div class="field">
+            <label for="ltv-aov">Average order value (&pound;)</label>
+            <input id="ltv-aov" name="aov" type="number" value="65" min="0" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="ltv-orders">Orders per year</label>
+            <input id="ltv-orders" name="ordersPerYear" type="number" value="4" min="0" step="0.5" />
+          </div>
+
+          <div class="field">
+            <label for="ltv-lifespan">Average customer lifespan (years)</label>
+            <input id="ltv-lifespan" name="lifespanYears" type="number" value="3" min="0" step="0.5" />
+          </div>
+
+          <div class="field">
+            <label for="ltv-margin">Gross margin (%)</label>
+            <input id="ltv-margin" name="margin" type="number" value="40" min="0" max="100" step="1" />
+          </div>
+
+          <div class="field">
+            <label for="ltv-cac">Current customer acquisition cost (&pound;)</label>
+            <input id="ltv-cac" name="cac" type="number" value="40" min="0" step="1" />
+          </div>
+
+          <button class="btn" type="submit">Calculate Lifetime Value</button>
+          <p class="tool-note">Results stay on the page and update in your browser. No signup is required.</p>
+        </form>
+
+        <div class="tool-results">
+          <div class="result-panel">
+            <h2>Result</h2>
+            <div class="result-metric-grid" data-result-metrics="customer-ltv"></div>
+          </div>
+
+          <div class="recommendation-panel">
+            <h2>What to do next</h2>
+            <p data-result-recommendation="customer-ltv">Run the calculation to see what a customer is really worth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lead" class="section">
+      <h2>Here's what you should do instead</h2>
+      <p class="section-desc">
+        Don't judge acquisition spend on revenue alone. Use profit LTV against CAC to decide whether to push harder
+        on acquisition, or fix retention and margin first.
+      </p>
+      <div class="hero-actions action-spacer">
+        <a href="../../ecommerce-systems.html" class="btn">See ecommerce systems</a>
+        <a href="../../business-tech-review.html" class="btn secondary">Book a free review</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer tools-site-footer">
+    <div class="footer-grid">
+      <div><a class="brand footer-brand" href="../../index.html"><span class="brand-logo" aria-hidden="true"><img class="brand-logo-dark" src="../../logo-white.png" alt=""><img class="brand-logo-light" src="../../logo-black.png" alt=""></span><span>Jora Solutions</span></a><p>Business systems, IT support, and the SEO, web, ecommerce, and content work that brings customers in.</p></div>
+      <div><h3>Pages</h3><a data-page-link="home" href="../../index.html">Home</a><a data-page-link="services" href="../../services.html">Solutions</a><a data-page-link="it-support" href="../../contact.html">IT Support</a><a data-page-link="business-systems" href="../../business-systems.html">Business Systems</a><a data-page-link="web" href="../../web-design.html">Web Design</a><a data-page-link="ecommerce" href="../../ecommerce-systems.html">Ecommerce Systems</a><a data-page-link="crm" href="../../crm-integrations.html">CRM &amp; Integrations</a><a data-page-link="seo" href="../../seo.html">SEO</a><a data-page-link="results" href="../../results.html">Our Work</a><a data-page-link="about" href="../../about.html">About</a><a data-page-link="blog" href="../../blog/">Blog</a><a data-page-link="tools" href="../../tools/">Tools</a><a data-page-link="contact" href="../../contact.html">Contact</a><a data-page-link="privacy" href="../../privacy-policy.html">Privacy Policy</a></div>
+      <div><h3>Growth</h3><a href="../../ecommerce-systems.html">Ecommerce systems</a><a href="../../seo.html">SEO services</a></div>
+      <div><h3>Start</h3><a href="../../business-tech-review.html">Get a free tech review</a><a href="../../tools/">Use the calculators</a></div>
+    </div>
+  </footer>
+  <script src="../../script.js?v=aurora-services-20260420"></script>
+</body>
+</html>
