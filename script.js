@@ -601,6 +601,66 @@
     });
   }
 
+  function setupScrollScaleCards() {
+    const cards = Array.from(document.querySelectorAll("[data-scale-scroll]"));
+    if (!cards.length || reduceMotion) return;
+
+    const mobileQuery = window.matchMedia("(max-width: 760px)");
+    let active = false;
+    let ticking = false;
+
+    function update() {
+      ticking = false;
+      const viewportHeight = window.innerHeight;
+      const center = viewportHeight / 2;
+
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(center - cardCenter);
+        const maxDistance = center + rect.height / 2;
+        const proximity = 1 - Math.min(distance / maxDistance, 1);
+        const scale = 0.9 + proximity * 0.1;
+        const opacity = 0.68 + proximity * 0.32;
+        card.style.transform = `scale(${scale.toFixed(3)})`;
+        card.style.opacity = opacity.toFixed(3);
+      });
+    }
+
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    function enable() {
+      if (active) return;
+      active = true;
+      update();
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+    }
+
+    function disable() {
+      if (!active) return;
+      active = false;
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      cards.forEach((card) => {
+        card.style.transform = "";
+        card.style.opacity = "";
+      });
+    }
+
+    function syncMode(event) {
+      if (event.matches) enable();
+      else disable();
+    }
+
+    syncMode(mobileQuery);
+    mobileQuery.addEventListener("change", syncMode);
+  }
+
   function setupBottomContactForm() {
     document.querySelectorAll("[data-bottom-contact-form]").forEach((form) => {
       const status = form.querySelector(".form-status");
@@ -760,6 +820,7 @@
   setupServiceBackdrop();
   setupProcessSteps();
   setupBottomContactForm();
+  setupScrollScaleCards();
   setupRevealObserver();
   setupStoryModal();
   setupForm();

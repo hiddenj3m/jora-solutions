@@ -509,6 +509,12 @@ body.index3-page > .hero-audit-entry {
   max-width: 100%;
 }
 
+[data-scale-scroll] {
+  transform-origin: center;
+  transition: transform 140ms ease-out, opacity 140ms ease-out;
+  will-change: transform, opacity;
+}
+
 .index3-core-service-card {
   --accent-rgb: 114, 215, 255;
   --accent: rgb(var(--accent-rgb));
@@ -1829,6 +1835,10 @@ body.index3-page > .hero-audit-entry {
   .index3-page .hero-copy h1 {
     max-width: 9.6ch;
     font-size: clamp(2.3rem, 11vw, 3.2rem);
+  }
+
+  .index3-page .hero-copy h1 .index3-aurora-text {
+    white-space: normal;
   }
 
   .index3-page .hero-phone {
