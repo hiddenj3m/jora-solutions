@@ -510,6 +510,28 @@ button { color: inherit; }
   color: var(--ink);
 }
 
+.nav-dropdown-panel-grouped {
+  width: min(38rem, 90vw);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem 0.6rem;
+}
+
+.nav-dropdown-group {
+  display: grid;
+  gap: 0.1rem;
+  align-content: start;
+}
+
+.nav-dropdown-group-title {
+  padding: 0.62rem 0.72rem 0.15rem;
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
 [data-theme="light"] .nav-dropdown-panel {
   background:
     linear-gradient(145deg, rgba(255,255,255,0.98), rgba(239,247,255,0.94)),
@@ -3190,6 +3212,7 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
 }
 
 .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card-grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 .glass-card, .service-card, .pipeline, .metric-card, .growth-form, .modal-panel {
   border: 1px solid rgba(255,255,255,0.11);
@@ -4019,6 +4042,67 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
   font-weight: 820;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.index3-process-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.index3-process-note {
+  max-width: 1180px;
+  margin: 1.4rem auto 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .index3-process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.2rem 1.1rem;
+  background: var(--panel-bg);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 1.6rem 1rem 0;
+  font-weight: 720;
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  font-weight: 720;
+  color: var(--muted);
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-item p {
+  margin: 0 0 1rem;
+  color: var(--muted);
 }
 
 .detail-card h3,
@@ -6271,7 +6355,7 @@ body[data-page="crm"] .crm-node-artefact.is-scroll-ambient.is-hero-interactive {
 
 @media (max-width: 960px) {
   .site-header nav { display: none; }
-  .card-grid.three, .results-grid, .pipeline-steps, .final-cta, .proof-section, .benefit-list, .page-hero-grid, .seo-hero-grid, .service-hero-grid, .quote-grid, .bio-grid, .principles-grid, .comparison-grid, .stats-strip, .contact-layout, .cta-panel, .proof-row, .footer-grid, .landing-hero-grid, .landing-split, .blog-grid, .landing-link-list { grid-template-columns: 1fr; }
+  .card-grid.three, .card-grid.four, .results-grid, .pipeline-steps, .final-cta, .proof-section, .benefit-list, .page-hero-grid, .seo-hero-grid, .service-hero-grid, .quote-grid, .bio-grid, .principles-grid, .comparison-grid, .stats-strip, .contact-layout, .cta-panel, .proof-row, .footer-grid, .landing-hero-grid, .landing-split, .blog-grid, .landing-link-list { grid-template-columns: 1fr; }
   .hero {
     grid-template-columns: 1fr;
     min-height: 78svh;

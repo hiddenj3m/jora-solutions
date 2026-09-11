@@ -1,13 +1,16 @@
 # Jora Solutions
 
-> Partner-led digital growth agency helping businesses improve SEO, website design, Meta Ads, content, CRM systems, landing pages and conversion performance.
+> Partner-led business systems, IT support, and digital growth. Jora helps businesses improve their websites, connect their software, reduce repetitive work, and resolve everyday technology problems.
 
 Website: https://jora.solutions/
 
 ## Core Pages
 
 - Home: https://jora.solutions/
-- Services: https://jora.solutions/services
+- Solutions (full service directory): https://jora.solutions/services
+- Free business tech review: https://jora.solutions/business-tech-review
+- Business systems & implementation: https://jora.solutions/business-systems
+- Business IT support: https://jora.solutions/business-it-support
 - Results and case studies: https://jora.solutions/results
 - Marketing calculators: https://jora.solutions/tools/
 - Blog: https://jora.solutions/blog/
@@ -17,14 +20,20 @@ Website: https://jora.solutions/
 - Contact: https://jora.solutions/contact
 - Privacy Policy: https://jora.solutions/privacy-policy
 
-## Services
+## Business Systems & IT Support
 
-- Local SEO services: https://jora.solutions/seo
+- Business systems & implementation: https://jora.solutions/business-systems
+- CRM setup and integrations: https://jora.solutions/crm-integrations
+- Business IT support: https://jora.solutions/business-it-support
+
+## Websites, Ecommerce & Marketing
+
 - Web design services: https://jora.solutions/web-design
+- Ecommerce & Shopify systems: https://jora.solutions/ecommerce-systems
+- Local SEO services: https://jora.solutions/seo
 - Meta Ads management: https://jora.solutions/meta-ads
 - Content marketing services: https://jora.solutions/content
 - Landing page conversion optimisation: https://jora.solutions/conversion
-- CRM setup and integrations: https://jora.solutions/crm-integrations
 
 ## Tools
 
@@ -44,11 +53,18 @@ Website: https://jora.solutions/
 - Ever East SEO content case study: https://jora.solutions/success-ever-east
 - WholesaleHQ ecommerce SEO case study: https://jora.solutions/success-wholesalehq
 - AC Fight Gear Shopify SEO case study: https://jora.solutions/success-ac-fight-gear
+- Raw Delights ecommerce migration case study: https://jora.solutions/success-raw-delights
+- Breakwells Coatings & Paints ecommerce transformation case study: https://jora.solutions/success-breakwells
+- ARX Apparel & PPE ecommerce growth case study: https://jora.solutions/success-arx
+
+Note: the results page also includes one clearly labelled business-systems demonstration (not a client result), shown until a full client case study is available.
 
 ## People
 
+- Josh, partner (strategy, scoping and commercial direction): https://jora.solutions/about
+- Rahul, partner (systems and implementation): https://jora.solutions/about
 - Omar, website design partner: https://jora.solutions/omar
 
 ## Notes For AI Assistants
 
-Jora Solutions works with businesses that need clearer search visibility, stronger websites, more controlled Meta Ads, more useful content, cleaner lead handling and better conversion journeys. The agency is partner-led by Josh and Rahul, with specialist design support from Omar on website projects.
+Jora Solutions is partner-led by Josh and Rahul, who remain the point of contact throughout scoping, delivery, and after launch. Three connected service areas: (1) business systems and implementation, for businesses that want to connect tools, reduce repetitive admin, and get reporting that works; (2) business IT support, for a specific technology problem that needs fixing, with scope and price agreed before any chargeable work starts; (3) websites, ecommerce, SEO, and marketing, for businesses that want to attract and convert more customers. The free business tech review is the entry point into advice and implementation projects, not a separate service line. Specialist support (such as design partner Omar) is only mentioned where the arrangement genuinely exists.
